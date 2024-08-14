@@ -26,7 +26,7 @@
   --mixin-u-aOKC2y2inA-v9K2E_font-size: 16px;
   --mixin-u-aOKC2y2inA-v9K2E_font-weight: 400;
   --mixin-u-aOKC2y2inA-v9K2E_font-style: normal;
-  --mixin-u-aOKC2y2inA-v9K2E_color: #535353;
+  --mixin-u-aOKC2y2inA-v9K2E_color: var(--token-LirvSzoJURQ3);
   --mixin-u-aOKC2y2inA-v9K2E_text-align: left;
   --mixin-u-aOKC2y2inA-v9K2E_text-transform: none;
   --mixin-u-aOKC2y2inA-v9K2E_line-height: 1.5;
