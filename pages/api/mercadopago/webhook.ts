@@ -67,11 +67,10 @@ export default async function handler(
       name: inscrito.name,
       cpf: inscrito.cpf,
       email: inscrito.email,
-      kids: paymentData[0].kids,
-      adultos: paymentData[0].adults,
-      price: paymentData[0].price,
+      price: inscrito.ticketTotalPrice,
+      vip: inscrito.ticketInfo.vip,
+      geral: inscrito.ticketInfo.geral,
       id: `${inscrito.id}`,
-      ticketType: inscrito.ticket_type
     });
     console.log("dale3", "success", email)
   } catch (err) {

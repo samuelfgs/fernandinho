@@ -33,7 +33,7 @@ const MyEmailTemplate = () => (
     <Text>
       Igreja em SV
     </Text>
-    <Img src={"https://ad20.igrejasv.com/plasmic/a_d_2/images/isv.png"} width={100} height={100} />
+    <Img src={"https://igrejasv.com/plasmic/a_d/images/isv.png"} width={100} height={100} />
   </Html>
 );
 
@@ -90,7 +90,7 @@ export const sendEmail = async (body: any) => {
   const { name, cpf, email, price, vip, geral, id } = body;
   const qrs: any[] = [];
   for (let i = 0; i < geral + vip; i++) {
-    const svg = await generateQRCodeSvg(`https://ad20.igrejasv.com/ingresso/${id}`);
+    const svg = await generateQRCodeSvg(`https://igrejasv.com/ingresso/${id}/${i}`);
     const buf = Buffer.from(svg as any);
     qrs.push(buf);
   }
