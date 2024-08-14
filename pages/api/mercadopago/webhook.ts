@@ -14,7 +14,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const id = req.body?.data?.id;
-  console.log("dale", {id, body: req.body})
+  console.log("dale", {id, body: req.body, query: req.query})
   const mercadoPago = await (
     await fetch(`https://api.mercadopago.com/v1/merchant_/${id}`, {
       headers: {
