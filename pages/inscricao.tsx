@@ -87,7 +87,7 @@ function Inscricao() {
       fullName: "asd",
       cpf: "bsdq",
       telefone: "casd",
-      email: "fgs.samuel+10@gmail.com"
+      email: "samuel.fg96@gmail.com"
     }
   });
 
