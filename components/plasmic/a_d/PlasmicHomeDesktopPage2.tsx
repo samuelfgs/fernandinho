@@ -207,7 +207,7 @@ function PlasmicHomeDesktopPage2__RenderFunc(props: {
                   displayWidth={"150px"}
                   loading={"lazy"}
                   src={{
-                    src: "/plasmic/a_d/images/image5.png",
+                    src: "/plasmic/a_d/images/isv.png",
                     fullWidth: 1080,
                     fullHeight: 1080,
                     aspectRatio: undefined

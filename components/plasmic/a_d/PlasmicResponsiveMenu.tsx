@@ -191,6 +191,7 @@ function PlasmicResponsiveMenu__RenderFunc(props: {
               sty.link__npcTs
             )}
             component={Link}
+            href={`/`}
             platform={"nextjs"}
           >
             <PlasmicImg__
@@ -204,7 +205,7 @@ function PlasmicResponsiveMenu__RenderFunc(props: {
               displayWidth={"75px"}
               loading={"lazy"}
               src={{
-                src: "/plasmic/a_d/images/image5.png",
+                src: "/plasmic/a_d/images/isv.png",
                 fullWidth: 1080,
                 fullHeight: 1080,
                 aspectRatio: undefined
@@ -230,6 +231,7 @@ function PlasmicResponsiveMenu__RenderFunc(props: {
                 sty.link__nw5Lv
               )}
               component={Link}
+              href={`/inscricao`}
               platform={"nextjs"}
             >
               {"Fa\u00e7a sua inscri\u00e7\u00e3o"}
@@ -313,7 +315,7 @@ function PlasmicResponsiveMenu__RenderFunc(props: {
                 displayWidth={"50px"}
                 loading={"lazy"}
                 src={{
-                  src: "/plasmic/a_d/images/image5.png",
+                  src: "/plasmic/a_d/images/isv.png",
                   fullWidth: 1080,
                   fullHeight: 1080,
                   aspectRatio: undefined
