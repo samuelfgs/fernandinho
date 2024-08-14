@@ -97,7 +97,7 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  alignItems: "center",
+                  justifyContent: "center",
                   lineHeight: 1.5,
                 }}
               >
