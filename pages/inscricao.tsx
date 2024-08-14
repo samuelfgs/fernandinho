@@ -86,8 +86,8 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
   );
 };
 
-const VIP_PRICE = 70;
-const GERAL_PRICE = 90;
+const VIP_PRICE = 90;
+const GERAL_PRICE = 70;
 
 type InscricaoProps = {
   vipPrice?: number;
