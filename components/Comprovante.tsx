@@ -97,10 +97,12 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
                 style={{
                   display: "flex",
                   flexDirection: "column",
+                  alignItems: "center",
                   lineHeight: 1.5,
                 }}
               >
-                <Text>Começo: 06/10/2024 - 18:00</Text>
+                <Text>06 de outubro de 2024</Text>
+                <Text>18:00</Text>
               </View>
             </View>
             <View
