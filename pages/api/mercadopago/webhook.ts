@@ -13,8 +13,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const id = req.body?.data?.id;
-  console.log("dale", {id, body: req.body, query: req.query})
+  const id = req.query?.["data.id"];
+  const topic = req.query?.type;
+
+  if (topic !== "payment") {
+    res.status(200).json({ q: req.query });
+    return;
+  }
+
   const mercadoPago = await (
     await fetch(`https://api.mercadopago.com/v1/merchant_/${id}`, {
       headers: {
@@ -23,6 +29,7 @@ export default async function handler(
     })
   ).json();
 
+  console.log("dale1", { id, mercadoPago });
   if (mercadoPago.status !== "approved") {
     console.log("dale", "not paid");
     res.status(500).json("not paid");
@@ -34,6 +41,7 @@ export default async function handler(
     .select("*")
     .eq("mercadopago", id);
 
+  console.log("dale2", { id, inscritoData })
   if (inscritoError || inscritoData.length !== 1) {
     throw new Error(inscritoError?.message ?? "Unknown error");
   }
@@ -53,6 +61,7 @@ export default async function handler(
     .eq('id', +mercadoPago.external_reference)
     .select("*");
 
+  console.log("dale3", { id, paymentData });
   if (paymentError || !paymentData || paymentData.length !== 1) {
     console.log("paymentError", { paymentError, paymentData })
     throw new Error(paymentError?.message ?? "Unknown error");
