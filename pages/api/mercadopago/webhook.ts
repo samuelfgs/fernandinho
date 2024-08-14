@@ -2,6 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { sendEmail } from "../email";
+import { updateSheets } from "@/lib/update-sheets";
 
 const supabase = createClient(
   process.env.SUPABASE_URL!,
@@ -38,11 +39,11 @@ export default async function handler(
 
   const mercadoPagoId = mercadoPago.external_reference;
   const { data: inscritoData, error: inscritoError } = await supabase
-    .from('inscritos_fernandinho')
+    .from("inscritos_fernandinho")
     .select("*")
     .eq("mercadoPagoId", mercadoPagoId);
 
-  console.log("dale2", { mercadoPagoId, inscritoData })
+  console.log("dale2", { mercadoPagoId, inscritoData });
   if (inscritoError || inscritoData.length !== 1) {
     throw new Error(inscritoError?.message ?? "Unknown error");
   }
@@ -50,26 +51,26 @@ export default async function handler(
   const inscrito = inscritoData[0];
 
   const { data: paymentData, error: paymentError } = await supabase
-    .from('payments')
-    .upsert({ 
+    .from("payments")
+    .upsert({
       user_id: inscrito.id,
       price: inscrito.ticketTotalPrice,
       paid: true,
       link: mercadoPago.init_point,
       method: mercadoPago.payment_method_id,
       lote: inscrito.lote,
-     })
-    .eq('user_id', inscrito.id )
+    })
+    .eq("user_id", inscrito.id)
     .select("*");
 
   console.log("dale3", { id: inscrito.id, paymentData });
   if (paymentError || !paymentData || paymentData.length !== 1) {
-    console.log("paymentError", { paymentError, paymentData })
+    console.log("paymentError", { paymentError, paymentData });
     throw new Error(paymentError?.message ?? "Unknown error");
   }
 
   if (inscrito.sent_email) {
-    res.status(200).json({...inscrito, already_sent: true});
+    res.status(200).json({ ...inscrito, already_sent: true });
     return;
   }
 
@@ -83,23 +84,24 @@ export default async function handler(
       geral: inscrito.ticketInfo.geral,
       id: `${inscrito.id}`,
     });
-    console.log("dale3", "success", email)
+    console.log("dale3", "success", email);
   } catch (err) {
-    console.log("err3", err)
+    console.log("err3", err);
     res.status(500).json(err);
     return;
   }
 
   const { error: error2 } = await supabase
-    .from('inscritos_fernandinho')
+    .from("inscritos_fernandinho")
     .update({ sent_email: true })
-    .eq('id', inscrito.id)
+    .eq("id", inscrito.id);
 
   if (error2) {
     console.log("error", error2);
     res.status(500).json(error2);
   } else {
-    res.status(200).json(inscrito);
+    const ret = await updateSheets();
+    console.log("dale4", { updateSheets: ret });
+    res.status(200).json({ inscrito, updatedSheet: ret });
   }
-
 }
