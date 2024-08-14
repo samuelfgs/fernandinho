@@ -21,7 +21,7 @@ export default async function handler(
       success: `${process.env.REACT_PUBLIC_ENDPOINT!}/success`
     },
     auto_return: "approved",
-    notification_url: "https://ad20.igrejasv.com/api/mercadopago/webhook/"
+    notification_url: "https://igrejasv.com/api/mercadopago/webhook/"
   }
 
   const response = await preference.create({ body });

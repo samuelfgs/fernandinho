@@ -302,6 +302,16 @@
           "assetId": "v9K2EjBMfgxWsQ5xC6ATsB",
           "type": "projectCss",
           "checksum": "23799f69144ecbf53b37659159cddfc7"
+        },
+        {
+          "type": "renderModule",
+          "assetId": "eVM8JIc_WVvG",
+          "checksum": "0e13aba55474d30b45988bc6889557e7"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "eVM8JIc_WVvG",
+          "checksum": "0e13aba55474d30b45988bc6889557e7"
         }
       ],
       "codegenVersion": "0.0.1"

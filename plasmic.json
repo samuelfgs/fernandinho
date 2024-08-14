@@ -283,6 +283,20 @@
           "cssFilePath": "plasmic/a_d/PlasmicBackgroundDesktop.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "eVM8JIc_WVvG",
+          "name": "Success",
+          "type": "managed",
+          "projectId": "v9K2EjBMfgxWsQ5xC6ATsB",
+          "renderModuleFilePath": "plasmic/a_d/PlasmicSuccess.tsx",
+          "importSpec": {
+            "modulePath": "../pages/success.tsx"
+          },
+          "cssFilePath": "plasmic/a_d/PlasmicSuccess.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/success"
         }
       ],
       "icons": [
