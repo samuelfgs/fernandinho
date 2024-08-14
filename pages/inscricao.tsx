@@ -18,6 +18,7 @@ import FormItem from "@/components/FormItem";
 import { supabase } from "@/components/supabase/supabase";
 import { nanoid } from "nanoid";
 import { useState } from "react";
+import validator from "email-validator";
 
 interface Person {
   fullName: string;
@@ -50,6 +51,7 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
     formState: { errors },
   } = useFormContext();
 
+  console.log("dale", errors);
   return (
     <FormItem
       input={
@@ -57,12 +59,23 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
           name={inputName}
           control={control}
           rules={{
-            required: ERROR_MESSAGE[inputName],
+            ...(inputName !== "email"
+              ? {
+                  required: ERROR_MESSAGE[inputName],
+                }
+              : {
+                  validate: (value) => {
+                    if (validator.validate(value)) {
+                      return true;
+                    }
+                    return ERROR_MESSAGE[inputName];
+                  },
+                }),
           }}
           render={({ field }) => (
             <Input
               {...field}
-              // status={errors[inputName] ? "error" : undefined}
+              status={errors[inputName] ? "error" : undefined}
             />
           )}
         />
@@ -73,27 +86,25 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
   );
 };
 
-const VIP_PRICE = 0.01;
-const GERAL_PRICE = 0.02;
+const VIP_PRICE = 70;
+const GERAL_PRICE = 90;
 
-function Inscricao() {
-  const [vip, setVip] = useState(1);
-  const [geral, setGeral] = useState(2);
+type InscricaoProps = {
+  vipPrice?: number;
+  geralPrice?: number
+}
+function Inscricao({
+  vipPrice = VIP_PRICE,
+  geralPrice = GERAL_PRICE,
+}: InscricaoProps) {
+  const [vip, setVip] = useState(0);
+  const [geral, setGeral] = useState(0);
 
   const router = useRouter();
 
-  const methods = useForm<Person>({
-    defaultValues: {
-      fullName: "asd",
-      cpf: "bsdq",
-      telefone: "casd",
-      email: "samuel.fg96@gmail.com",
-    },
-  });
+  const methods = useForm<Person>({});
 
   const onSubmitHandler: SubmitHandler<Person> = async (newData, e) => {
-    console.log("dalex", newData);
-
     const mercadoPagoId = nanoid() + nanoid();
 
     const response = await fetch(
@@ -114,7 +125,7 @@ function Inscricao() {
                       "Ingressos Pista VIP para o Fernandinho em ISV - 06 de outubro",
                     quantity: vip,
                     currency_id: "BRL",
-                    unit_price: VIP_PRICE,
+                    unit_price: vipPrice,
                   },
                 ]
               : []),
@@ -127,7 +138,7 @@ function Inscricao() {
                       "Ingressos Pista Geral para o Fernandinho em ISV - 06 de outubro",
                     quantity: geral,
                     currency_id: "BRL",
-                    unit_price: GERAL_PRICE,
+                    unit_price: geralPrice,
                   },
                 ]
               : []),
@@ -148,12 +159,12 @@ function Inscricao() {
         mercadoPagoId,
         mercadoPagoLink: responseJson.response.init_point,
         ticketAmount: geral + vip,
-        ticketTotalPrice: geral * GERAL_PRICE + vip * VIP_PRICE,
+        ticketTotalPrice: geral * geralPrice + vip * vipPrice,
         ticketInfo: {
           geral,
           vip,
-          geralPrice: GERAL_PRICE,
-          vipPrice: VIP_PRICE,
+          geralPrice: geralPrice,
+          vipPrice: vipPrice,
           lote: 1,
         },
       })
@@ -163,7 +174,6 @@ function Inscricao() {
       throw new Error(newRow.error?.message ?? "Unknown error");
     }
 
-    console.log("dale", responseJson.response);
     router.push(responseJson.response.init_point);
   };
 
@@ -185,8 +195,8 @@ function Inscricao() {
           isLoading={methods.formState.isSubmitting}
           vip={vip}
           geral={geral}
-          vipPrice={VIP_PRICE}
-          geralPrice={GERAL_PRICE}
+          vipPrice={vipPrice}
+          geralPrice={geralPrice}
           onDecVip={() => setVip((v) => (v > 0 ? v - 1 : v))}
           onDecGeral={() => setGeral((g) => (g > 0 ? g - 1 : g))}
           onIncVip={() => setVip((v) => v + 1)}
