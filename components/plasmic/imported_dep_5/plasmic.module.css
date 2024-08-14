@@ -1,0 +1,1655 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C400%3B0%2C500%3B0%2C700%3B0%2C900&family=Inter%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C400%3B0%2C600%3B0%2C700%3B0%2C900&display=swap");
+
+.plasmic_tokens {
+  --token-KvwRoNxH_VUpY: #fdfdfc;
+  --plasmic-token-sand-1: var(--token-KvwRoNxH_VUpY);
+  --token-adNUy7KO6cCMv: #f9f9f8;
+  --plasmic-token-sand-2: var(--token-adNUy7KO6cCMv);
+  --token-It2otJC60wL8U: #f3f3f2;
+  --plasmic-token-sand-3: var(--token-It2otJC60wL8U);
+  --token-HFkp7-7z7sZzT: #eeeeec;
+  --plasmic-token-sand-4: var(--token-HFkp7-7z7sZzT);
+  --token-SyyoS7qtyFEcJ: #e9e9e6;
+  --plasmic-token-sand-5: var(--token-SyyoS7qtyFEcJ);
+  --token-J0U8QgXD_NQ7E: #e3e3e0;
+  --plasmic-token-sand-6: var(--token-J0U8QgXD_NQ7E);
+  --token-VffypujdvDuLw: #dbdbd7;
+  --plasmic-token-sand-7: var(--token-VffypujdvDuLw);
+  --token-eMIzfwB7MCSX9: #c8c7c1;
+  --plasmic-token-sand-8: var(--token-eMIzfwB7MCSX9);
+  --token-rtQAeFRoBigT1: #90908c;
+  --plasmic-token-sand-9: var(--token-rtQAeFRoBigT1);
+  --token--LRIzf-yz76aF: #868682;
+  --plasmic-token-sand-10: var(--token--LRIzf-yz76aF);
+  --token-nOyz50W5ba07M: #706f6c;
+  --plasmic-token-sand-11: var(--token-nOyz50W5ba07M);
+  --token-0nux_H4urWELK: #1b1b18;
+  --plasmic-token-sand-12: var(--token-0nux_H4urWELK);
+  --token-FNgpkDELmsarq: #161615;
+  --plasmic-token-sand-dark-1: var(--token-FNgpkDELmsarq);
+  --token-4eqX2ql80uT8R: #1c1c1a;
+  --plasmic-token-sand-dark-2: var(--token-4eqX2ql80uT8R);
+  --token-XrQnxoYy_Fnyq: #232320;
+  --plasmic-token-sand-dark-3: var(--token-XrQnxoYy_Fnyq);
+  --token-aR5svrXNQqvtp: #282826;
+  --plasmic-token-sand-dark-4: var(--token-aR5svrXNQqvtp);
+  --token-EMiyA0cTTyVHY: #2e2e2b;
+  --plasmic-token-sand-dark-5: var(--token-EMiyA0cTTyVHY);
+  --token-mjtujSxAbSGGl: #353431;
+  --plasmic-token-sand-dark-6: var(--token-mjtujSxAbSGGl);
+  --token-w0K0_b6Vsgou4: #3e3e3a;
+  --plasmic-token-sand-dark-7: var(--token-w0K0_b6Vsgou4);
+  --token-TrkHFI6mX-prS: #51504b;
+  --plasmic-token-sand-dark-8: var(--token-TrkHFI6mX-prS);
+  --token-HjtQWpYTSAtGd: #717069;
+  --plasmic-token-sand-dark-9: var(--token-HjtQWpYTSAtGd);
+  --token-7Ra5-E9gF60WW: #7f7e77;
+  --plasmic-token-sand-dark-10: var(--token-7Ra5-E9gF60WW);
+  --token-ZBDYOpkh1is-x: #a1a09a;
+  --plasmic-token-sand-dark-11: var(--token-ZBDYOpkh1is-x);
+  --token-X4Wh30WrF3yli: #ededec;
+  --plasmic-token-sand-dark-12: var(--token-X4Wh30WrF3yli);
+  --token-bIxOHysAtrvCG: #fffcfc;
+  --plasmic-token-tomato-1: var(--token-bIxOHysAtrvCG);
+  --token-zYUpVAnRtO57R: #fff8f7;
+  --plasmic-token-tomato-2: var(--token-zYUpVAnRtO57R);
+  --token-csDaW27_2dLs-: #fff0ee;
+  --plasmic-token-tomato-3: var(--token-csDaW27_2dLs-);
+  --token-MnpUj7KQGviUP: #ffe6e2;
+  --plasmic-token-tomato-4: var(--token-MnpUj7KQGviUP);
+  --token-MLoyO9bsdxlLk: #fdd8d3;
+  --plasmic-token-tomato-5: var(--token-MLoyO9bsdxlLk);
+  --token-WGpfs4M0JoBAf: #fac7be;
+  --plasmic-token-tomato-6: var(--token-WGpfs4M0JoBAf);
+  --token-IKCoUK8LLXq_G: #f3b0a2;
+  --plasmic-token-tomato-7: var(--token-IKCoUK8LLXq_G);
+  --token-XCXcqDCTjGBwe: #ea9280;
+  --plasmic-token-tomato-8: var(--token-XCXcqDCTjGBwe);
+  --token-UeytqckwiEaIY: #e54d2e;
+  --plasmic-token-tomato-9: var(--token-UeytqckwiEaIY);
+  --token-hOu6W2okJTCkF: #db4324;
+  --plasmic-token-tomato-10: var(--token-hOu6W2okJTCkF);
+  --token-PoelYDar3hZGw: #ca3214;
+  --plasmic-token-tomato-11: var(--token-PoelYDar3hZGw);
+  --token-zFYxPiV4o0oFg: #341711;
+  --plasmic-token-tomato-12: var(--token-zFYxPiV4o0oFg);
+  --token-YPSkyJdEIQNXv: #1d1412;
+  --plasmic-token-tomato-dark-1: var(--token-YPSkyJdEIQNXv);
+  --token-8U4VhBwpwjhmj: #2a1410;
+  --plasmic-token-tomato-dark-2: var(--token-8U4VhBwpwjhmj);
+  --token-Z9XtmdcoG_EiI: #3b1813;
+  --plasmic-token-tomato-dark-3: var(--token-Z9XtmdcoG_EiI);
+  --token-3r9fUSkrEQUds: #481a14;
+  --plasmic-token-tomato-dark-4: var(--token-3r9fUSkrEQUds);
+  --token-waE3JT9nFvZjQ: #541c15;
+  --plasmic-token-tomato-dark-5: var(--token-waE3JT9nFvZjQ);
+  --token-ATBrOmDPIkVaS: #652016;
+  --plasmic-token-tomato-dark-6: var(--token-ATBrOmDPIkVaS);
+  --token-FbHBkQpJ9-kty: #7f2315;
+  --plasmic-token-tomato-dark-7: var(--token-FbHBkQpJ9-kty);
+  --token-GsOSND22NrWsi: #a42a12;
+  --plasmic-token-tomato-dark-8: var(--token-GsOSND22NrWsi);
+  --token-sIr79Vc66DAn_: #e54d2e;
+  --plasmic-token-tomato-dark-9: var(--token-sIr79Vc66DAn_);
+  --token-lAU7VTgdWZHfr: #ec5e41;
+  --plasmic-token-tomato-dark-10: var(--token-lAU7VTgdWZHfr);
+  --token-R0IezBE8onjbn: #f16a50;
+  --plasmic-token-tomato-dark-11: var(--token-R0IezBE8onjbn);
+  --token-lBO2MKn820prg: #feefec;
+  --plasmic-token-tomato-dark-12: var(--token-lBO2MKn820prg);
+  --token-zG3nDdCCKorah: #fffcfc;
+  --plasmic-token-red-1: var(--token-zG3nDdCCKorah);
+  --token-MTi53Wu9FdIh1: #fff8f8;
+  --plasmic-token-red-2: var(--token-MTi53Wu9FdIh1);
+  --token-jB1cIVV471pAq: #ffefef;
+  --plasmic-token-red-3: var(--token-jB1cIVV471pAq);
+  --token-MnH0ACWaC5-MV: #ffe5e5;
+  --plasmic-token-red-4: var(--token-MnH0ACWaC5-MV);
+  --token-CzuGbklY5Xd69: #fdd8d8;
+  --plasmic-token-red-5: var(--token-CzuGbklY5Xd69);
+  --token-qhvLIowJ_MJeP: #f9c6c6;
+  --plasmic-token-red-6: var(--token-qhvLIowJ_MJeP);
+  --token-fR1rE_Mufthey: #f3aeaf;
+  --plasmic-token-red-7: var(--token-fR1rE_Mufthey);
+  --token-ACMWYAx8Oao_8: #eb9091;
+  --plasmic-token-red-8: var(--token-ACMWYAx8Oao_8);
+  --token-SgwOAGxhWBqDn: #e5484d;
+  --plasmic-token-red-9: var(--token-SgwOAGxhWBqDn);
+  --token-NauMyC0eAHvEG: #dc3d43;
+  --plasmic-token-red-10: var(--token-NauMyC0eAHvEG);
+  --token-A2_corQeQXhDp: #cd2b31;
+  --plasmic-token-red-11: var(--token-A2_corQeQXhDp);
+  --token-Hzbc4DkkJvEEy: #381316;
+  --plasmic-token-red-12: var(--token-Hzbc4DkkJvEEy);
+  --token-HVBqMQfdy0v9P: #1f1315;
+  --plasmic-token-red-dark-1: var(--token-HVBqMQfdy0v9P);
+  --token-JtL6pm_K8AQxG: #291415;
+  --plasmic-token-red-dark-2: var(--token-JtL6pm_K8AQxG);
+  --token--yBqLV8G2p47j: #3c181a;
+  --plasmic-token-red-dark-3: var(--token--yBqLV8G2p47j);
+  --token-Zt67L4RWQiY6S: #481a1d;
+  --plasmic-token-red-dark-4: var(--token-Zt67L4RWQiY6S);
+  --token-ICvlAjDoul7nS: #541b1f;
+  --plasmic-token-red-dark-5: var(--token-ICvlAjDoul7nS);
+  --token-vsFaIxZSeoboJ: #671e22;
+  --plasmic-token-red-dark-6: var(--token-vsFaIxZSeoboJ);
+  --token-Db1KFRCUdwnfK: #822025;
+  --plasmic-token-red-dark-7: var(--token-Db1KFRCUdwnfK);
+  --token-H64AMzIdd6_f2: #aa2429;
+  --plasmic-token-red-dark-8: var(--token-H64AMzIdd6_f2);
+  --token-1kkDVUsrrqIv3: #e5484d;
+  --plasmic-token-red-dark-9: var(--token-1kkDVUsrrqIv3);
+  --token-1fnHL-oCQMuV7: #f2555a;
+  --plasmic-token-red-dark-10: var(--token-1fnHL-oCQMuV7);
+  --token-aNDgbbIstyTIw: #ff6369;
+  --plasmic-token-red-dark-11: var(--token-aNDgbbIstyTIw);
+  --token-rhnWP1Yru9ED8: #feecee;
+  --plasmic-token-red-dark-12: var(--token-rhnWP1Yru9ED8);
+  --token-r5VOOG_2_VN8Y: #fffcfd;
+  --plasmic-token-crimson-1: var(--token-r5VOOG_2_VN8Y);
+  --token-DEzg3ldA4Z0r9: #fff7fb;
+  --plasmic-token-crimson-2: var(--token-DEzg3ldA4Z0r9);
+  --token-eJtH9Si1mACJT: #feeff6;
+  --plasmic-token-crimson-3: var(--token-eJtH9Si1mACJT);
+  --token-a8rKVhkzMonam: #fce5f0;
+  --plasmic-token-crimson-4: var(--token-a8rKVhkzMonam);
+  --token-idIvvZQotfOnI: #f9d8e7;
+  --plasmic-token-crimson-5: var(--token-idIvvZQotfOnI);
+  --token-B1qiZaYah9ZKq: #f4c6db;
+  --plasmic-token-crimson-6: var(--token-B1qiZaYah9ZKq);
+  --token-fCfUGHhT_2r46: #edadc8;
+  --plasmic-token-crimson-7: var(--token-fCfUGHhT_2r46);
+  --token-nFrp8rjrZ729v: #e58fb1;
+  --plasmic-token-crimson-8: var(--token-nFrp8rjrZ729v);
+  --token-i8AAQVvty006K: #e93d82;
+  --plasmic-token-crimson-9: var(--token-i8AAQVvty006K);
+  --token-Iwn5T3N0gqLd8: #e03177;
+  --plasmic-token-crimson-10: var(--token-Iwn5T3N0gqLd8);
+  --token-RyouFZzduX5xH: #d31e66;
+  --plasmic-token-crimson-11: var(--token-RyouFZzduX5xH);
+  --token-plOj8-cZCUEoh: #3d0d1d;
+  --plasmic-token-crimson-12: var(--token-plOj8-cZCUEoh);
+  --token-JzJD_w-YXPhD2: #1d1418;
+  --plasmic-token-crimson-dark-1: var(--token-JzJD_w-YXPhD2);
+  --token-17-_7AfGksKyf: #27141c;
+  --plasmic-token-crimson-dark-2: var(--token-17-_7AfGksKyf);
+  --token-kDRBOjTF7VFtZ: #3c1827;
+  --plasmic-token-crimson-dark-3: var(--token-kDRBOjTF7VFtZ);
+  --token-emikj2tVW02uR: #481a2d;
+  --plasmic-token-crimson-dark-4: var(--token-emikj2tVW02uR);
+  --token-zKQ03j0_7728X: #541b33;
+  --plasmic-token-crimson-dark-5: var(--token-zKQ03j0_7728X);
+  --token-M9_6Jc7foi9jx: #641d3b;
+  --plasmic-token-crimson-dark-6: var(--token-M9_6Jc7foi9jx);
+  --token-6eag_YMPqFrcW: #801d45;
+  --plasmic-token-crimson-dark-7: var(--token-6eag_YMPqFrcW);
+  --token-LRZ9IC-j1qmFr: #ae1955;
+  --plasmic-token-crimson-dark-8: var(--token-LRZ9IC-j1qmFr);
+  --token-IGYXyc4TTjD3V: #e93d82;
+  --plasmic-token-crimson-dark-9: var(--token-IGYXyc4TTjD3V);
+  --token-pIUo0sgXIgt5m: #f04f88;
+  --plasmic-token-crimson-dark-10: var(--token-pIUo0sgXIgt5m);
+  --token-jD4YvhcrpZmR5: #f76190;
+  --plasmic-token-crimson-dark-11: var(--token-jD4YvhcrpZmR5);
+  --token-Te45KXaBY7TTo: #feecf4;
+  --plasmic-token-crimson-dark-12: var(--token-Te45KXaBY7TTo);
+  --token-ruWexAeLybVOO: #fffcfe;
+  --plasmic-token-pink-1: var(--token-ruWexAeLybVOO);
+  --token-7ASqvjecPOQhp: #fff7fc;
+  --plasmic-token-pink-2: var(--token-7ASqvjecPOQhp);
+  --token-OqTXYobRnZcXE: #feeef8;
+  --plasmic-token-pink-3: var(--token-OqTXYobRnZcXE);
+  --token-9Seh0PGif-bpv: #fce5f3;
+  --plasmic-token-pink-4: var(--token-9Seh0PGif-bpv);
+  --token-0XpLoTaBV1Xjx: #f9d8ec;
+  --plasmic-token-pink-5: var(--token-0XpLoTaBV1Xjx);
+  --token-EMdgK8OCG4Zgl: #f3c6e2;
+  --plasmic-token-pink-6: var(--token-EMdgK8OCG4Zgl);
+  --token--PZsk6_S-i5tO: #ecadd4;
+  --plasmic-token-pink-7: var(--token--PZsk6_S-i5tO);
+  --token-_TdgF4bjp1Xkh: #e38ec3;
+  --plasmic-token-pink-8: var(--token-_TdgF4bjp1Xkh);
+  --token-rLm8BPu_WeZWj: #d6409f;
+  --plasmic-token-pink-9: var(--token-rLm8BPu_WeZWj);
+  --token-pLRHvk-_GYQpI: #d23197;
+  --plasmic-token-pink-10: var(--token-pLRHvk-_GYQpI);
+  --token-04OVUHliSNprG: #cd1d8d;
+  --plasmic-token-pink-11: var(--token-04OVUHliSNprG);
+  --token-p5NQqd6Up6m7X: #3b0a2a;
+  --plasmic-token-pink-12: var(--token-p5NQqd6Up6m7X);
+  --token-OUa8rJa_nUgCi: #1f121b;
+  --plasmic-token-pink-dark-1: var(--token-OUa8rJa_nUgCi);
+  --token-z9tHgSWEAwoMZ: #271421;
+  --plasmic-token-pink-dark-2: var(--token-z9tHgSWEAwoMZ);
+  --token-CTqXEjrNrDw0w: #3a182f;
+  --plasmic-token-pink-dark-3: var(--token-CTqXEjrNrDw0w);
+  --token-dyjBHhYpZy8ih: #451a37;
+  --plasmic-token-pink-dark-4: var(--token-dyjBHhYpZy8ih);
+  --token-dEDlosSLaZCK7: #501b3f;
+  --plasmic-token-pink-dark-5: var(--token-dEDlosSLaZCK7);
+  --token-1EYcpCGHD-VPP: #601d48;
+  --plasmic-token-pink-dark-6: var(--token-1EYcpCGHD-VPP);
+  --token-aEaRmb0ODVstG: #7a1d5a;
+  --plasmic-token-pink-dark-7: var(--token-aEaRmb0ODVstG);
+  --token-wjCxZFKAdMsl6: #a71873;
+  --plasmic-token-pink-dark-8: var(--token-wjCxZFKAdMsl6);
+  --token-Wd6rfAnVvO0AK: #d6409f;
+  --plasmic-token-pink-dark-9: var(--token-Wd6rfAnVvO0AK);
+  --token-L5iiO3c2_lpwQ: #e34ba9;
+  --plasmic-token-pink-dark-10: var(--token-L5iiO3c2_lpwQ);
+  --token-SlxwqL7Deyqrw: #f65cb6;
+  --plasmic-token-pink-dark-11: var(--token-SlxwqL7Deyqrw);
+  --token-QAZt2tl-YMCJC: #feebf7;
+  --plasmic-token-pink-dark-12: var(--token-QAZt2tl-YMCJC);
+  --token-ykCjVxcNWzLy2: #fefcff;
+  --plasmic-token-plum-1: var(--token-ykCjVxcNWzLy2);
+  --token-Ej56yHjyjVnbM: #fff8ff;
+  --plasmic-token-plum-2: var(--token-Ej56yHjyjVnbM);
+  --token-IT3V_4qLT4ZJG: #fceffc;
+  --plasmic-token-plum-3: var(--token-IT3V_4qLT4ZJG);
+  --token-M8Tomr4mRfoww: #f9e5f9;
+  --plasmic-token-plum-4: var(--token-M8Tomr4mRfoww);
+  --token-Uy3yJMwrX9S0T: #f3d9f4;
+  --plasmic-token-plum-5: var(--token-Uy3yJMwrX9S0T);
+  --token-zXzWenppQ_Sdz: #ebc8ed;
+  --plasmic-token-plum-6: var(--token-zXzWenppQ_Sdz);
+  --token-5wmPfpIVEQz05: #dfafe3;
+  --plasmic-token-plum-7: var(--token-5wmPfpIVEQz05);
+  --token-x1ZrukftDKBwQ: #cf91d8;
+  --plasmic-token-plum-8: var(--token-x1ZrukftDKBwQ);
+  --token-Cc0cZrOxRNd9-: #ab4aba;
+  --plasmic-token-plum-9: var(--token-Cc0cZrOxRNd9-);
+  --token-bFKtZacGgNoQ4: #a43cb4;
+  --plasmic-token-plum-10: var(--token-bFKtZacGgNoQ4);
+  --token-uwZN_y-jKge5f: #9c2bad;
+  --plasmic-token-plum-11: var(--token-uwZN_y-jKge5f);
+  --token-k9bNIPIXybONH: #340c3b;
+  --plasmic-token-plum-12: var(--token-k9bNIPIXybONH);
+  --token-LYUXEc026Peax: #1d131d;
+  --plasmic-token-plum-dark-1: var(--token-LYUXEc026Peax);
+  --token-hDjinU6J0a67P: #251425;
+  --plasmic-token-plum-dark-2: var(--token-hDjinU6J0a67P);
+  --token-glO-qRIp1796A: #341a34;
+  --plasmic-token-plum-dark-3: var(--token-glO-qRIp1796A);
+  --token-O55D0P9NPKjW0: #3e1d40;
+  --plasmic-token-plum-dark-4: var(--token-O55D0P9NPKjW0);
+  --token-njW1oFg_w225w: #48214b;
+  --plasmic-token-plum-dark-5: var(--token-njW1oFg_w225w);
+  --token-luFvhS-WFr_BB: #542658;
+  --plasmic-token-plum-dark-6: var(--token-luFvhS-WFr_BB);
+  --token-bTUsFKKJ8IBNk: #692d6f;
+  --plasmic-token-plum-dark-7: var(--token-bTUsFKKJ8IBNk);
+  --token-AUsgRkVnAQm75: #883894;
+  --plasmic-token-plum-dark-8: var(--token-AUsgRkVnAQm75);
+  --token-e2OZIwoOJvqKP: #ab4aba;
+  --plasmic-token-plum-dark-9: var(--token-e2OZIwoOJvqKP);
+  --token-xvXeLkfpybEkV: #bd54c6;
+  --plasmic-token-plum-dark-10: var(--token-xvXeLkfpybEkV);
+  --token-Vibc3_0NHT3Fa: #d864d8;
+  --plasmic-token-plum-dark-11: var(--token-Vibc3_0NHT3Fa);
+  --token-Godvfs8Abcj4p: #fbecfc;
+  --plasmic-token-plum-dark-12: var(--token-Godvfs8Abcj4p);
+  --token-kqqZY5RJ74_H2: #fefcfe;
+  --plasmic-token-purple-1: var(--token-kqqZY5RJ74_H2);
+  --token-tDj4qWmcj9jR_: #fdfaff;
+  --plasmic-token-purple-2: var(--token-tDj4qWmcj9jR_);
+  --token-ukPmjrj_C4saz: #f9f1fe;
+  --plasmic-token-purple-3: var(--token-ukPmjrj_C4saz);
+  --token-NWWpfhcveWW2e: #f3e7fc;
+  --plasmic-token-purple-4: var(--token-NWWpfhcveWW2e);
+  --token-xosK92H5p1QkH: #eddbf9;
+  --plasmic-token-purple-5: var(--token-xosK92H5p1QkH);
+  --token-BmezUn7Tds2dY: #e3ccf4;
+  --plasmic-token-purple-6: var(--token-BmezUn7Tds2dY);
+  --token-HpJRJvnj7zHda: #d3b4ed;
+  --plasmic-token-purple-7: var(--token-HpJRJvnj7zHda);
+  --token-OwwIRd8K2Rrvz: #be93e4;
+  --plasmic-token-purple-8: var(--token-OwwIRd8K2Rrvz);
+  --token-eqFWLvJpRgQPG: #8e4ec6;
+  --plasmic-token-purple-9: var(--token-eqFWLvJpRgQPG);
+  --token-7nKfxpRnygkH2: #8445bc;
+  --plasmic-token-purple-10: var(--token-7nKfxpRnygkH2);
+  --token-92gMYH5bQD0Dt: #793aaf;
+  --plasmic-token-purple-11: var(--token-92gMYH5bQD0Dt);
+  --token-Eymf7N2XQ0jjg: #2b0e44;
+  --plasmic-token-purple-12: var(--token-Eymf7N2XQ0jjg);
+  --token-niWDKfcZrCqez: #1b141d;
+  --plasmic-token-purple-dark-1: var(--token-niWDKfcZrCqez);
+  --token-E03w7l3rR_Nl_: #221527;
+  --plasmic-token-purple-dark-2: var(--token-E03w7l3rR_Nl_);
+  --token-iPgWsfCZguB8z: #301a3a;
+  --plasmic-token-purple-dark-3: var(--token-iPgWsfCZguB8z);
+  --token-TQPpTtOLGHwBh: #3a1e48;
+  --plasmic-token-purple-dark-4: var(--token-TQPpTtOLGHwBh);
+  --token-fOdTxWhWHxyTj: #432155;
+  --plasmic-token-purple-dark-5: var(--token-fOdTxWhWHxyTj);
+  --token-FAU3tZ3KATX-s: #4e2667;
+  --plasmic-token-purple-dark-6: var(--token-FAU3tZ3KATX-s);
+  --token-dCgLD4aFHyrTK: #5f2d84;
+  --plasmic-token-purple-dark-7: var(--token-dCgLD4aFHyrTK);
+  --token-SXEghXmN1jF4Q: #7938b2;
+  --plasmic-token-purple-dark-8: var(--token-SXEghXmN1jF4Q);
+  --token-RD3U2H9-ByikE: #8e4ec6;
+  --plasmic-token-purple-dark-9: var(--token-RD3U2H9-ByikE);
+  --token-jX5gZm9ME3D7l: #9d5bd2;
+  --plasmic-token-purple-dark-10: var(--token-jX5gZm9ME3D7l);
+  --token-Tu6wJt2eOOMPN: #bf7af0;
+  --plasmic-token-purple-dark-11: var(--token-Tu6wJt2eOOMPN);
+  --token-wzqLMoHRs5Pv2: #f7ecfc;
+  --plasmic-token-purple-dark-12: var(--token-wzqLMoHRs5Pv2);
+  --token-LKqzTH86wJC8z: #fdfcfe;
+  --plasmic-token-violet-1: var(--token-LKqzTH86wJC8z);
+  --token-1enLiB6zGcZVN: #fbfaff;
+  --plasmic-token-violet-2: var(--token-1enLiB6zGcZVN);
+  --token-dZdZdw_ByA2xU: #f5f2ff;
+  --plasmic-token-violet-3: var(--token-dZdZdw_ByA2xU);
+  --token--jfRXlCQteLBo: #ede9fe;
+  --plasmic-token-violet-4: var(--token--jfRXlCQteLBo);
+  --token-PZXVSFGz3kQFZ: #e4defc;
+  --plasmic-token-violet-5: var(--token-PZXVSFGz3kQFZ);
+  --token-r72T81ESojceE: #d7cff9;
+  --plasmic-token-violet-6: var(--token-r72T81ESojceE);
+  --token-i4b_4OtccHrd6: #c4b8f3;
+  --plasmic-token-violet-7: var(--token-i4b_4OtccHrd6);
+  --token-xfXaRlsQZN6YX: #aa99ec;
+  --plasmic-token-violet-8: var(--token-xfXaRlsQZN6YX);
+  --token-RoIlPdn7iNkZJ: #6e56cf;
+  --plasmic-token-violet-9: var(--token-RoIlPdn7iNkZJ);
+  --token-y4eJ9kIgejPUu: #644fc1;
+  --plasmic-token-violet-10: var(--token-y4eJ9kIgejPUu);
+  --token-r7xHo3teKfV6h: #5746af;
+  --plasmic-token-violet-11: var(--token-r7xHo3teKfV6h);
+  --token-B7kwfMwax8D8n: #20134b;
+  --plasmic-token-violet-12: var(--token-B7kwfMwax8D8n);
+  --token-3K65geMA0fsIk: #17151f;
+  --plasmic-token-violet-dark-1: var(--token-3K65geMA0fsIk);
+  --token-IuPfR8vcM_Lug: #1c172b;
+  --plasmic-token-violet-dark-2: var(--token-IuPfR8vcM_Lug);
+  --token-Yi6kie3ftx66d: #251e40;
+  --plasmic-token-violet-dark-3: var(--token-Yi6kie3ftx66d);
+  --token-iuaohEIBfsnah: #2c2250;
+  --plasmic-token-violet-dark-4: var(--token-iuaohEIBfsnah);
+  --token-Ehtbdx3Yj0d4M: #32275f;
+  --plasmic-token-violet-dark-5: var(--token-Ehtbdx3Yj0d4M);
+  --token-8N82WcE_zv80t: #392c72;
+  --plasmic-token-violet-dark-6: var(--token-8N82WcE_zv80t);
+  --token-5RuutTbwCcSpW: #443592;
+  --plasmic-token-violet-dark-7: var(--token-5RuutTbwCcSpW);
+  --token-bU8eVX30I30-k: #5842c3;
+  --plasmic-token-violet-dark-8: var(--token-bU8eVX30I30-k);
+  --token-r_vEnQhSX5trx: #6e56cf;
+  --plasmic-token-violet-dark-9: var(--token-r_vEnQhSX5trx);
+  --token-y4qLhONCWUloh: #7c66dc;
+  --plasmic-token-violet-dark-10: var(--token-y4qLhONCWUloh);
+  --token-BU-WSutZlfSPQ: #9e8cfc;
+  --plasmic-token-violet-dark-11: var(--token-BU-WSutZlfSPQ);
+  --token-NrNNcYF18Umfi: #f1eefe;
+  --plasmic-token-violet-dark-12: var(--token-NrNNcYF18Umfi);
+  --token-gdLVAtOENm8o-: #fdfdfe;
+  --plasmic-token-indigo-1: var(--token-gdLVAtOENm8o-);
+  --token-zTmMvQy1-tO8x: #f8faff;
+  --plasmic-token-indigo-2: var(--token-zTmMvQy1-tO8x);
+  --token-7mASg52CUyFcb: #f0f4ff;
+  --plasmic-token-indigo-3: var(--token-7mASg52CUyFcb);
+  --token-SaPRwUuUsDa1-: #e6edfe;
+  --plasmic-token-indigo-4: var(--token-SaPRwUuUsDa1-);
+  --token--zOwOa3PybYUn: #d9e2fc;
+  --plasmic-token-indigo-5: var(--token--zOwOa3PybYUn);
+  --token-2onA5rWGn7LEr: #c6d4f9;
+  --plasmic-token-indigo-6: var(--token-2onA5rWGn7LEr);
+  --token-xKFhWsmcTAxWv: #aec0f5;
+  --plasmic-token-indigo-7: var(--token-xKFhWsmcTAxWv);
+  --token-2YuwKezDLzJdg: #8da4ef;
+  --plasmic-token-indigo-8: var(--token-2YuwKezDLzJdg);
+  --token-845X0sPPtoHmi: #3e63dd;
+  --plasmic-token-indigo-9: var(--token-845X0sPPtoHmi);
+  --token-uiodc5MrCeSx1: #3a5ccc;
+  --plasmic-token-indigo-10: var(--token-uiodc5MrCeSx1);
+  --token-lrnL9gc9jCJxA: #3451b2;
+  --plasmic-token-indigo-11: var(--token-lrnL9gc9jCJxA);
+  --token-TzqLD1KtmZKNJ: #101d46;
+  --plasmic-token-indigo-12: var(--token-TzqLD1KtmZKNJ);
+  --token-06XIoM21aNznU: #131620;
+  --plasmic-token-indigo-dark-1: var(--token-06XIoM21aNznU);
+  --token-1nOuMKjAegKa8: #15192d;
+  --plasmic-token-indigo-dark-2: var(--token-1nOuMKjAegKa8);
+  --token-nL9N28_6hGMOc: #192140;
+  --plasmic-token-indigo-dark-3: var(--token-nL9N28_6hGMOc);
+  --token-m0N5Ldaup2Csq: #1c274f;
+  --plasmic-token-indigo-dark-4: var(--token-m0N5Ldaup2Csq);
+  --token-JfBen8XoRqbmM: #1f2c5c;
+  --plasmic-token-indigo-dark-5: var(--token-JfBen8XoRqbmM);
+  --token-IT36exWDNY4e1: #22346e;
+  --plasmic-token-indigo-dark-6: var(--token-IT36exWDNY4e1);
+  --token-_ogtQL9HFS1CZ: #273e89;
+  --plasmic-token-indigo-dark-7: var(--token-_ogtQL9HFS1CZ);
+  --token-5u0jzNU6x42YE: #2f4eb2;
+  --plasmic-token-indigo-dark-8: var(--token-5u0jzNU6x42YE);
+  --token-LQC1fXELZxoFi: #3e63dd;
+  --plasmic-token-indigo-dark-9: var(--token-LQC1fXELZxoFi);
+  --token-D_SaxxKgUJFVp: #5373e7;
+  --plasmic-token-indigo-dark-10: var(--token-D_SaxxKgUJFVp);
+  --token-oToghkN0yMnft: #849dff;
+  --plasmic-token-indigo-dark-11: var(--token-oToghkN0yMnft);
+  --token-spAgDD40ULbt5: #eef1fd;
+  --plasmic-token-indigo-dark-12: var(--token-spAgDD40ULbt5);
+  --token-0qWZ2BwCRWrzN: #fbfdff;
+  --plasmic-token-blue-1: var(--token-0qWZ2BwCRWrzN);
+  --token-9FlE6IJ6kJLuX: #f5faff;
+  --plasmic-token-blue-2: var(--token-9FlE6IJ6kJLuX);
+  --token-kVCuj439vJX4L: #edf6ff;
+  --plasmic-token-blue-3: var(--token-kVCuj439vJX4L);
+  --token-GT3Ewogw5DWgo: #e1f0ff;
+  --plasmic-token-blue-4: var(--token-GT3Ewogw5DWgo);
+  --token-p457eUFtkpvTL: #cee7fe;
+  --plasmic-token-blue-5: var(--token-p457eUFtkpvTL);
+  --token-cST2W9sZwffhz: #b7d9f8;
+  --plasmic-token-blue-6: var(--token-cST2W9sZwffhz);
+  --token-nCwSK3FzK8qFe: #96c7f2;
+  --plasmic-token-blue-7: var(--token-nCwSK3FzK8qFe);
+  --token-8_NV37_zIdOpz: #5eb0ef;
+  --plasmic-token-blue-8: var(--token-8_NV37_zIdOpz);
+  --token-l5rK9o3G0nzZd: #0091ff;
+  --plasmic-token-blue-9: var(--token-l5rK9o3G0nzZd);
+  --token-A_28tDn0DTBHI: #0081f1;
+  --plasmic-token-blue-10: var(--token-A_28tDn0DTBHI);
+  --token-ThnFxYwNOaz4P: #006adc;
+  --plasmic-token-blue-11: var(--token-ThnFxYwNOaz4P);
+  --token-0kI3JlBolqyCq: #00254d;
+  --plasmic-token-blue-12: var(--token-0kI3JlBolqyCq);
+  --token-EuMGbyMG_amRv: #0f1720;
+  --plasmic-token-blue-dark-1: var(--token-EuMGbyMG_amRv);
+  --token-03CYYUAJ0Y4QG: #0f1b2d;
+  --plasmic-token-blue-dark-2: var(--token-03CYYUAJ0Y4QG);
+  --token-dsCLLrHfq3590: #10243e;
+  --plasmic-token-blue-dark-3: var(--token-dsCLLrHfq3590);
+  --token-RMp4-ZrG0sYHL: #102a4c;
+  --plasmic-token-blue-dark-4: var(--token-RMp4-ZrG0sYHL);
+  --token-N4U5swzWvqhK2: #0f3058;
+  --plasmic-token-blue-dark-5: var(--token-N4U5swzWvqhK2);
+  --token-v3Cc5ycnQxqA-: #0d3868;
+  --plasmic-token-blue-dark-6: var(--token-v3Cc5ycnQxqA-);
+  --token-dWi_aRklcYdsE: #0a4481;
+  --plasmic-token-blue-dark-7: var(--token-dWi_aRklcYdsE);
+  --token-BWKzemqu0gzSE: #0954a5;
+  --plasmic-token-blue-dark-8: var(--token-BWKzemqu0gzSE);
+  --token-ULSWGLb9N229A: #0091ff;
+  --plasmic-token-blue-dark-9: var(--token-ULSWGLb9N229A);
+  --token-sRHUsTcyytmeak: #369eff;
+  --plasmic-token-blue-dark-10: var(--token-sRHUsTcyytmeak);
+  --token-Y3yBrHFgEepsjt: #52a9ff;
+  --plasmic-token-blue-dark-11: var(--token-Y3yBrHFgEepsjt);
+  --token-Zq1pTiTEvrAkYV: #eaf6ff;
+  --plasmic-token-blue-dark-12: var(--token-Zq1pTiTEvrAkYV);
+  --token-mQvb7ojDz1FUbC: #fafdfe;
+  --plasmic-token-cyan-1: var(--token-mQvb7ojDz1FUbC);
+  --token-J27G-gWcwtbA8X: #f2fcfd;
+  --plasmic-token-cyan-2: var(--token-J27G-gWcwtbA8X);
+  --token-6B6TwDPhUCqPpK: #e7f9fb;
+  --plasmic-token-cyan-3: var(--token-6B6TwDPhUCqPpK);
+  --token-1ybTzpBT4_TQF6: #d8f3f6;
+  --plasmic-token-cyan-4: var(--token-1ybTzpBT4_TQF6);
+  --token-EdpT_-Wm_Esfnc: #c4eaef;
+  --plasmic-token-cyan-5: var(--token-EdpT_-Wm_Esfnc);
+  --token-jNLfv8rD1rWii4: #aadee6;
+  --plasmic-token-cyan-6: var(--token-jNLfv8rD1rWii4);
+  --token-bmsfQAgr6_N3Mm: #84cdda;
+  --plasmic-token-cyan-7: var(--token-bmsfQAgr6_N3Mm);
+  --token-saQx-3ephIt-ya: #3db9cf;
+  --plasmic-token-cyan-8: var(--token-saQx-3ephIt-ya);
+  --token-L1mJKI1CbMjtDG: #05a2c2;
+  --plasmic-token-cyan-9: var(--token-L1mJKI1CbMjtDG);
+  --token-H35s_SfJRnkWiW: #0894b3;
+  --plasmic-token-cyan-10: var(--token-H35s_SfJRnkWiW);
+  --token-dLQ-pseuwGNltD: #0c7792;
+  --plasmic-token-cyan-11: var(--token-dLQ-pseuwGNltD);
+  --token-FlRLvUhAcAyS50: #04313c;
+  --plasmic-token-cyan-12: var(--token-FlRLvUhAcAyS50);
+  --token-qxNysp8pW6y-_g: #07191d;
+  --plasmic-token-cyan-dark-1: var(--token-qxNysp8pW6y-_g);
+  --token-2btDddv0jQtevM: #061e24;
+  --plasmic-token-cyan-dark-2: var(--token-2btDddv0jQtevM);
+  --token-Tt3WHz5wlkxH1w: #072830;
+  --plasmic-token-cyan-dark-3: var(--token-Tt3WHz5wlkxH1w);
+  --token-4jvARmsnJ4fyFp: #07303b;
+  --plasmic-token-cyan-dark-4: var(--token-4jvARmsnJ4fyFp);
+  --token-25-itA608R_SZX: #073844;
+  --plasmic-token-cyan-dark-5: var(--token-25-itA608R_SZX);
+  --token-pPy0j1UYKpSy9T: #064150;
+  --plasmic-token-cyan-dark-6: var(--token-pPy0j1UYKpSy9T);
+  --token-LpTrd2t7hnlxZd: #045063;
+  --plasmic-token-cyan-dark-7: var(--token-LpTrd2t7hnlxZd);
+  --token-apQFqYD4KqH19B: #00647d;
+  --plasmic-token-cyan-dark-8: var(--token-apQFqYD4KqH19B);
+  --token-6rbFsk2WJ2_1EK: #05a2c2;
+  --plasmic-token-cyan-dark-9: var(--token-6rbFsk2WJ2_1EK);
+  --token-YS1wLSC2nDShnc: #00b1cc;
+  --plasmic-token-cyan-dark-10: var(--token-YS1wLSC2nDShnc);
+  --token-cWNseN_KeDG7SN: #00c2d7;
+  --plasmic-token-cyan-dark-11: var(--token-cWNseN_KeDG7SN);
+  --token-9933NRWvs68H7g: #e1f8fa;
+  --plasmic-token-cyan-dark-12: var(--token-9933NRWvs68H7g);
+  --token-DUixhpxXbVgkmM: #fafefd;
+  --plasmic-token-teal-1: var(--token-DUixhpxXbVgkmM);
+  --token-KU6RlCQjotbhSO: #f1fcfa;
+  --plasmic-token-teal-2: var(--token-KU6RlCQjotbhSO);
+  --token-JpfSSTEFDtYHse: #e7f9f5;
+  --plasmic-token-teal-3: var(--token-JpfSSTEFDtYHse);
+  --token-gqsTV3vBVnAiGP: #d9f3ee;
+  --plasmic-token-teal-4: var(--token-gqsTV3vBVnAiGP);
+  --token-Kk-WaSlyE1nE5D: #c7ebe5;
+  --plasmic-token-teal-5: var(--token-Kk-WaSlyE1nE5D);
+  --token-Y89U4mac84RzR6: #afdfd7;
+  --plasmic-token-teal-6: var(--token-Y89U4mac84RzR6);
+  --token-T55O-QQZIlVU2R: #8dcec3;
+  --plasmic-token-teal-7: var(--token-T55O-QQZIlVU2R);
+  --token-NlJRSEL-O-G0yE: #53b9ab;
+  --plasmic-token-teal-8: var(--token-NlJRSEL-O-G0yE);
+  --token-etRYsU9CykE9IN: #12a594;
+  --plasmic-token-teal-9: var(--token-etRYsU9CykE9IN);
+  --token-6deleEhQADpqid: #0e9888;
+  --plasmic-token-teal-10: var(--token-6deleEhQADpqid);
+  --token-H8Sy9JMPgHlqRn: #067a6f;
+  --plasmic-token-teal-11: var(--token-H8Sy9JMPgHlqRn);
+  --token-NBACDl5ac5Pmk4: #10302b;
+  --plasmic-token-teal-12: var(--token-NBACDl5ac5Pmk4);
+  --token-BWhp0YdUkZ5dxz: #091915;
+  --plasmic-token-teal-dark-1: var(--token-BWhp0YdUkZ5dxz);
+  --token-Le9gJL87UbMGR4: #04201b;
+  --plasmic-token-teal-dark-2: var(--token-Le9gJL87UbMGR4);
+  --token-hNH5eR6-D4-3da: #062923;
+  --plasmic-token-teal-dark-3: var(--token-hNH5eR6-D4-3da);
+  --token-nrnt4m41SOY0M4: #07312b;
+  --plasmic-token-teal-dark-4: var(--token-nrnt4m41SOY0M4);
+  --token-C7TcdarL--w-fW: #083932;
+  --plasmic-token-teal-dark-5: var(--token-C7TcdarL--w-fW);
+  --token-HR66Gjm38rtReF: #09443c;
+  --plasmic-token-teal-dark-6: var(--token-HR66Gjm38rtReF);
+  --token-FgiU-YbzNKHrYL: #0b544a;
+  --plasmic-token-teal-dark-7: var(--token-FgiU-YbzNKHrYL);
+  --token-VbN9R-32GvXswE: #0c6d62;
+  --plasmic-token-teal-dark-8: var(--token-VbN9R-32GvXswE);
+  --token-AFjd3y6lXdnWOv: #12a594;
+  --plasmic-token-teal-dark-9: var(--token-AFjd3y6lXdnWOv);
+  --token-pkvuXCCq_SNUvJ: #10b3a3;
+  --plasmic-token-teal-dark-10: var(--token-pkvuXCCq_SNUvJ);
+  --token-ND9SVqYwH1pl_K: #0ac5b3;
+  --plasmic-token-teal-dark-11: var(--token-ND9SVqYwH1pl_K);
+  --token-jHSqmL44cthXA0: #e1faf4;
+  --plasmic-token-teal-dark-12: var(--token-jHSqmL44cthXA0);
+  --token-UTCnWvLPh4pCUK: #fbfefc;
+  --plasmic-token-green-1: var(--token-UTCnWvLPh4pCUK);
+  --token-NahnQMTC84O4is: #f2fcf5;
+  --plasmic-token-green-2: var(--token-NahnQMTC84O4is);
+  --token-6CE08aI4TilQzG: #e9f9ee;
+  --plasmic-token-green-3: var(--token-6CE08aI4TilQzG);
+  --token-9xXrrHvgWdTr8K: #ddf3e4;
+  --plasmic-token-green-4: var(--token-9xXrrHvgWdTr8K);
+  --token-ftGZ2kCXRB8BNA: #ccebd7;
+  --plasmic-token-green-5: var(--token-ftGZ2kCXRB8BNA);
+  --token-EtJfcHzWAJ5xK7: #b4dfc4;
+  --plasmic-token-green-6: var(--token-EtJfcHzWAJ5xK7);
+  --token-zrnTveFKzCCbRC: #92ceac;
+  --plasmic-token-green-7: var(--token-zrnTveFKzCCbRC);
+  --token-USpS_ivCcqFzPi: #5bb98c;
+  --plasmic-token-green-8: var(--token-USpS_ivCcqFzPi);
+  --token-V4Ab-fwp_kGNnm: #30a46c;
+  --plasmic-token-green-9: var(--token-V4Ab-fwp_kGNnm);
+  --token-yTyaMQMsxxifUD: #299764;
+  --plasmic-token-green-10: var(--token-yTyaMQMsxxifUD);
+  --token-GDRRKUQBtHsOGH: #18794e;
+  --plasmic-token-green-11: var(--token-GDRRKUQBtHsOGH);
+  --token--LlsGX3LlyM1aa: #153226;
+  --plasmic-token-green-12: var(--token--LlsGX3LlyM1aa);
+  --token-t-WFSUhksgMEfi: #0d1912;
+  --plasmic-token-green-dark-1: var(--token-t-WFSUhksgMEfi);
+  --token-FJ2biV7THVHwQ1: #0c1f17;
+  --plasmic-token-green-dark-2: var(--token-FJ2biV7THVHwQ1);
+  --token-UWVrjGfHPSumIS: #0f291e;
+  --plasmic-token-green-dark-3: var(--token-UWVrjGfHPSumIS);
+  --token-W61YCYrdIg9Ci7: #113123;
+  --plasmic-token-green-dark-4: var(--token-W61YCYrdIg9Ci7);
+  --token-Wwr4nGQV5KEIeS: #133929;
+  --plasmic-token-green-dark-5: var(--token-Wwr4nGQV5KEIeS);
+  --token-a5GnzckQLi4tJv: #164430;
+  --plasmic-token-green-dark-6: var(--token-a5GnzckQLi4tJv);
+  --token-_yy59riMSQfLoI: #1b543a;
+  --plasmic-token-green-dark-7: var(--token-_yy59riMSQfLoI);
+  --token-iF-grmeorFSqAF: #236e4a;
+  --plasmic-token-green-dark-8: var(--token-iF-grmeorFSqAF);
+  --token-56_3J9IdYYrb8a: #30a46c;
+  --plasmic-token-green-dark-9: var(--token-56_3J9IdYYrb8a);
+  --token-0llJg1I-MMPlaQ: #3cb179;
+  --plasmic-token-green-dark-10: var(--token-0llJg1I-MMPlaQ);
+  --token-Cku_uVRIE5LAbI: #4cc38a;
+  --plasmic-token-green-dark-11: var(--token-Cku_uVRIE5LAbI);
+  --token-A-qawIE5OEllrF: #e5fbeb;
+  --plasmic-token-green-dark-12: var(--token-A-qawIE5OEllrF);
+  --token-OIBaQUJiWHzTqE: #fbfefb;
+  --plasmic-token-grass-1: var(--token-OIBaQUJiWHzTqE);
+  --token-QC0RxUxsIuhXWb: #f3fcf3;
+  --plasmic-token-grass-2: var(--token-QC0RxUxsIuhXWb);
+  --token-sBE55FI2Avo_wL: #ebf9eb;
+  --plasmic-token-grass-3: var(--token-sBE55FI2Avo_wL);
+  --token-XLWPKhix-MdANu: #dff3df;
+  --plasmic-token-grass-4: var(--token-XLWPKhix-MdANu);
+  --token-gLRniWcJ3Mrzer: #ceebcf;
+  --plasmic-token-grass-5: var(--token-gLRniWcJ3Mrzer);
+  --token-BbWcyIX3y1So97: #b7dfba;
+  --plasmic-token-grass-6: var(--token-BbWcyIX3y1So97);
+  --token-5VQirxE4DgErxt: #97cf9c;
+  --plasmic-token-grass-7: var(--token-5VQirxE4DgErxt);
+  --token-DzwR0lulz8c06J: #65ba75;
+  --plasmic-token-grass-8: var(--token-DzwR0lulz8c06J);
+  --token-tSz5e8FX1zJ2eF: #46a758;
+  --plasmic-token-grass-9: var(--token-tSz5e8FX1zJ2eF);
+  --token-zFJNbLFcg2yul4: #3d9a50;
+  --plasmic-token-grass-10: var(--token-zFJNbLFcg2yul4);
+  --token-c4gB8RCPZqNC0m: #297c3b;
+  --plasmic-token-grass-11: var(--token-c4gB8RCPZqNC0m);
+  --token-vlmE1719vKQZYX: #1b311e;
+  --plasmic-token-grass-12: var(--token-vlmE1719vKQZYX);
+  --token-YoHmExishE-cSJ: #0d1912;
+  --plasmic-token-grass-dark-1: var(--token-YoHmExishE-cSJ);
+  --token-KKrI7vdzOB_RFL: #0f1e13;
+  --plasmic-token-grass-dark-2: var(--token-KKrI7vdzOB_RFL);
+  --token-d5qc3R5g12hhZK: #132819;
+  --plasmic-token-grass-dark-3: var(--token-d5qc3R5g12hhZK);
+  --token-KaJxzyschDd2CE: #16301d;
+  --plasmic-token-grass-dark-4: var(--token-KaJxzyschDd2CE);
+  --token-AgYhdba19cXQ19: #193921;
+  --plasmic-token-grass-dark-5: var(--token-AgYhdba19cXQ19);
+  --token-XYB3N44wzmurtR: #1d4427;
+  --plasmic-token-grass-dark-6: var(--token-XYB3N44wzmurtR);
+  --token-40BRXmYMrZ0Yjz: #245530;
+  --plasmic-token-grass-dark-7: var(--token-40BRXmYMrZ0Yjz);
+  --token-X3FRFan0p6NAA0: #2f6e3b;
+  --plasmic-token-grass-dark-8: var(--token-X3FRFan0p6NAA0);
+  --token-Y22eM-fzFCn0Xm: #46a758;
+  --plasmic-token-grass-dark-9: var(--token-Y22eM-fzFCn0Xm);
+  --token-cC0JR2YH-qVgMI: #55b467;
+  --plasmic-token-grass-dark-10: var(--token-cC0JR2YH-qVgMI);
+  --token-zEXMVNEL_xjH9h: #63c174;
+  --plasmic-token-grass-dark-11: var(--token-zEXMVNEL_xjH9h);
+  --token-X90rJtaRn9EBQ-: #e5fbeb;
+  --plasmic-token-grass-dark-12: var(--token-X90rJtaRn9EBQ-);
+  --token-RTXg8gtBPgheQT: #fefcfb;
+  --plasmic-token-orange-1: var(--token-RTXg8gtBPgheQT);
+  --token-Ba4maqtIiE6bex: #fef8f4;
+  --plasmic-token-orange-2: var(--token-Ba4maqtIiE6bex);
+  --token-zr-G3X-DmGz8RO: #fff1e7;
+  --plasmic-token-orange-3: var(--token-zr-G3X-DmGz8RO);
+  --token-51d9dY5GTBvhDe: #ffe8d7;
+  --plasmic-token-orange-4: var(--token-51d9dY5GTBvhDe);
+  --token-vIwpBDwSfw3Pg9: #ffdcc3;
+  --plasmic-token-orange-5: var(--token-vIwpBDwSfw3Pg9);
+  --token-ITvLsZtJAhIq_7: #ffcca7;
+  --plasmic-token-orange-6: var(--token-ITvLsZtJAhIq_7);
+  --token-kCTBwLlg2j6jPr: #ffb381;
+  --plasmic-token-orange-7: var(--token-kCTBwLlg2j6jPr);
+  --token-_lK83BYRpLOmPH: #fa934e;
+  --plasmic-token-orange-8: var(--token-_lK83BYRpLOmPH);
+  --token-WX43-wSgsqwA3m: #f76808;
+  --plasmic-token-orange-9: var(--token-WX43-wSgsqwA3m);
+  --token-OwwwETRNstByJF: #ed5f00;
+  --plasmic-token-orange-10: var(--token-OwwwETRNstByJF);
+  --token-xKxnJXiNlkmHBx: #bd4b00;
+  --plasmic-token-orange-11: var(--token-xKxnJXiNlkmHBx);
+  --token-qatyD4_JzE9GAl: #451e11;
+  --plasmic-token-orange-12: var(--token-qatyD4_JzE9GAl);
+  --token-LDI8pT86w0pxIF: #1f1206;
+  --plasmic-token-orange-dark-1: var(--token-LDI8pT86w0pxIF);
+  --token-auP-MpRHzsX7Xe: #2b1400;
+  --plasmic-token-orange-dark-2: var(--token-auP-MpRHzsX7Xe);
+  --token-i9Qi84SyD70XL6: #391a03;
+  --plasmic-token-orange-dark-3: var(--token-i9Qi84SyD70XL6);
+  --token-lbysXCvIxfRhgk: #441f04;
+  --plasmic-token-orange-dark-4: var(--token-lbysXCvIxfRhgk);
+  --token-XXY-XhX8AT__sG: #4f2305;
+  --plasmic-token-orange-dark-5: var(--token-XXY-XhX8AT__sG);
+  --token-x4dgqGUGDlRk1u: #5f2a06;
+  --plasmic-token-orange-dark-6: var(--token-x4dgqGUGDlRk1u);
+  --token-3v2qt40ldjfarP: #763205;
+  --plasmic-token-orange-dark-7: var(--token-3v2qt40ldjfarP);
+  --token-6rXqTEOyMP9qxC: #943e00;
+  --plasmic-token-orange-dark-8: var(--token-6rXqTEOyMP9qxC);
+  --token-2DwohBSgC6xGB1: #f76808;
+  --plasmic-token-orange-dark-9: var(--token-2DwohBSgC6xGB1);
+  --token-Z9eHHiDCPc2A-f: #ff802b;
+  --plasmic-token-orange-dark-10: var(--token-Z9eHHiDCPc2A-f);
+  --token-w5I6qhb_zGYbsQ: #ff8b3e;
+  --plasmic-token-orange-dark-11: var(--token-w5I6qhb_zGYbsQ);
+  --token-jaiBPIyMr34rKy: #feeadd;
+  --plasmic-token-orange-dark-12: var(--token-jaiBPIyMr34rKy);
+  --token-ayr4UtJ__9uuxm: #fefdfc;
+  --plasmic-token-brown-1: var(--token-ayr4UtJ__9uuxm);
+  --token-ufGiialaRrZOJO: #fcf9f6;
+  --plasmic-token-brown-2: var(--token-ufGiialaRrZOJO);
+  --token-cYQklg8fyn-_4p: #f8f1ea;
+  --plasmic-token-brown-3: var(--token-cYQklg8fyn-_4p);
+  --token-PUoPttvJGQCDTF: #f4e9dd;
+  --plasmic-token-brown-4: var(--token-PUoPttvJGQCDTF);
+  --token-LDXfC1PE-J3nGR: #efddcc;
+  --plasmic-token-brown-5: var(--token-LDXfC1PE-J3nGR);
+  --token-gGtKIcIMXmBB4w: #e8cdb5;
+  --plasmic-token-brown-6: var(--token-gGtKIcIMXmBB4w);
+  --token-0f1B8DMIJKH9lb: #ddb896;
+  --plasmic-token-brown-7: var(--token-0f1B8DMIJKH9lb);
+  --token-OE8Ahff9hUVrNn: #d09e72;
+  --plasmic-token-brown-8: var(--token-OE8Ahff9hUVrNn);
+  --token-pr0OaPwrTdAqXN: #ad7f58;
+  --plasmic-token-brown-9: var(--token-pr0OaPwrTdAqXN);
+  --token-xtZBk7A6IQ13xT: #a07653;
+  --plasmic-token-brown-10: var(--token-xtZBk7A6IQ13xT);
+  --token-peXMKsVCuiOcj5: #886349;
+  --plasmic-token-brown-11: var(--token-peXMKsVCuiOcj5);
+  --token-GYi3wXSI_pp9w3: #3f2c22;
+  --plasmic-token-brown-12: var(--token-GYi3wXSI_pp9w3);
+  --token-7y-Fgq2audE-h-: #191513;
+  --plasmic-token-brown-dark-1: var(--token-7y-Fgq2audE-h-);
+  --token-DFSD1OHEWJb2qb: #221813;
+  --plasmic-token-brown-dark-2: var(--token-DFSD1OHEWJb2qb);
+  --token-ScsvUBW-VumEc3: #2e201a;
+  --plasmic-token-brown-dark-3: var(--token-ScsvUBW-VumEc3);
+  --token-SLlvMOFB78RKcU: #36261e;
+  --plasmic-token-brown-dark-4: var(--token-SLlvMOFB78RKcU);
+  --token-cr14fkzIkKnnaf: #3e2c22;
+  --plasmic-token-brown-dark-5: var(--token-cr14fkzIkKnnaf);
+  --token-_iB8VE32aWpHYP: #3e2c22;
+  --plasmic-token-brown-dark-6: var(--token-_iB8VE32aWpHYP);
+  --token-5yMZMLhPiEvAAH: #5c4332;
+  --plasmic-token-brown-dark-7: var(--token-5yMZMLhPiEvAAH);
+  --token-BMBD736IRof8EB: #775940;
+  --plasmic-token-brown-dark-8: var(--token-BMBD736IRof8EB);
+  --token-jbQOqca8ZmV1UK: #ad7f58;
+  --plasmic-token-brown-dark-9: var(--token-jbQOqca8ZmV1UK);
+  --token-nG66dgY5LQndIt: #bd8b60;
+  --plasmic-token-brown-dark-10: var(--token-nG66dgY5LQndIt);
+  --token-uEU6XYK55hW0do: #dba16e;
+  --plasmic-token-brown-dark-11: var(--token-uEU6XYK55hW0do);
+  --token-p4GEwFcTar2puJ: #faf0e5;
+  --plasmic-token-brown-dark-12: var(--token-p4GEwFcTar2puJ);
+  --token-Taq6TkVvwa6vZl: #fdfdf9;
+  --plasmic-token-yellow-1: var(--token-Taq6TkVvwa6vZl);
+  --token-7uVeG2HanJmz1n: #fffce8;
+  --plasmic-token-yellow-2: var(--token-7uVeG2HanJmz1n);
+  --token-PjW3Nx38bdIV6v: #fffbd1;
+  --plasmic-token-yellow-3: var(--token-PjW3Nx38bdIV6v);
+  --token-EU7BurWHwbht4j: #fff8bb;
+  --plasmic-token-yellow-4: var(--token-EU7BurWHwbht4j);
+  --token-F4omGSeXISVw0V: #fef2a4;
+  --plasmic-token-yellow-5: var(--token-F4omGSeXISVw0V);
+  --token-tHaxpmvQjhvywy: #f9e68c;
+  --plasmic-token-yellow-6: var(--token-tHaxpmvQjhvywy);
+  --token-iPfi_HRz9jgXD9: #efd36c;
+  --plasmic-token-yellow-7: var(--token-iPfi_HRz9jgXD9);
+  --token-O1wk6k4oEM3P38: #ebbc00;
+  --plasmic-token-yellow-8: var(--token-O1wk6k4oEM3P38);
+  --token-cic7_VoZtEOsa5: #f5d90a;
+  --plasmic-token-yellow-9: var(--token-cic7_VoZtEOsa5);
+  --token-ODQ1XM3UyGT9-2: #f7ce00;
+  --plasmic-token-yellow-10: var(--token-ODQ1XM3UyGT9-2);
+  --token-QgdFvlFGTzYyDA: #946800;
+  --plasmic-token-yellow-11: var(--token-QgdFvlFGTzYyDA);
+  --token-KDU80EKLa2ZLdb: #35290f;
+  --plasmic-token-yellow-12: var(--token-KDU80EKLa2ZLdb);
+  --token-lIU5F2OOLeTOw1: #1c1500;
+  --plasmic-token-yellow-dark-1: var(--token-lIU5F2OOLeTOw1);
+  --token-5BqIMyy22mE-Lw: #221a00;
+  --plasmic-token-yellow-dark-2: var(--token-5BqIMyy22mE-Lw);
+  --token-VfGklqe8B4pvac: #2c2100;
+  --plasmic-token-yellow-dark-3: var(--token-VfGklqe8B4pvac);
+  --token-8P24f13tiJmugh: #352800;
+  --plasmic-token-yellow-dark-4: var(--token-8P24f13tiJmugh);
+  --token-D1PhnoPxcLAYaS: #3e3000;
+  --plasmic-token-yellow-dark-5: var(--token-D1PhnoPxcLAYaS);
+  --token-HxOQD_AAiCtImh: #493c00;
+  --plasmic-token-yellow-dark-6: var(--token-HxOQD_AAiCtImh);
+  --token-sUDHQ8dSDMLQBv: #594a05;
+  --plasmic-token-yellow-dark-7: var(--token-sUDHQ8dSDMLQBv);
+  --token-sucVVRS-6OaNcG: #705e00;
+  --plasmic-token-yellow-dark-8: var(--token-sucVVRS-6OaNcG);
+  --token-TUP_e3cq9ZfYrU: #f5d90a;
+  --plasmic-token-yellow-dark-9: var(--token-TUP_e3cq9ZfYrU);
+  --token-nOAkmvULCIctpj: #ffef5c;
+  --plasmic-token-yellow-dark-10: var(--token-nOAkmvULCIctpj);
+  --token-k4POeY-Vf57UBN: #f0c000;
+  --plasmic-token-yellow-dark-11: var(--token-k4POeY-Vf57UBN);
+  --token-TkOLvNj4C77Atd: #fffad1;
+  --plasmic-token-yellow-dark-12: var(--token-TkOLvNj4C77Atd);
+  --token-EZqQ9LxJ1Q3q70: #00000003;
+  --plasmic-token-black-a-1: var(--token-EZqQ9LxJ1Q3q70);
+  --token-Q8JlHNucMXwOBX: #00000008;
+  --plasmic-token-black-a-2: var(--token-Q8JlHNucMXwOBX);
+  --token-haKk3oWTXtp21n: #0000000d;
+  --plasmic-token-black-a-3: var(--token-haKk3oWTXtp21n);
+  --token-6cDQvqI7SA48yG: #00000012;
+  --plasmic-token-black-a-4: var(--token-6cDQvqI7SA48yG);
+  --token-DIMNQlyzadYLjs: #00000017;
+  --plasmic-token-black-a-5: var(--token-DIMNQlyzadYLjs);
+  --token-bsoddeLV5fOLCP: #0000001c;
+  --plasmic-token-black-a-6: var(--token-bsoddeLV5fOLCP);
+  --token-CR1Y_fR-Wr6Uyd: #00000024;
+  --plasmic-token-black-a-7: var(--token-CR1Y_fR-Wr6Uyd);
+  --token-c2l517FQiE3jhe: #00000038;
+  --plasmic-token-black-a-8: var(--token-c2l517FQiE3jhe);
+  --token-glF2Y6YcRDiwNh: #00000070;
+  --plasmic-token-black-a-9: var(--token-glF2Y6YcRDiwNh);
+  --token-mDQbk7_gH6qit0: #0000007a;
+  --plasmic-token-black-a-10: var(--token-mDQbk7_gH6qit0);
+  --token-MPbMdYggQEqMP-: #00000091;
+  --plasmic-token-black-a-11: var(--token-MPbMdYggQEqMP-);
+  --token-4IjSKOCvCltGDn: #000000e8;
+  --plasmic-token-black-a-12: var(--token-4IjSKOCvCltGDn);
+  --token-MjBWph2_JG89i4: #000000;
+  --plasmic-token-black: var(--token-MjBWph2_JG89i4);
+  --token-DmXYJOgbbsge9W: transparent;
+  --plasmic-token-white-a-1: var(--token-DmXYJOgbbsge9W);
+  --token-ggL1AKl5Afr9jU: #ffffff03;
+  --plasmic-token-white-a-2: var(--token-ggL1AKl5Afr9jU);
+  --token-GRs47zNIY46V6J: #ffffff08;
+  --plasmic-token-white-a-3: var(--token-GRs47zNIY46V6J);
+  --token-w9Bi8-Hgc0D-3T: #ffffff0f;
+  --plasmic-token-white-a-4: var(--token-w9Bi8-Hgc0D-3T);
+  --token-7tt6bJu-zb7IXl: #ffffff17;
+  --plasmic-token-white-a-5: var(--token-7tt6bJu-zb7IXl);
+  --token-WQBx5xoSc4kfbv: #ffffff1f;
+  --plasmic-token-white-a-6: var(--token-WQBx5xoSc4kfbv);
+  --token-L4eVwxtshcZGYq: #ffffff2e;
+  --plasmic-token-white-a-7: var(--token-L4eVwxtshcZGYq);
+  --token-0qhllWUzXosznx: #ffffff40;
+  --plasmic-token-white-a-8: var(--token-0qhllWUzXosznx);
+  --token-PP6e2FiVqLQcYC: #ffffff63;
+  --plasmic-token-white-a-9: var(--token-PP6e2FiVqLQcYC);
+  --token-R7wGEGncedFIHt: #ffffff73;
+  --plasmic-token-white-a-10: var(--token-R7wGEGncedFIHt);
+  --token-mk_U4-m0tLGQGP: #ffffff96;
+  --plasmic-token-white-a-11: var(--token-mk_U4-m0tLGQGP);
+  --token--IyL4KTjXcc2ZX: #ffffffeb;
+  --plasmic-token-white-a-12: var(--token--IyL4KTjXcc2ZX);
+  --token-9MkmzesVuXPDf0: #ffffff;
+  --plasmic-token-white: var(--token-9MkmzesVuXPDf0);
+  --token-soq0-bZeANMCCM: #fdfdfc;
+  --plasmic-token-gold-1: var(--token-soq0-bZeANMCCM);
+  --token-kXXA8bY-_ViYOX: #fbf9f2;
+  --plasmic-token-gold-2: var(--token-kXXA8bY-_ViYOX);
+  --token-0be6woOH87jrmq: #f5f2e9;
+  --plasmic-token-gold-3: var(--token-0be6woOH87jrmq);
+  --token-IH1jGAyz8dqBoV: #eeeadd;
+  --plasmic-token-gold-4: var(--token-IH1jGAyz8dqBoV);
+  --token-YTChl4pnIerHDZ: #e5dfd0;
+  --plasmic-token-gold-5: var(--token-YTChl4pnIerHDZ);
+  --token-E_5WjQzWqQxhTg: #dad1bd;
+  --plasmic-token-gold-6: var(--token-E_5WjQzWqQxhTg);
+  --token--1SbrlHZhr6lx1: #cbbda4;
+  --plasmic-token-gold-7: var(--token--1SbrlHZhr6lx1);
+  --token--iEZPEUgK4jkcx: #b8a383;
+  --plasmic-token-gold-8: var(--token--iEZPEUgK4jkcx);
+  --token-w832IWCkg94mVR: #978365;
+  --plasmic-token-gold-9: var(--token-w832IWCkg94mVR);
+  --token-Vqs46E94MAHECV: #8c795d;
+  --plasmic-token-gold-10: var(--token-Vqs46E94MAHECV);
+  --token-IOSO6sqdzEDhzB: #776750;
+  --plasmic-token-gold-11: var(--token-IOSO6sqdzEDhzB);
+  --token-U6_XBUAQxaoiLc: #3b352b;
+  --plasmic-token-gold-12: var(--token-U6_XBUAQxaoiLc);
+  --token-T5yRdqFbjztkzh: #171613;
+  --plasmic-token-gold-dark-1: var(--token-T5yRdqFbjztkzh);
+  --token-insCwD3LrFHkLO: #1c1a15;
+  --plasmic-token-gold-dark-2: var(--token-insCwD3LrFHkLO);
+  --token-pdb5J5taGo95Ql: #26231c;
+  --plasmic-token-gold-dark-3: var(--token-pdb5J5taGo95Ql);
+  --token-4-59PXT5LJl0s5: #2e2a21;
+  --plasmic-token-gold-dark-4: var(--token-4-59PXT5LJl0s5);
+  --token-yfL_UkcnNWhNPu: #353026;
+  --plasmic-token-gold-dark-5: var(--token-yfL_UkcnNWhNPu);
+  --token-hzUwx2L1LxsS8E: #3e382c;
+  --plasmic-token-gold-dark-6: var(--token-hzUwx2L1LxsS8E);
+  --token-XsSnmPrrQikhOV: #504737;
+  --plasmic-token-gold-dark-7: var(--token-XsSnmPrrQikhOV);
+  --token-iURJi6M_H_vozT: #6b5d48;
+  --plasmic-token-gold-dark-8: var(--token-iURJi6M_H_vozT);
+  --token-BZ3fNwjkLYs7Mg: #978365;
+  --plasmic-token-gold-dark-9: var(--token-BZ3fNwjkLYs7Mg);
+  --token-92xKP0AzldEMsY: #a59071;
+  --plasmic-token-gold-dark-10: var(--token-92xKP0AzldEMsY);
+  --token-Qn1Q4cWZ5a__fV: #bfa888;
+  --plasmic-token-gold-dark-11: var(--token-Qn1Q4cWZ5a__fV);
+  --token-oe0wTMcy184Fx4: #f7f4e7;
+  --plasmic-token-gold-dark-12: var(--token-oe0wTMcy184Fx4);
+  --token-2lDC0wXVQyitUi: #f9feff;
+  --plasmic-token-sky-1: var(--token-2lDC0wXVQyitUi);
+  --token-sAiawK3Pmlpcki: #f1fcff;
+  --plasmic-token-sky-2: var(--token-sAiawK3Pmlpcki);
+  --token-zo_vW_8bkDWb14: #e4f9ff;
+  --plasmic-token-sky-3: var(--token-zo_vW_8bkDWb14);
+  --token-dfmMDyAyYXS-a4: #d5f4fd;
+  --plasmic-token-sky-4: var(--token-dfmMDyAyYXS-a4);
+  --token-cM8Q2F5oCpRAfv: #c1ecf9;
+  --plasmic-token-sky-5: var(--token-cM8Q2F5oCpRAfv);
+  --token-mcgVhdMO3fM3zL: #a4dff1;
+  --plasmic-token-sky-6: var(--token-mcgVhdMO3fM3zL);
+  --token-Ky9nvO7iUjJoPO: #79cfea;
+  --plasmic-token-sky-7: var(--token-Ky9nvO7iUjJoPO);
+  --token-Ffu7kfzV53_h-G: #2ebde5;
+  --plasmic-token-sky-8: var(--token-Ffu7kfzV53_h-G);
+  --token-pvFc7fgrfDhWnp: #68ddfd;
+  --plasmic-token-sky-9: var(--token-pvFc7fgrfDhWnp);
+  --token-dMp2uyCeR_74zs: #5fd4f4;
+  --plasmic-token-sky-10: var(--token-dMp2uyCeR_74zs);
+  --token-r8t2JLNgGTa6Vq: #0078a1;
+  --plasmic-token-sky-11: var(--token-r8t2JLNgGTa6Vq);
+  --token-To11ofM3uSceQ0: #003242;
+  --plasmic-token-sky-12: var(--token-To11ofM3uSceQ0);
+  --token-XQClXKBZr_QVDj: #0c1820;
+  --plasmic-token-sky-dark-1: var(--token-XQClXKBZr_QVDj);
+  --token-A_YfYLqLTC9qtd: #071d2a;
+  --plasmic-token-sky-dark-2: var(--token-A_YfYLqLTC9qtd);
+  --token-08di0h-Ubd3fCo: #082636;
+  --plasmic-token-sky-dark-3: var(--token-08di0h-Ubd3fCo);
+  --token-hdwyw9El3ul3We: #082d41;
+  --plasmic-token-sky-dark-4: var(--token-hdwyw9El3ul3We);
+  --token-MhgM_KtkfOH21r: #08354c;
+  --plasmic-token-sky-dark-5: var(--token-MhgM_KtkfOH21r);
+  --token-mclQXnLm9g2MgV: #083e59;
+  --plasmic-token-sky-dark-6: var(--token-mclQXnLm9g2MgV);
+  --token-dMs0L2iroQkQ74: #064b6b;
+  --plasmic-token-sky-dark-7: var(--token-dMs0L2iroQkQ74);
+  --token-P4rAG4gysMi4DH: #005d85;
+  --plasmic-token-sky-dark-8: var(--token-P4rAG4gysMi4DH);
+  --token-DA97Hr-K_IPKrh: #68ddfd;
+  --plasmic-token-sky-dark-9: var(--token-DA97Hr-K_IPKrh);
+  --token-FZslr_DxAvPyKV: #8ae8ff;
+  --plasmic-token-sky-dark-10: var(--token-FZslr_DxAvPyKV);
+  --token-2QQbQBiLN8Y6-8: #2ec8ee;
+  --plasmic-token-sky-dark-11: var(--token-2QQbQBiLN8Y6-8);
+  --token-Ioco_FHDS3574G: #eaf8ff;
+  --plasmic-token-sky-dark-12: var(--token-Ioco_FHDS3574G);
+  --token-nEypOAulwzPkeC: #ffffff00;
+  --plasmic-token-transparent: var(--token-nEypOAulwzPkeC);
+}
+
+.plasmic_tokens {
+  --plsmc-standard-width: 800px;
+  --plsmc-wide-width: 1280px;
+  --plsmc-viewport-gap: 16px;
+  --plsmc-wide-chunk: calc(
+    ((var(--plsmc-wide-width) - var(--plsmc-standard-width)) / 2) -
+      var(--plsmc-viewport-gap)
+  );
+}
+
+.plasmic_default_styles {
+  --mixin-rdkjEdCNlvxz-49wF7_font-family: "Roboto", sans-serif;
+  --mixin-rdkjEdCNlvxz-49wF7_font-size: 16px;
+  --mixin-rdkjEdCNlvxz-49wF7_font-weight: 400;
+  --mixin-rdkjEdCNlvxz-49wF7_font-style: normal;
+  --mixin-rdkjEdCNlvxz-49wF7_color: #535353;
+  --mixin-rdkjEdCNlvxz-49wF7_text-align: left;
+  --mixin-rdkjEdCNlvxz-49wF7_text-transform: none;
+  --mixin-rdkjEdCNlvxz-49wF7_line-height: 1.5;
+  --mixin-rdkjEdCNlvxz-49wF7_letter-spacing: normal;
+  --mixin-rdkjEdCNlvxz-49wF7_white-space: pre-wrap;
+  --mixin-rdkjEdCNlvxz-49wF7_user-select: text;
+  --mixin-rdkjEdCNlvxz-49wF7_text-decoration-line: none;
+  --mixin-rdkjEdCNlvxz-49wF7_text-overflow: clip;
+  --mixin-5KbZ_SKNA46q-49wF7_font-family: "Inter", sans-serif;
+  --mixin-5KbZ_SKNA46q-49wF7_color: #000000;
+  --mixin-5KbZ_SKNA46q-49wF7_font-size: 72px;
+  --mixin-5KbZ_SKNA46q-49wF7_font-weight: 900;
+  --mixin-5KbZ_SKNA46q-49wF7_letter-spacing: -4px;
+  --mixin-5KbZ_SKNA46q-49wF7_line-height: 1;
+  --mixin-5KbZ_SKNA46q-49wF7_white-space: pre-wrap;
+  --mixin-Ayd-IK_1vNOB-49wF7_font-family: "Inter", sans-serif;
+  --mixin-Ayd-IK_1vNOB-49wF7_color: #000000;
+  --mixin-Ayd-IK_1vNOB-49wF7_font-size: 48px;
+  --mixin-Ayd-IK_1vNOB-49wF7_font-weight: 700;
+  --mixin-Ayd-IK_1vNOB-49wF7_letter-spacing: -1px;
+  --mixin-Ayd-IK_1vNOB-49wF7_line-height: 1.1;
+  --mixin-Ayd-IK_1vNOB-49wF7_white-space: pre-wrap;
+  --mixin-RehzfCCPMojO-49wF7_font-family: "Inter", sans-serif;
+  --mixin-RehzfCCPMojO-49wF7_color: #000000;
+  --mixin-RehzfCCPMojO-49wF7_font-size: 32px;
+  --mixin-RehzfCCPMojO-49wF7_font-weight: 600;
+  --mixin-RehzfCCPMojO-49wF7_letter-spacing: -0.8px;
+  --mixin-RehzfCCPMojO-49wF7_line-height: 1.2;
+  --mixin-RehzfCCPMojO-49wF7_white-space: pre-wrap;
+  --mixin-r3iw9etgiggq-49wF7_font-family: "Inter", sans-serif;
+  --mixin-r3iw9etgiggq-49wF7_color: #000000;
+  --mixin-r3iw9etgiggq-49wF7_font-size: 24px;
+  --mixin-r3iw9etgiggq-49wF7_font-weight: 600;
+  --mixin-r3iw9etgiggq-49wF7_letter-spacing: -0.5px;
+  --mixin-r3iw9etgiggq-49wF7_line-height: 1.3;
+  --mixin-r3iw9etgiggq-49wF7_white-space: pre-wrap;
+  --mixin-BeVQsoDeOTJv-49wF7_font-family: "Inter", sans-serif;
+  --mixin-BeVQsoDeOTJv-49wF7_color: #000000;
+  --mixin-BeVQsoDeOTJv-49wF7_font-size: 20px;
+  --mixin-BeVQsoDeOTJv-49wF7_font-weight: 600;
+  --mixin-BeVQsoDeOTJv-49wF7_letter-spacing: -0.3px;
+  --mixin-BeVQsoDeOTJv-49wF7_line-height: 1.5;
+  --mixin-BeVQsoDeOTJv-49wF7_white-space: pre-wrap;
+  --mixin-nC0bZoQyzWIa-49wF7_font-family: "Inter", sans-serif;
+  --mixin-nC0bZoQyzWIa-49wF7_color: #000000;
+  --mixin-nC0bZoQyzWIa-49wF7_font-size: 16px;
+  --mixin-nC0bZoQyzWIa-49wF7_font-weight: 600;
+  --mixin-nC0bZoQyzWIa-49wF7_line-height: 1.5;
+  --mixin-nC0bZoQyzWIa-49wF7_white-space: pre-wrap;
+  --mixin-XqYr5l51gQyx-49wF7_color: #0070f3;
+  --mixin-XqYr5l51gQyx-49wF7_white-space: pre-wrap;
+  --mixin-PWfjPLywceJh-49wF7_color: #3291ff;
+  --mixin-PWfjPLywceJh-49wF7_white-space: pre-wrap;
+  --mixin-R-xj5cJpxnGy-49wF7_border-left-color: #dddddd;
+  --mixin-R-xj5cJpxnGy-49wF7_border-left-style: solid;
+  --mixin-R-xj5cJpxnGy-49wF7_border-left-width: 3px;
+  --mixin-R-xj5cJpxnGy-49wF7_color: #888888;
+  --mixin-R-xj5cJpxnGy-49wF7_padding-left: 10px;
+  --mixin-R-xj5cJpxnGy-49wF7_white-space: pre-wrap;
+  --mixin-SGNTb_huuPy4-49wF7_background: linear-gradient(#f8f8f8, #f8f8f8);
+  --mixin-SGNTb_huuPy4-49wF7_border-bottom-color: #dddddd;
+  --mixin-SGNTb_huuPy4-49wF7_border-bottom-style: solid;
+  --mixin-SGNTb_huuPy4-49wF7_border-bottom-width: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_border-left-color: #dddddd;
+  --mixin-SGNTb_huuPy4-49wF7_border-left-style: solid;
+  --mixin-SGNTb_huuPy4-49wF7_border-left-width: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_border-right-color: #dddddd;
+  --mixin-SGNTb_huuPy4-49wF7_border-right-style: solid;
+  --mixin-SGNTb_huuPy4-49wF7_border-right-width: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_border-top-color: #dddddd;
+  --mixin-SGNTb_huuPy4-49wF7_border-top-style: solid;
+  --mixin-SGNTb_huuPy4-49wF7_border-top-width: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_border-bottom-left-radius: 3px;
+  --mixin-SGNTb_huuPy4-49wF7_border-bottom-right-radius: 3px;
+  --mixin-SGNTb_huuPy4-49wF7_border-top-left-radius: 3px;
+  --mixin-SGNTb_huuPy4-49wF7_border-top-right-radius: 3px;
+  --mixin-SGNTb_huuPy4-49wF7_font-family: "Inconsolata";
+  --mixin-SGNTb_huuPy4-49wF7_padding-bottom: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_padding-left: 4px;
+  --mixin-SGNTb_huuPy4-49wF7_padding-right: 4px;
+  --mixin-SGNTb_huuPy4-49wF7_padding-top: 1px;
+  --mixin-SGNTb_huuPy4-49wF7_white-space: pre-wrap;
+  --mixin--MTkSdK1PlyO-49wF7_background: linear-gradient(#f8f8f8, #f8f8f8);
+  --mixin--MTkSdK1PlyO-49wF7_border-bottom-color: #dddddd;
+  --mixin--MTkSdK1PlyO-49wF7_border-bottom-style: solid;
+  --mixin--MTkSdK1PlyO-49wF7_border-bottom-width: 1px;
+  --mixin--MTkSdK1PlyO-49wF7_border-left-color: #dddddd;
+  --mixin--MTkSdK1PlyO-49wF7_border-left-style: solid;
+  --mixin--MTkSdK1PlyO-49wF7_border-left-width: 1px;
+  --mixin--MTkSdK1PlyO-49wF7_border-right-color: #dddddd;
+  --mixin--MTkSdK1PlyO-49wF7_border-right-style: solid;
+  --mixin--MTkSdK1PlyO-49wF7_border-right-width: 1px;
+  --mixin--MTkSdK1PlyO-49wF7_border-top-color: #dddddd;
+  --mixin--MTkSdK1PlyO-49wF7_border-top-style: solid;
+  --mixin--MTkSdK1PlyO-49wF7_border-top-width: 1px;
+  --mixin--MTkSdK1PlyO-49wF7_border-bottom-left-radius: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_border-bottom-right-radius: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_border-top-left-radius: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_border-top-right-radius: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_font-family: "Inconsolata";
+  --mixin--MTkSdK1PlyO-49wF7_padding-bottom: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_padding-left: 6px;
+  --mixin--MTkSdK1PlyO-49wF7_padding-right: 6px;
+  --mixin--MTkSdK1PlyO-49wF7_padding-top: 3px;
+  --mixin--MTkSdK1PlyO-49wF7_white-space: pre-wrap;
+  --mixin-C0uc_XrkgufC-49wF7_display: flex;
+  --mixin-C0uc_XrkgufC-49wF7_flex-direction: column;
+  --mixin-C0uc_XrkgufC-49wF7_align-items: stretch;
+  --mixin-C0uc_XrkgufC-49wF7_justify-content: flex-start;
+  --mixin-C0uc_XrkgufC-49wF7_list-style-position: outside;
+  --mixin-C0uc_XrkgufC-49wF7_padding-left: 40px;
+  --mixin-C0uc_XrkgufC-49wF7_position: relative;
+  --mixin-C0uc_XrkgufC-49wF7_list-style-type: decimal;
+  --mixin-C0uc_XrkgufC-49wF7_white-space: pre-wrap;
+  --mixin-Ze08sCSQCD7R-49wF7_display: flex;
+  --mixin-Ze08sCSQCD7R-49wF7_flex-direction: column;
+  --mixin-Ze08sCSQCD7R-49wF7_align-items: stretch;
+  --mixin-Ze08sCSQCD7R-49wF7_justify-content: flex-start;
+  --mixin-Ze08sCSQCD7R-49wF7_list-style-position: outside;
+  --mixin-Ze08sCSQCD7R-49wF7_padding-left: 40px;
+  --mixin-Ze08sCSQCD7R-49wF7_position: relative;
+  --mixin-Ze08sCSQCD7R-49wF7_list-style-type: disc;
+  --mixin-Ze08sCSQCD7R-49wF7_white-space: pre-wrap;
+}
+
+.plasmic_mixins {
+  --mixin-U5t_vKFhZz8_cm_box-shadow: 0px 1px 1px 0px var(--token-DIMNQlyzadYLjs);
+  --plasmic-mixin-extra-small-shadow_box-shadow: var(
+    --mixin-U5t_vKFhZz8_cm_box-shadow
+  );
+  --mixin-U5t_vKFhZz8_cm_white-space: pre-wrap;
+  --plasmic-mixin-extra-small-shadow_white-space: var(
+    --mixin-U5t_vKFhZz8_cm_white-space
+  );
+  --mixin-JmP9XRUTNMbkDM_box-shadow: 0px 4px 8px 1px var(--token-Q8JlHNucMXwOBX);
+  --plasmic-mixin-small-shadow_box-shadow: var(
+    --mixin-JmP9XRUTNMbkDM_box-shadow
+  );
+  --mixin-JmP9XRUTNMbkDM_white-space: pre-wrap;
+  --plasmic-mixin-small-shadow_white-space: var(
+    --mixin-JmP9XRUTNMbkDM_white-space
+  );
+  --mixin-2IRsctPdxJ2syN_box-shadow: 0px 8px 32px -8px var(--token-c2l517FQiE3jhe),
+    0px 8px 20px -16px var(--token-CR1Y_fR-Wr6Uyd);
+  --plasmic-mixin-medium-shadow_box-shadow: var(
+    --mixin-2IRsctPdxJ2syN_box-shadow
+  );
+  --mixin-2IRsctPdxJ2syN_white-space: pre-wrap;
+  --plasmic-mixin-medium-shadow_white-space: var(
+    --mixin-2IRsctPdxJ2syN_white-space
+  );
+}
+
+:where(.all) {
+  display: block;
+  white-space: inherit;
+  grid-row: auto;
+  grid-column: auto;
+  position: relative;
+  background: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  margin: 0;
+  border-width: 0px;
+}
+:where(.__wab_expr_html_text *) {
+  white-space: inherit;
+  grid-row: auto;
+  grid-column: auto;
+  background: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  box-sizing: border-box;
+  text-decoration-line: none;
+  margin: 0;
+  border-width: 0px;
+}
+
+:where(.img) {
+  display: inline-block;
+}
+:where(.__wab_expr_html_text img) {
+  white-space: inherit;
+}
+
+:where(.li) {
+  display: list-item;
+}
+:where(.__wab_expr_html_text li) {
+  white-space: inherit;
+}
+
+:where(.span) {
+  display: inline;
+  position: static;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+:where(.__wab_expr_html_text span) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+:where(.input) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+:where(.__wab_expr_html_text input) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: linear-gradient(#ffffff, #ffffff);
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+
+:where(.textarea) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+:where(.__wab_expr_html_text textarea) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  padding: 2px;
+  border: 1px solid lightgray;
+}
+
+:where(.button) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: none;
+  align-items: flex-start;
+  text-align: center;
+  padding: 2px 6px;
+  border: 1px solid lightgray;
+}
+:where(.__wab_expr_html_text button) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+  background-image: none;
+  align-items: flex-start;
+  text-align: center;
+  padding: 2px 6px;
+  border: 1px solid lightgray;
+}
+
+:where(.code) {
+  font-family: inherit;
+  line-height: inherit;
+}
+:where(.__wab_expr_html_text code) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+:where(.pre) {
+  font-family: inherit;
+  line-height: inherit;
+}
+:where(.__wab_expr_html_text pre) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+:where(.p) {
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+:where(.__wab_expr_html_text p) {
+  white-space: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+:where(.h1) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h1) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.h2) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h2) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.h3) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h3) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.h4) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h4) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.h5) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h5) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.h6) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+:where(.__wab_expr_html_text h6) {
+  white-space: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.address) {
+  font-style: inherit;
+}
+:where(.__wab_expr_html_text address) {
+  white-space: inherit;
+  font-style: inherit;
+}
+
+:where(.a) {
+  color: inherit;
+}
+:where(.__wab_expr_html_text a) {
+  white-space: inherit;
+  color: inherit;
+}
+
+:where(.ol) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(.__wab_expr_html_text ol) {
+  white-space: inherit;
+  list-style-type: none;
+  padding: 0;
+}
+
+:where(.ul) {
+  list-style-type: none;
+  padding: 0;
+}
+:where(.__wab_expr_html_text ul) {
+  white-space: inherit;
+  list-style-type: none;
+  padding: 0;
+}
+
+:where(.select) {
+  padding: 2px 6px;
+}
+:where(.__wab_expr_html_text select) {
+  white-space: inherit;
+  padding: 2px 6px;
+}
+
+.plasmic_default__component_wrapper {
+  display: grid;
+}
+.plasmic_default__inline {
+  display: inline;
+}
+.plasmic_page_wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: stretch;
+  align-self: start;
+}
+.plasmic_page_wrapper > * {
+  height: auto !important;
+}
+.__wab_expr_html_text {
+  white-space: normal;
+}
+:where(.root_reset) {
+  font-family: var(--mixin-rdkjEdCNlvxz-49wF7_font-family);
+  font-size: var(--mixin-rdkjEdCNlvxz-49wF7_font-size);
+  font-weight: var(--mixin-rdkjEdCNlvxz-49wF7_font-weight);
+  font-style: var(--mixin-rdkjEdCNlvxz-49wF7_font-style);
+  color: var(--mixin-rdkjEdCNlvxz-49wF7_color);
+  text-align: var(--mixin-rdkjEdCNlvxz-49wF7_text-align);
+  text-transform: var(--mixin-rdkjEdCNlvxz-49wF7_text-transform);
+  line-height: var(--mixin-rdkjEdCNlvxz-49wF7_line-height);
+  letter-spacing: var(--mixin-rdkjEdCNlvxz-49wF7_letter-spacing);
+  white-space: var(--mixin-rdkjEdCNlvxz-49wF7_white-space);
+}
+
+:where(.root_reset) h1:where(.h1),
+h1:where(.root_reset.h1),
+:where(.root_reset .__wab_expr_html_text) h1,
+:where(.root_reset_tags) h1,
+h1:where(.root_reset_tags) {
+  font-family: var(--mixin-5KbZ_SKNA46q-49wF7_font-family);
+  color: var(--mixin-5KbZ_SKNA46q-49wF7_color);
+  font-size: var(--mixin-5KbZ_SKNA46q-49wF7_font-size);
+  font-weight: var(--mixin-5KbZ_SKNA46q-49wF7_font-weight);
+  letter-spacing: var(--mixin-5KbZ_SKNA46q-49wF7_letter-spacing);
+  line-height: var(--mixin-5KbZ_SKNA46q-49wF7_line-height);
+}
+
+:where(.root_reset) h2:where(.h2),
+h2:where(.root_reset.h2),
+:where(.root_reset .__wab_expr_html_text) h2,
+:where(.root_reset_tags) h2,
+h2:where(.root_reset_tags) {
+  font-family: var(--mixin-Ayd-IK_1vNOB-49wF7_font-family);
+  color: var(--mixin-Ayd-IK_1vNOB-49wF7_color);
+  font-size: var(--mixin-Ayd-IK_1vNOB-49wF7_font-size);
+  font-weight: var(--mixin-Ayd-IK_1vNOB-49wF7_font-weight);
+  letter-spacing: var(--mixin-Ayd-IK_1vNOB-49wF7_letter-spacing);
+  line-height: var(--mixin-Ayd-IK_1vNOB-49wF7_line-height);
+}
+
+:where(.root_reset) h3:where(.h3),
+h3:where(.root_reset.h3),
+:where(.root_reset .__wab_expr_html_text) h3,
+:where(.root_reset_tags) h3,
+h3:where(.root_reset_tags) {
+  font-family: var(--mixin-RehzfCCPMojO-49wF7_font-family);
+  color: var(--mixin-RehzfCCPMojO-49wF7_color);
+  font-size: var(--mixin-RehzfCCPMojO-49wF7_font-size);
+  font-weight: var(--mixin-RehzfCCPMojO-49wF7_font-weight);
+  letter-spacing: var(--mixin-RehzfCCPMojO-49wF7_letter-spacing);
+  line-height: var(--mixin-RehzfCCPMojO-49wF7_line-height);
+}
+
+:where(.root_reset) h4:where(.h4),
+h4:where(.root_reset.h4),
+:where(.root_reset .__wab_expr_html_text) h4,
+:where(.root_reset_tags) h4,
+h4:where(.root_reset_tags) {
+  font-family: var(--mixin-r3iw9etgiggq-49wF7_font-family);
+  color: var(--mixin-r3iw9etgiggq-49wF7_color);
+  font-size: var(--mixin-r3iw9etgiggq-49wF7_font-size);
+  font-weight: var(--mixin-r3iw9etgiggq-49wF7_font-weight);
+  letter-spacing: var(--mixin-r3iw9etgiggq-49wF7_letter-spacing);
+  line-height: var(--mixin-r3iw9etgiggq-49wF7_line-height);
+}
+
+:where(.root_reset) h5:where(.h5),
+h5:where(.root_reset.h5),
+:where(.root_reset .__wab_expr_html_text) h5,
+:where(.root_reset_tags) h5,
+h5:where(.root_reset_tags) {
+  font-family: var(--mixin-BeVQsoDeOTJv-49wF7_font-family);
+  color: var(--mixin-BeVQsoDeOTJv-49wF7_color);
+  font-size: var(--mixin-BeVQsoDeOTJv-49wF7_font-size);
+  font-weight: var(--mixin-BeVQsoDeOTJv-49wF7_font-weight);
+  letter-spacing: var(--mixin-BeVQsoDeOTJv-49wF7_letter-spacing);
+  line-height: var(--mixin-BeVQsoDeOTJv-49wF7_line-height);
+}
+
+:where(.root_reset) h6:where(.h6),
+h6:where(.root_reset.h6),
+:where(.root_reset .__wab_expr_html_text) h6,
+:where(.root_reset_tags) h6,
+h6:where(.root_reset_tags) {
+  font-family: var(--mixin-nC0bZoQyzWIa-49wF7_font-family);
+  color: var(--mixin-nC0bZoQyzWIa-49wF7_color);
+  font-size: var(--mixin-nC0bZoQyzWIa-49wF7_font-size);
+  font-weight: var(--mixin-nC0bZoQyzWIa-49wF7_font-weight);
+  line-height: var(--mixin-nC0bZoQyzWIa-49wF7_line-height);
+}
+
+:where(.root_reset) a:where(.a),
+a:where(.root_reset.a),
+:where(.root_reset .__wab_expr_html_text) a,
+:where(.root_reset_tags) a,
+a:where(.root_reset_tags) {
+  color: var(--mixin-XqYr5l51gQyx-49wF7_color);
+}
+
+:where(.root_reset) a:where(.a):hover,
+a:where(.root_reset.a):hover,
+:where(.root_reset .__wab_expr_html_text) a:hover,
+:where(.root_reset_tags) a:hover,
+a:where(.root_reset_tags):hover {
+  color: var(--mixin-PWfjPLywceJh-49wF7_color);
+}
+
+:where(.root_reset) blockquote:where(.blockquote),
+blockquote:where(.root_reset.blockquote),
+:where(.root_reset .__wab_expr_html_text) blockquote,
+:where(.root_reset_tags) blockquote,
+blockquote:where(.root_reset_tags) {
+  color: var(--mixin-R-xj5cJpxnGy-49wF7_color);
+  padding-left: var(--mixin-R-xj5cJpxnGy-49wF7_padding-left);
+  border-left: var(--mixin-R-xj5cJpxnGy-49wF7_border-left-width)
+    var(--mixin-R-xj5cJpxnGy-49wF7_border-left-style)
+    var(--mixin-R-xj5cJpxnGy-49wF7_border-left-color);
+}
+
+:where(.root_reset) code:where(.code),
+code:where(.root_reset.code),
+:where(.root_reset .__wab_expr_html_text) code,
+:where(.root_reset_tags) code,
+code:where(.root_reset_tags) {
+  background: #f8f8f8;
+  font-family: var(--mixin-SGNTb_huuPy4-49wF7_font-family);
+  border-radius: var(--mixin-SGNTb_huuPy4-49wF7_border-top-left-radius)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-top-right-radius)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-bottom-right-radius)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-bottom-left-radius);
+  padding: var(--mixin-SGNTb_huuPy4-49wF7_padding-top)
+    var(--mixin-SGNTb_huuPy4-49wF7_padding-right)
+    var(--mixin-SGNTb_huuPy4-49wF7_padding-bottom)
+    var(--mixin-SGNTb_huuPy4-49wF7_padding-left);
+  border-top: var(--mixin-SGNTb_huuPy4-49wF7_border-top-width)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-top-style)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-top-color);
+  border-right: var(--mixin-SGNTb_huuPy4-49wF7_border-right-width)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-right-style)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-right-color);
+  border-bottom: var(--mixin-SGNTb_huuPy4-49wF7_border-bottom-width)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-bottom-style)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-bottom-color);
+  border-left: var(--mixin-SGNTb_huuPy4-49wF7_border-left-width)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-left-style)
+    var(--mixin-SGNTb_huuPy4-49wF7_border-left-color);
+}
+
+:where(.root_reset) pre:where(.pre),
+pre:where(.root_reset.pre),
+:where(.root_reset .__wab_expr_html_text) pre,
+:where(.root_reset_tags) pre,
+pre:where(.root_reset_tags) {
+  background: #f8f8f8;
+  font-family: var(--mixin--MTkSdK1PlyO-49wF7_font-family);
+  border-radius: var(--mixin--MTkSdK1PlyO-49wF7_border-top-left-radius)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-top-right-radius)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-bottom-right-radius)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-bottom-left-radius);
+  padding: var(--mixin--MTkSdK1PlyO-49wF7_padding-top)
+    var(--mixin--MTkSdK1PlyO-49wF7_padding-right)
+    var(--mixin--MTkSdK1PlyO-49wF7_padding-bottom)
+    var(--mixin--MTkSdK1PlyO-49wF7_padding-left);
+  border-top: var(--mixin--MTkSdK1PlyO-49wF7_border-top-width)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-top-style)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-top-color);
+  border-right: var(--mixin--MTkSdK1PlyO-49wF7_border-right-width)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-right-style)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-right-color);
+  border-bottom: var(--mixin--MTkSdK1PlyO-49wF7_border-bottom-width)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-bottom-style)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-bottom-color);
+  border-left: var(--mixin--MTkSdK1PlyO-49wF7_border-left-width)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-left-style)
+    var(--mixin--MTkSdK1PlyO-49wF7_border-left-color);
+}
+
+:where(.root_reset) ol:where(.ol),
+ol:where(.root_reset.ol),
+:where(.root_reset .__wab_expr_html_text) ol,
+:where(.root_reset_tags) ol,
+ol:where(.root_reset_tags) {
+  display: var(--mixin-C0uc_XrkgufC-49wF7_display);
+  flex-direction: var(--mixin-C0uc_XrkgufC-49wF7_flex-direction);
+  align-items: var(--mixin-C0uc_XrkgufC-49wF7_align-items);
+  justify-content: var(--mixin-C0uc_XrkgufC-49wF7_justify-content);
+  list-style-position: var(--mixin-C0uc_XrkgufC-49wF7_list-style-position);
+  padding-left: var(--mixin-C0uc_XrkgufC-49wF7_padding-left);
+  position: var(--mixin-C0uc_XrkgufC-49wF7_position);
+  list-style-type: var(--mixin-C0uc_XrkgufC-49wF7_list-style-type);
+  flex-column-gap: var(--mixin-C0uc_XrkgufC-49wF7_flex-column-gap);
+}
+
+:where(.root_reset) ul:where(.ul),
+ul:where(.root_reset.ul),
+:where(.root_reset .__wab_expr_html_text) ul,
+:where(.root_reset_tags) ul,
+ul:where(.root_reset_tags) {
+  display: var(--mixin-Ze08sCSQCD7R-49wF7_display);
+  flex-direction: var(--mixin-Ze08sCSQCD7R-49wF7_flex-direction);
+  align-items: var(--mixin-Ze08sCSQCD7R-49wF7_align-items);
+  justify-content: var(--mixin-Ze08sCSQCD7R-49wF7_justify-content);
+  list-style-position: var(--mixin-Ze08sCSQCD7R-49wF7_list-style-position);
+  padding-left: var(--mixin-Ze08sCSQCD7R-49wF7_padding-left);
+  position: var(--mixin-Ze08sCSQCD7R-49wF7_position);
+  list-style-type: var(--mixin-Ze08sCSQCD7R-49wF7_list-style-type);
+  flex-column-gap: var(--mixin-Ze08sCSQCD7R-49wF7_flex-column-gap);
+}

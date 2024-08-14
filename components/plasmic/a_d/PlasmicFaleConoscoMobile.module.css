@@ -1,0 +1,29 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+  justify-self: flex-start;
+}
+.link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: auto;
+  height: auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+.img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 75px;
+  height: 75px;
+  flex-shrink: 0;
+}
+.img > picture > img {
+  object-fit: cover;
+}
