@@ -88,6 +88,12 @@ export type PlasmicInscricao__ArgsType = {
   form?: React.ReactNode;
   onSubmit?: (event: any) => void;
   isLoading?: boolean;
+  onIncVip?: (event: any) => void;
+  onDecVip?: (event: any) => void;
+  onDecGeral?: (event: any) => void;
+  onIncGeral?: (event: any) => void;
+  vip?: number;
+  geral?: number;
 };
 type ArgPropType = keyof PlasmicInscricao__ArgsType;
 export const PlasmicInscricao__ArgProps = new Array<ArgPropType>(
@@ -96,7 +102,13 @@ export const PlasmicInscricao__ArgProps = new Array<ArgPropType>(
   "lote",
   "form",
   "onSubmit",
-  "isLoading"
+  "isLoading",
+  "onIncVip",
+  "onDecVip",
+  "onDecGeral",
+  "onIncGeral",
+  "vip",
+  "geral"
 );
 
 export type PlasmicInscricao__OverridesType = {
@@ -137,7 +149,9 @@ function PlasmicInscricao__RenderFunc(props: {
           vipPrice: 90,
           geralPrice: 70,
           lote: 1,
-          isLoading: false
+          isLoading: false,
+          vip: 0,
+          geral: 0
         },
         props.args
       ),
@@ -157,22 +171,10 @@ function PlasmicInscricao__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "vip",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
-      },
-      {
-        path: "geral",
-        type: "private",
-        variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
-      },
-      {
         path: "step",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 1
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       }
     ],
     [$props, $ctx, $refs]
@@ -414,52 +416,7 @@ function PlasmicInscricao__RenderFunc(props: {
                             "__wab_instance",
                             sty.button___3ElQt
                           )}
-                          onClick={async event => {
-                            const $steps = {};
-
-                            $steps["updateVip"] =
-                              $state.vip > 0
-                                ? (() => {
-                                    const actionArgs = {
-                                      variable: {
-                                        objRoot: $state,
-                                        variablePath: ["vip"]
-                                      },
-                                      operation: 3
-                                    };
-                                    return (({
-                                      variable,
-                                      value,
-                                      startIndex,
-                                      deleteCount
-                                    }) => {
-                                      if (!variable) {
-                                        return;
-                                      }
-                                      const { objRoot, variablePath } =
-                                        variable;
-
-                                      const oldValue = $stateGet(
-                                        objRoot,
-                                        variablePath
-                                      );
-                                      $stateSet(
-                                        objRoot,
-                                        variablePath,
-                                        oldValue - 1
-                                      );
-                                      return oldValue - 1;
-                                    })?.apply(null, [actionArgs]);
-                                  })()
-                                : undefined;
-                            if (
-                              $steps["updateVip"] != null &&
-                              typeof $steps["updateVip"] === "object" &&
-                              typeof $steps["updateVip"].then === "function"
-                            ) {
-                              $steps["updateVip"] = await $steps["updateVip"];
-                            }
-                          }}
+                          onClick={args.onDecVip}
                         >
                           <div
                             className={classNames(
@@ -478,71 +435,14 @@ function PlasmicInscricao__RenderFunc(props: {
                             sty.text__tycfd
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $state.vip;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
+                          <React.Fragment>{$props.vip}</React.Fragment>
                         </div>
                         <Button
                           className={classNames(
                             "__wab_instance",
                             sty.button__oujWt
                           )}
-                          onClick={async event => {
-                            const $steps = {};
-
-                            $steps["updateVip"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["vip"]
-                                    },
-                                    operation: 2
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-
-                                    const oldValue = $stateGet(
-                                      objRoot,
-                                      variablePath
-                                    );
-                                    $stateSet(
-                                      objRoot,
-                                      variablePath,
-                                      oldValue + 1
-                                    );
-                                    return oldValue + 1;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["updateVip"] != null &&
-                              typeof $steps["updateVip"] === "object" &&
-                              typeof $steps["updateVip"].then === "function"
-                            ) {
-                              $steps["updateVip"] = await $steps["updateVip"];
-                            }
-                          }}
+                          onClick={args.onIncVip}
                         >
                           <div
                             className={classNames(
@@ -614,54 +514,7 @@ function PlasmicInscricao__RenderFunc(props: {
                             "__wab_instance",
                             sty.button__bw6Sm
                           )}
-                          onClick={async event => {
-                            const $steps = {};
-
-                            $steps["updateGeral"] =
-                              $state.geral > 0
-                                ? (() => {
-                                    const actionArgs = {
-                                      variable: {
-                                        objRoot: $state,
-                                        variablePath: ["geral"]
-                                      },
-                                      operation: 3
-                                    };
-                                    return (({
-                                      variable,
-                                      value,
-                                      startIndex,
-                                      deleteCount
-                                    }) => {
-                                      if (!variable) {
-                                        return;
-                                      }
-                                      const { objRoot, variablePath } =
-                                        variable;
-
-                                      const oldValue = $stateGet(
-                                        objRoot,
-                                        variablePath
-                                      );
-                                      $stateSet(
-                                        objRoot,
-                                        variablePath,
-                                        oldValue - 1
-                                      );
-                                      return oldValue - 1;
-                                    })?.apply(null, [actionArgs]);
-                                  })()
-                                : undefined;
-                            if (
-                              $steps["updateGeral"] != null &&
-                              typeof $steps["updateGeral"] === "object" &&
-                              typeof $steps["updateGeral"].then === "function"
-                            ) {
-                              $steps["updateGeral"] = await $steps[
-                                "updateGeral"
-                              ];
-                            }
-                          }}
+                          onClick={args.onDecGeral}
                         >
                           <div
                             className={classNames(
@@ -680,73 +533,14 @@ function PlasmicInscricao__RenderFunc(props: {
                             sty.text__lnVxh
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $state.geral;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
+                          <React.Fragment>{$props.geral}</React.Fragment>
                         </div>
                         <Button
                           className={classNames(
                             "__wab_instance",
                             sty.button__sA6Sa
                           )}
-                          onClick={async event => {
-                            const $steps = {};
-
-                            $steps["updateGeral"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: ["geral"]
-                                    },
-                                    operation: 2
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-
-                                    const oldValue = $stateGet(
-                                      objRoot,
-                                      variablePath
-                                    );
-                                    $stateSet(
-                                      objRoot,
-                                      variablePath,
-                                      oldValue + 1
-                                    );
-                                    return oldValue + 1;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["updateGeral"] != null &&
-                              typeof $steps["updateGeral"] === "object" &&
-                              typeof $steps["updateGeral"].then === "function"
-                            ) {
-                              $steps["updateGeral"] = await $steps[
-                                "updateGeral"
-                              ];
-                            }
-                          }}
+                          onClick={args.onIncGeral}
                         >
                           <div
                             className={classNames(
@@ -775,8 +569,8 @@ function PlasmicInscricao__RenderFunc(props: {
                         {(() => {
                           try {
                             return `Total: R$ ${(
-                              $props.vipPrice * $state.vip +
-                              $props.geralPrice * $state.geral
+                              $props.vipPrice * $props.vip +
+                              $props.geralPrice * $props.geral
                             ).toLocaleString("fr", {
                               minimumFractionDigits: 2,
                               maximumFractionDigits: 2
@@ -796,35 +590,52 @@ function PlasmicInscricao__RenderFunc(props: {
                   </div>
                   <Button
                     className={classNames("__wab_instance", sty.button__kJIv)}
+                    isDisabled={(() => {
+                      try {
+                        return $props.geral + $props.vip === 0;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return [];
+                        }
+                        throw e;
+                      }
+                    })()}
                     onClick={async event => {
                       const $steps = {};
 
-                      $steps["updateStep"] = true
-                        ? (() => {
-                            const actionArgs = {
-                              variable: {
-                                objRoot: $state,
-                                variablePath: ["step"]
-                              },
-                              operation: 2
-                            };
-                            return (({
-                              variable,
-                              value,
-                              startIndex,
-                              deleteCount
-                            }) => {
-                              if (!variable) {
-                                return;
-                              }
-                              const { objRoot, variablePath } = variable;
+                      $steps["updateStep"] =
+                        $props.geral + $props.vip > 0
+                          ? (() => {
+                              const actionArgs = {
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["step"]
+                                },
+                                operation: 2
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
 
-                              const oldValue = $stateGet(objRoot, variablePath);
-                              $stateSet(objRoot, variablePath, oldValue + 1);
-                              return oldValue + 1;
-                            })?.apply(null, [actionArgs]);
-                          })()
-                        : undefined;
+                                const oldValue = $stateGet(
+                                  objRoot,
+                                  variablePath
+                                );
+                                $stateSet(objRoot, variablePath, oldValue + 1);
+                                return oldValue + 1;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
                       if (
                         $steps["updateStep"] != null &&
                         typeof $steps["updateStep"] === "object" &&
@@ -886,6 +697,90 @@ function PlasmicInscricao__RenderFunc(props: {
                       defaultContents: null,
                       value: args.form
                     })}
+                    <Stack__
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(
+                        projectcss.all,
+                        sty.freeBox___95LJe
+                      )}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text___8Ssdw
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return `Pista VIP: ${$props.vip}`;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__scITp
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return `Pista Geral: ${$props.geral}`;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__szuF6
+                        )}
+                      >
+                        <React.Fragment>
+                          {(() => {
+                            try {
+                              return `Total: R$ ${(
+                                $props.geralPrice * $props.geral +
+                                $props.vipPrice * $props.vip
+                              ).toLocaleString("fr", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                              })}`;
+                            } catch (e) {
+                              if (
+                                e instanceof TypeError ||
+                                e?.plasmicType === "PlasmicUndefinedDataError"
+                              ) {
+                                return "";
+                              }
+                              throw e;
+                            }
+                          })()}
+                        </React.Fragment>
+                      </div>
+                    </Stack__>
                     <Stack__
                       as={"div"}
                       hasGap={true}

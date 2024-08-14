@@ -76,10 +76,6 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
 const VIP_PRICE = 0.02;
 const GERAL_PRICE = 0.01;
 
-function Wrapper(props: any) {
-  return <PlasmicInscricao {...props} />
-}
-
 function Inscricao() {
   const [vip, setVip] = useState(1);
   const [geral, setGeral] = useState(2);
@@ -171,11 +167,13 @@ function Inscricao() {
       query={useRouter()?.query}
     >
       <FormProvider {...methods}>
-        <Wrapper
+        <PlasmicInscricao
           onSubmit={handleMySubmit}
           isLoading={methods.formState.isSubmitting}
           vip={vip}
           geral={geral}
+          vipPrice={VIP_PRICE}
+          geralPrice={GERAL_PRICE}
           onDecVip={() => setVip(v => v > 0 ? v-1 : v)}
           onDecGeral={() => setGeral(g => g > 0 ? g-1 : g)}
           onIncVip={() => setVip(v => v+1)}
