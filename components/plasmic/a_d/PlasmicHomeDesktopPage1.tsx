@@ -216,7 +216,7 @@ function PlasmicHomeDesktopPage1__RenderFunc(props: {
               data-plasmic-override={overrides.link}
               className={classNames(projectcss.all, projectcss.a, sty.link)}
               component={Link}
-              href={"https://g.co/kgs/LFpRACh"}
+              href={"https://www.instagram.com/igrejaemsv/"}
               platform={"nextjs"}
             >
               <IconHomePageDesktop

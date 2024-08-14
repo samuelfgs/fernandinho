@@ -163,6 +163,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
             <Button
               className={classNames("__wab_instance", sty.button__ps1KG)}
               color={"yellow"}
+              link={`/inscricao`}
             >
               <div
                 className={classNames(
@@ -265,7 +266,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
               data-plasmic-override={overrides.link}
               className={classNames(projectcss.all, projectcss.a, sty.link)}
               component={Link}
-              href={"https://maps.app.goo.gl/RR1PCSv5opYVFgg1A"}
+              href={"https://www.instagram.com/igrejaemsv/"}
               platform={"nextjs"}
             >
               <IconHomePageMobile
@@ -352,6 +353,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
         <Button
           className={classNames("__wab_instance", sty.button__q4Nit)}
           color={"yellow"}
+          link={`/inscricao`}
         >
           <div
             className={classNames(
@@ -389,7 +391,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
               displayWidth={"100px"}
               loading={"lazy"}
               src={{
-                src: "/plasmic/a_d/images/image5.png",
+                src: "/plasmic/a_d/images/isv.png",
                 fullWidth: 1080,
                 fullHeight: 1080,
                 aspectRatio: undefined
