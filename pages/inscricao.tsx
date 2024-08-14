@@ -73,8 +73,8 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
   );
 };
 
-const VIP_PRICE = 0.02;
-const GERAL_PRICE = 0.01;
+const VIP_PRICE = 0.01;
+const GERAL_PRICE = 0.02;
 
 function Inscricao() {
   const [vip, setVip] = useState(1);
