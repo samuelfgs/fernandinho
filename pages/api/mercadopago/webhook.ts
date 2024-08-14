@@ -22,7 +22,7 @@ export default async function handler(
   }
 
   const mercadoPago = await (
-    await fetch(`https://api.mercadopago.com/v1/merchant_/${id}`, {
+    await fetch(`https://api.mercadopago.com/v1/payments/${id}`, {
       headers: {
         authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
       },
