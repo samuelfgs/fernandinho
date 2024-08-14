@@ -87,41 +87,54 @@ function Inscricao() {
       fullName: "asd",
       cpf: "bsdq",
       telefone: "casd",
-      email: "samuel.fg96@gmail.com"
-    }
+      email: "samuel.fg96@gmail.com",
+    },
   });
 
   const onSubmitHandler: SubmitHandler<Person> = async (newData, e) => {
     console.log("dalex", newData);
 
-    const mercadoPagoId = nanoid()+nanoid();
+    const mercadoPagoId = nanoid() + nanoid();
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/mercadopago/preference`, {
-      method: "POST",
-      body: JSON.stringify({
-        name: newData.fullName,
-        email: newData.email,
-        id: mercadoPagoId,
-        items: [
-          {
-            id: 0,
-            title: "Pista VIP",
-            description: "Ingressos Pista VIP para o Fernandinho em ISV - 06 de outubro",
-            quantity: vip,
-            currency_id: "BRL",
-            unit_price: VIP_PRICE
-          },
-          {
-            id: 1,
-            title: "Pista Geral",
-            description: "Ingressos Pista Geral para o Fernandinho em ISV - 06 de outubro",
-            quantity: geral,
-            currency_id: "BRL",
-            unit_price: GERAL_PRICE
-          }
-        ]
-      })
-    });
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_ENDPOINT}/api/mercadopago/preference`,
+      {
+        method: "POST",
+        body: JSON.stringify({
+          name: newData.fullName,
+          email: newData.email,
+          id: mercadoPagoId,
+          items: [
+            ...(vip
+              ? [
+                  {
+                    id: 0,
+                    title: "Pista VIP",
+                    description:
+                      "Ingressos Pista VIP para o Fernandinho em ISV - 06 de outubro",
+                    quantity: vip,
+                    currency_id: "BRL",
+                    unit_price: VIP_PRICE,
+                  },
+                ]
+              : []),
+            ...(geral
+              ? [
+                  {
+                    id: 1,
+                    title: "Pista Geral",
+                    description:
+                      "Ingressos Pista Geral para o Fernandinho em ISV - 06 de outubro",
+                    quantity: geral,
+                    currency_id: "BRL",
+                    unit_price: GERAL_PRICE,
+                  },
+                ]
+              : []),
+          ],
+        }),
+      }
+    );
 
     const responseJson = await response.json();
 
@@ -141,8 +154,8 @@ function Inscricao() {
           vip,
           geralPrice: GERAL_PRICE,
           vipPrice: VIP_PRICE,
-          lote: 1
-        }
+          lote: 1,
+        },
       })
       .select();
 
@@ -151,7 +164,7 @@ function Inscricao() {
     }
 
     console.log("dale", responseJson.response);
-    router.push(responseJson.response.init_point)
+    router.push(responseJson.response.init_point);
   };
 
   const handleMySubmit: React.FormHTMLAttributes<HTMLFormElement>["onSubmit"] =
@@ -174,10 +187,10 @@ function Inscricao() {
           geral={geral}
           vipPrice={VIP_PRICE}
           geralPrice={GERAL_PRICE}
-          onDecVip={() => setVip(v => v > 0 ? v-1 : v)}
-          onDecGeral={() => setGeral(g => g > 0 ? g-1 : g)}
-          onIncVip={() => setVip(v => v+1)}
-          onIncGeral={() => setGeral(g => g+1)}
+          onDecVip={() => setVip((v) => (v > 0 ? v - 1 : v))}
+          onDecGeral={() => setGeral((g) => (g > 0 ? g - 1 : g))}
+          onIncVip={() => setVip((v) => v + 1)}
+          onIncGeral={() => setGeral((g) => g + 1)}
           form={
             <>
               <InputWithError inputName="fullName" />
