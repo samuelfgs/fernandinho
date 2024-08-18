@@ -232,6 +232,30 @@
 .img > picture > img {
   object-fit: cover;
 }
+.text__lokS {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--token-LirvSzoJURQ3);
+  text-align: left;
+  text-transform: none;
+  line-height: 1.5;
+  letter-spacing: normal;
+  white-space: pre-wrap;
+  user-select: text;
+  text-decoration-line: none;
+  text-overflow: clip;
+  min-width: 0;
+}
+.span___7MCMk {
+  color: var(--token-NauMyC0eAHvEG);
+  padding-right: 4px;
+}
 .faleConosco:global(.__wab_instance) {
   position: relative;
 }
