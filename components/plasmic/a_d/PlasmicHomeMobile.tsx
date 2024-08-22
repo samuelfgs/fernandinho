@@ -195,7 +195,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
             displayWidth={"500px"}
             loading={"lazy"}
             src={{
-              src: "/plasmic/a_d/images/image9.jpg",
+              src: "/plasmic/a_d/images/whatsAppImage20240821At223033Jpeg.jpg",
               fullWidth: 1200,
               fullHeight: 1599,
               aspectRatio: undefined

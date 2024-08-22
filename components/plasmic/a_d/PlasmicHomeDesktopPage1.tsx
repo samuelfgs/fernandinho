@@ -175,15 +175,6 @@ function PlasmicHomeDesktopPage1__RenderFunc(props: {
               >
                 {"EM S\u00c3O VICENTE"}
               </div>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__a7KL
-                )}
-              >
-                {"T O U R   \u00da N I C O"}
-              </div>
             </Stack__>
           </div>
           <Stack__

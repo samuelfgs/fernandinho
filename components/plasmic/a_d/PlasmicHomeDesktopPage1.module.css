@@ -120,33 +120,6 @@
     font-size: 60px;
   }
 }
-.text__a7KL {
-  position: relative;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-MjBWph2_JG89i4);
-  font-family: "Libre Franklin", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  text-align: center;
-  background: var(--token-hjny0JfiVsY7);
-  font-style: normal;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-  border-radius: 30px;
-  padding: 10px;
-}
-@media (min-width: 600px) {
-  .text__a7KL {
-    font-size: 30px;
-  }
-}
 .freeBox__v7HBj {
   display: flex;
   flex-direction: row;
