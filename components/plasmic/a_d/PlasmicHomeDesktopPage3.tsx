@@ -204,7 +204,7 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
                 sty.text__wfCk3
               )}
             >
-              {"1\u00ba LOTE"}
+              {"2\u00ba LOTE"}
             </div>
             <div
               className={classNames(
@@ -225,10 +225,10 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
                       sty.span__p2Suc
                     )}
                   >
-                    {"R$ 180,00"}
+                    {"R$ 200,00"}
                   </span>
                 }
-                <React.Fragment>{" R$ 90,00"}</React.Fragment>
+                <React.Fragment>{" R$ 100,00"}</React.Fragment>
               </React.Fragment>
             </div>
             <div

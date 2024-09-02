@@ -338,7 +338,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
               sty.text__jt31V
             )}
           >
-            {"PISTA VIP: R$ 90,00"}
+            {"PISTA VIP: R$ 100,00"}
           </div>
           <div
             className={classNames(

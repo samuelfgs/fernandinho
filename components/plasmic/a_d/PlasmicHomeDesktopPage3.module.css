@@ -153,6 +153,7 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  padding-left: 0px;
 }
 .text__u586K {
   position: relative;
