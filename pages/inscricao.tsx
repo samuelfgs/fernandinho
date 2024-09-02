@@ -86,7 +86,7 @@ const InputWithError = ({ inputName }: InputWithErrorProps) => {
   );
 };
 
-const VIP_PRICE = 90;
+const VIP_PRICE = 100;
 const GERAL_PRICE = 70;
 
 type InscricaoProps = {
@@ -165,7 +165,7 @@ function Inscricao({
           vip,
           geralPrice: geralPrice,
           vipPrice: vipPrice,
-          lote: 1,
+          lote: 2,
         },
       })
       .select();

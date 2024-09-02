@@ -9,8 +9,8 @@ export default async function handler(
   const ret = await updateSheets();
 
   if (ret) {
-    res.status(200).json({nice: 1});
+    res.status(200).json({ret});
   } else {
-    res.status(500).json({nice: 0});
+    res.status(500).json({ret});
   }
 }

@@ -13,33 +13,44 @@ const auth = new JWT({
   scopes: ["https://www.googleapis.com/auth/spreadsheets"],
 });
 
-type Row = {
-  fullName: string;
-  cpf: string;
-  telefone: string;
-  email: string;
-  lote: number;
-  vip: number;
-  geral: number;
-  total: number;
-  status: "PAGO" | "AGUARDANDO";
-};
+const colOrder = [
+  "id",
+  "fullName",
+  "cpf",
+  "telefone",
+  "email",
+  "lote",
+  "vip",
+  "geral",
+  "total",
+  "status",
+] as const;
+
+type Row = { [K in (typeof colOrder)[number]]: string };
 
 export async function updateSheets() {
-  const { data: inscritos, error: err1 } = await supabase.from(
-    "inscritos_fernandinho"
-  ).select(`
-      *,
-      payments (id, paid, lote)
-    `);
+  const { data: inscritos, error: err1 } = await supabase
+    .from("inscritos_fernandinho")
+    .select(
+      `
+        *,
+        payments (id, paid, lote)
+      `
+    )
+    .filter("id", "gte", 43);
 
+  console.log("dale", inscritos, err1);
   const lines: Row[] = [];
 
   if (!inscritos || err1) {
     return false;
   }
   for (const inscricao of inscritos) {
+    if (!inscricao.payments?.find((p: any) => p.paid)) {
+      continue;
+    }
     lines.push({
+      id: inscricao.id,
       fullName: inscricao.name,
       cpf: inscricao.cpf,
       telefone: inscricao.telefone,
@@ -48,24 +59,11 @@ export async function updateSheets() {
       vip: inscricao.ticketInfo.vip,
       geral: inscricao.ticketInfo.geral,
       total: inscricao.ticketTotalPrice,
-      status: inscricao.payments.paid ? "PAGO" : "AGUARDANDO",
+      status: inscricao.payments?.[0]?.paid ? "PAGO" : "AGUARDANDO",
     });
   }
 
-  const colOrder = [
-    "fullName",
-    "cpf",
-    "telefone",
-    "email",
-    "lote",
-    "vip",
-    "geral",
-    "total",
-    "status",
-  ];
   const sheets = google.sheets({ version: "v4", auth });
-
-  const range = `Inscritos!A2:Z`;
 
   const formattedLines = [];
   for (const line of lines) {
@@ -76,6 +74,9 @@ export async function updateSheets() {
     formattedLines.push(row);
   }
 
+  for (let i = 0; i < 100; i++) formattedLines.push(colOrder.map((x) => ""));
+
+  const range = "A2:Z";
   await sheets.spreadsheets.values.update({
     spreadsheetId,
     range,
@@ -86,5 +87,5 @@ export async function updateSheets() {
     },
   });
 
-  return true;
+  return formattedLines;
 }

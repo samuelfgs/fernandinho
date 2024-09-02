@@ -274,7 +274,7 @@ function PlasmicInscricao__RenderFunc(props: {
                   <React.Fragment>
                     <React.Fragment>
                       {
-                        "A data final da venda do 1\u00ba Lote vai at\u00e9 31/08/2024 ou at\u00e9 esgotar a quantidade de vagas do 1\u00ba lote.\n\nEnt\u00e3o n\u00e3o perca a oportunidade de comprar o seu ingresso com desconto nesse 1\u00ba Lote.\n\nValor do Ingresso para o evento:\nPista VIP: R$ 90,00 "
+                        "A data final da venda do 2\u00ba Lote vai at\u00e9 30/09/2024 ou at\u00e9 esgotar a quantidade de vagas do 1\u00ba lote.\n\nEnt\u00e3o n\u00e3o perca a oportunidade de comprar o seu ingresso com desconto nesse 1\u00ba Lote.\n\nValor do Ingresso para o evento:\nPista VIP: R$ 100,00 "
                       }
                     </React.Fragment>
                     {
@@ -287,7 +287,7 @@ function PlasmicInscricao__RenderFunc(props: {
                           sty.span___12PqI
                         )}
                       >
-                        {"R$ 180,00"}
+                        {"R$ 200,00"}
                       </span>
                     }
                     <React.Fragment>
@@ -308,7 +308,7 @@ function PlasmicInscricao__RenderFunc(props: {
                     }
                     <React.Fragment>
                       {
-                        "\n\n2\u00ba Lote: A PARTIR DE 01/09/2024\n3\u00ba Lote: A PARTIR DE 01/10/2024"
+                        "\n\n1\u00ba Lote: ESGOTADO\n2\u00ba Lote: A PARTIR DE 01/09/2024\n3\u00ba Lote: A PARTIR DE 01/10/2024"
                       }
                     </React.Fragment>
                   </React.Fragment>
