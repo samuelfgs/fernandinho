@@ -329,7 +329,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
               sty.text__tqZR
             )}
           >
-            {"1\u00ba LOTE"}
+            {"2\u00ba LOTE"}
           </div>
           <div
             className={classNames(

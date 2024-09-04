@@ -308,7 +308,7 @@ function PlasmicInscricao__RenderFunc(props: {
                     }
                     <React.Fragment>
                       {
-                        "\n\n1\u00ba Lote: ESGOTADO\n2\u00ba Lote: A PARTIR DE 01/09/2024\n3\u00ba Lote: A PARTIR DE 01/10/2024"
+                        "\n\n1\u00ba Lote: ESGOTADO\n2\u00ba Lote: A PARTIR DE 01/09/2024"
                       }
                     </React.Fragment>
                   </React.Fragment>

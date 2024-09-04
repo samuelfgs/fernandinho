@@ -338,6 +338,7 @@
   user-select: text;
   text-decoration-line: none;
   text-overflow: clip;
+  padding-bottom: 0px;
 }
 .text__jt31V {
   position: relative;
