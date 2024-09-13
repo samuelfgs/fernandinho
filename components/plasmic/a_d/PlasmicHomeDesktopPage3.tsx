@@ -87,6 +87,7 @@ export type PlasmicHomeDesktopPage3__OverridesType = {
   root?: Flex__<"div">;
   img?: Flex__<typeof PlasmicImg__>;
   button?: Flex__<typeof Button>;
+  span?: Flex__<"span">;
 };
 
 export interface DefaultHomeDesktopPage3Props {
@@ -110,7 +111,16 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
 }) {
   const { variants, overrides, forNode } = props;
 
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
@@ -213,23 +223,7 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
                 sty.text__u586K
               )}
             >
-              <React.Fragment>
-                <React.Fragment>{"PISTA VIP: "}</React.Fragment>
-                {
-                  <span
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.span,
-                      projectcss.__wab_text,
-                      projectcss.plasmic_default__inline,
-                      sty.span__p2Suc
-                    )}
-                  >
-                    {"R$ 200,00"}
-                  </span>
-                }
-                <React.Fragment>{" R$ 100,00"}</React.Fragment>
-              </React.Fragment>
+              {"PISTA VIP: ESGOTADO"}
             </div>
             <div
               className={classNames(
@@ -242,12 +236,14 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
                 <React.Fragment>{"PISTA GERAL: "}</React.Fragment>
                 {
                   <span
+                    data-plasmic-name={"span"}
+                    data-plasmic-override={overrides.span}
                     className={classNames(
                       projectcss.all,
                       projectcss.span,
                       projectcss.__wab_text,
                       projectcss.plasmic_default__inline,
-                      sty.span__bDn0F
+                      sty.span
                     )}
                   >
                     {"R$ 140,00"}
@@ -264,9 +260,10 @@ function PlasmicHomeDesktopPage3__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img", "button"],
+  root: ["root", "img", "button", "span"],
   img: ["img"],
-  button: ["button"]
+  button: ["button"],
+  span: ["span"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -275,6 +272,7 @@ type NodeDefaultElementType = {
   root: "div";
   img: typeof PlasmicImg__;
   button: typeof Button;
+  span: "span";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -339,6 +337,7 @@ export const PlasmicHomeDesktopPage3 = Object.assign(
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
     button: makeNodeComponent("button"),
+    span: makeNodeComponent("span"),
 
     // Metadata about props expected for PlasmicHomeDesktopPage3
     internalVariantProps: PlasmicHomeDesktopPage3__VariantProps,

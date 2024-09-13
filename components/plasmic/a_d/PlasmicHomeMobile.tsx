@@ -113,7 +113,16 @@ function PlasmicHomeMobile__RenderFunc(props: {
 }) {
   const { variants, overrides, forNode } = props;
 
-  const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
+  const args = React.useMemo(
+    () =>
+      Object.assign(
+        {},
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
+      ),
+    [props.args]
+  );
 
   const $props = {
     ...args,
@@ -338,7 +347,7 @@ function PlasmicHomeMobile__RenderFunc(props: {
               sty.text__jt31V
             )}
           >
-            {"PISTA VIP: R$ 100,00"}
+            {"PISTA VIP: ESGOTADO"}
           </div>
           <div
             className={classNames(

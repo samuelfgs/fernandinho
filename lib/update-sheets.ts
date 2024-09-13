@@ -45,11 +45,11 @@ export async function updateSheets() {
   if (!inscritos || err1) {
     return false;
   }
+
+  const not_paid = [];
+  const already_seen = new Set();
   for (const inscricao of inscritos) {
-    if (!inscricao.payments?.find((p: any) => p.paid)) {
-      continue;
-    }
-    lines.push({
+    const newLine = {
       id: inscricao.id,
       fullName: inscricao.name,
       cpf: inscricao.cpf,
@@ -60,7 +60,28 @@ export async function updateSheets() {
       geral: inscricao.ticketInfo.geral,
       total: inscricao.ticketTotalPrice,
       status: inscricao.payments?.[0]?.paid ? "PAGO" : "AGUARDANDO",
-    });
+    }
+
+    if (!inscricao.payments?.find((p: any) => p.paid)) {
+      not_paid.push(newLine);
+    } else {
+      lines.push(newLine);
+      already_seen.add(newLine.email);
+      already_seen.add(newLine.telefone);
+      already_seen.add(newLine.fullName);
+    }
+  }
+
+  const not_paid_lines = [];
+  for (const line of not_paid) {
+    if (already_seen.has(line.email)) continue;
+    if (already_seen.has(line.telefone)) continue;
+    if (already_seen.has(line.fullName)) continue;
+
+    already_seen.add(line.email);
+    already_seen.add(line.telefone);
+    already_seen.add(line.fullName);
+    not_paid_lines.push(line);
   }
 
   const sheets = google.sheets({ version: "v4", auth });
@@ -73,8 +94,17 @@ export async function updateSheets() {
     }
     formattedLines.push(row);
   }
-
   for (let i = 0; i < 100; i++) formattedLines.push(colOrder.map((x) => ""));
+
+  const formattedLinesNotPaid = [];
+  for (const line of not_paid_lines) {
+    const row = [];
+    for (const col of colOrder) {
+      row.push(line[col as keyof Row]);
+    }
+    formattedLinesNotPaid.push(row);
+  }
+  for (let i = 0; i < 100; i++) formattedLinesNotPaid.push(colOrder.map((x) => ""));
 
   const range = "A2:Z";
   await sheets.spreadsheets.values.update({
@@ -84,6 +114,17 @@ export async function updateSheets() {
     requestBody: {
       range,
       values: formattedLines,
+    },
+  });
+
+  const range2 = "Inscritos!A2:Z";
+  await sheets.spreadsheets.values.update({
+    spreadsheetId,
+    range: range2,
+    valueInputOption: "USER_ENTERED",
+    requestBody: {
+      range: range2,
+      values: formattedLinesNotPaid,
     },
   });
 

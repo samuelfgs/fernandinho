@@ -174,9 +174,6 @@
   text-decoration-line: none;
   text-overflow: clip;
 }
-.span__p2Suc {
-  text-decoration-line: line-through;
-}
 .text___6GDAc {
   position: relative;
   width: auto;
@@ -196,6 +193,6 @@
   text-decoration-line: none;
   text-overflow: clip;
 }
-.span__bDn0F {
+.span {
   text-decoration-line: line-through;
 }

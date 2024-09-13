@@ -153,7 +153,9 @@ function PlasmicInscricao__RenderFunc(props: {
           vip: 0,
           geral: 0
         },
-        props.args
+        Object.fromEntries(
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
       ),
     [props.args]
   );
@@ -274,24 +276,8 @@ function PlasmicInscricao__RenderFunc(props: {
                   <React.Fragment>
                     <React.Fragment>
                       {
-                        "A data final da venda do 2\u00ba Lote vai at\u00e9 30/09/2024 ou at\u00e9 esgotar a quantidade de vagas do 2\u00ba lote.\n\nEnt\u00e3o n\u00e3o perca a oportunidade de comprar o seu ingresso com desconto nesse 2\u00ba Lote.\n\nValor do Ingresso para o evento:\nPista VIP: R$ 100,00 "
+                        "A data final da venda do 2\u00ba Lote vai at\u00e9 30/09/2024 ou at\u00e9 esgotar a quantidade de vagas do 2\u00ba lote.\n\nEnt\u00e3o n\u00e3o perca a oportunidade de comprar o seu ingresso com desconto nesse 2\u00ba Lote.\n\nValor do Ingresso para o evento:\nPista VIP: ESGOTADO \nPista Geral: R$ 70,00 "
                       }
-                    </React.Fragment>
-                    {
-                      <span
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.span,
-                          projectcss.__wab_text,
-                          projectcss.plasmic_default__inline,
-                          sty.span___12PqI
-                        )}
-                      >
-                        {"R$ 200,00"}
-                      </span>
-                    }
-                    <React.Fragment>
-                      {"\nPista Geral: R$ 70,00 "}
                     </React.Fragment>
                     {
                       <span
@@ -413,13 +399,7 @@ function PlasmicInscricao__RenderFunc(props: {
                         <React.Fragment>
                           {(() => {
                             try {
-                              return `R$ ${$props.vipPrice.toLocaleString(
-                                "fr",
-                                {
-                                  minimumFractionDigits: 2,
-                                  maximumFractionDigits: 2
-                                }
-                              )}`;
+                              return "ESGOTADO";
                             } catch (e) {
                               if (
                                 e instanceof TypeError ||
@@ -432,58 +412,6 @@ function PlasmicInscricao__RenderFunc(props: {
                           })()}
                         </React.Fragment>
                       </div>
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___2Fzh3
-                        )}
-                      >
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button___3ElQt
-                          )}
-                          onClick={args.onDecVip}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__i7Wid
-                            )}
-                          >
-                            {"-"}
-                          </div>
-                        </Button>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__tycfd
-                          )}
-                        >
-                          <React.Fragment>{$props.vip}</React.Fragment>
-                        </div>
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__oujWt
-                          )}
-                          onClick={args.onIncVip}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jenLf
-                            )}
-                          >
-                            {"+"}
-                          </div>
-                        </Button>
-                      </Stack__>
                     </div>
                   </div>
                   <div

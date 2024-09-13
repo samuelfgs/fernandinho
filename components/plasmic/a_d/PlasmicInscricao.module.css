@@ -195,21 +195,6 @@
   text-overflow: clip;
   min-width: 0;
 }
-.span___12PqI {
-  text-decoration-line: line-through;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--token-LirvSzoJURQ3);
-  text-align: left;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-overflow: clip;
-}
 .span__y41Zs {
   text-decoration-line: line-through;
   font-family: "Montserrat", sans-serif;
@@ -331,103 +316,9 @@
   width: 100%;
   height: auto;
   max-width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   min-width: 0;
-}
-.freeBox___2Fzh3 {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  padding: 0px;
-}
-.freeBox___2Fzh3 > :global(.__wab_flex-container) {
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-left: calc(0px - 20px);
-  width: calc(100% + 20px);
-}
-.freeBox___2Fzh3 > :global(.__wab_flex-container) > *,
-.freeBox___2Fzh3 > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
-.freeBox___2Fzh3 > :global(.__wab_flex-container) > picture > img,
-.freeBox___2Fzh3
-  > :global(.__wab_flex-container)
-  > :global(.__wab_slot)
-  > picture
-  > img {
-  margin-left: 20px;
-}
-.button___3ElQt:global(.__wab_instance) {
-  max-width: 100%;
-  width: 100%;
-  min-width: 0;
-}
-.svg__tsPfE {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
-}
-.text__i7Wid {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  color: #ededec;
-  text-align: left;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
-}
-.svg__uTrwd {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
-}
-.text__tycfd {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  text-align: center;
-  min-width: 20px;
-}
-.button__oujWt:global(.__wab_instance) {
-  max-width: 100%;
-  position: relative;
-}
-.svg__gOei5 {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
-}
-.text__jenLf {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  color: #ededec;
-  text-align: left;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre;
-  user-select: text;
-  text-decoration-line: none !important;
-  text-overflow: clip !important;
-}
-.svg__dquCd {
-  position: relative;
-  object-fit: cover;
-  width: auto;
-  height: 1em;
 }
 .freeBox__wMv1B {
   display: flex;
