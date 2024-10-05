@@ -325,6 +325,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/login"
+        },
+        {
+          "id": "CGqfazUoAy5y",
+          "name": "Status",
+          "type": "managed",
+          "projectId": "v9K2EjBMfgxWsQ5xC6ATsB",
+          "renderModuleFilePath": "plasmic/a_d/PlasmicStatus.tsx",
+          "importSpec": {
+            "modulePath": "../pages/status.tsx"
+          },
+          "cssFilePath": "plasmic/a_d/PlasmicStatus.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/status"
         }
       ],
       "icons": [
