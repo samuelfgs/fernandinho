@@ -37,9 +37,10 @@ export async function updateSheets() {
         payments (id, paid, lote)
       `
     )
-    .filter("id", "gte", 43);
+    .filter("id", "gte", 43)
+    .limit(5000)
 
-  console.log("dale", inscritos, err1);
+  console.log("dale", inscritos?.length, err1);
   const lines: Row[] = [];
 
   if (!inscritos || err1) {

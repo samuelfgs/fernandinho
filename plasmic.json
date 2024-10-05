@@ -297,6 +297,34 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/success"
+        },
+        {
+          "id": "tkL7NtyLeguy",
+          "name": "Ingresso",
+          "type": "managed",
+          "projectId": "v9K2EjBMfgxWsQ5xC6ATsB",
+          "renderModuleFilePath": "plasmic/a_d/PlasmicIngresso.tsx",
+          "importSpec": {
+            "modulePath": "../pages/ingresso/[id]/[entry].tsx"
+          },
+          "cssFilePath": "plasmic/a_d/PlasmicIngresso.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/ingresso/[id]/[entry]"
+        },
+        {
+          "id": "cB6f0S1EOzoR",
+          "name": "Login",
+          "type": "managed",
+          "projectId": "v9K2EjBMfgxWsQ5xC6ATsB",
+          "renderModuleFilePath": "plasmic/a_d/PlasmicLogin.tsx",
+          "importSpec": {
+            "modulePath": "../pages/login.tsx"
+          },
+          "cssFilePath": "plasmic/a_d/PlasmicLogin.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/login"
         }
       ],
       "icons": [
@@ -391,6 +419,11 @@
           "id": "iIZr2EbCrYe6",
           "name": "WhatsApp Image 2024-08-21 at 22.30.33.jpeg",
           "filePath": "../public/plasmic/a_d/images/whatsAppImage20240821At223033Jpeg.jpg"
+        },
+        {
+          "id": "_CYITfyfShrb",
+          "name": "loading",
+          "filePath": "../public/plasmic/a_d/images/loading.png"
         }
       ],
       "indirect": false,

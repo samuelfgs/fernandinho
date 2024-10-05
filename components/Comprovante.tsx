@@ -136,28 +136,24 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
               gap: 10,
             }}
           >
-            {isFirst ? (
-              <>
-                <View style={{ display: "flex", lineHeight: 1.5 }}>
-                  <Text style={{ color: "#8d8d8d" }}>Participante</Text>
-                  <Text>{person.name}</Text>
-                </View>
-                <View style={{ display: "flex", lineHeight: 1.5 }}>
-                  <Text style={{ color: "#8d8d8d" }}>E-mail</Text>
-                  <Text>
-                    {person.email.slice(0, 3) +
-                      "******" +
-                      person.email.slice(idx - 1)}
-                  </Text>
-                </View>
-                <View style={{ display: "flex", lineHeight: 1.5 }}>
-                  <Text style={{ color: "#8d8d8d" }}>Documento</Text>
-                  <Text>
-                    {person.doc.slice(0, 3) + "*******" + person.doc.slice(-2)}
-                  </Text>
-                </View>
-              </>
-            ) : null}
+            <View style={{ display: "flex", lineHeight: 1.5 }}>
+              <Text style={{ color: "#8d8d8d" }}>Participante</Text>
+              <Text>{person.name}</Text>
+            </View>
+            <View style={{ display: "flex", lineHeight: 1.5 }}>
+              <Text style={{ color: "#8d8d8d" }}>E-mail</Text>
+              <Text>
+                {person.email.slice(0, 3) +
+                  "******" +
+                  person.email.slice(idx - 1)}
+              </Text>
+            </View>
+            <View style={{ display: "flex", lineHeight: 1.5 }}>
+              <Text style={{ color: "#8d8d8d" }}>Documento</Text>
+              <Text>
+                {person.doc.slice(0, 3) + "*******" + person.doc.slice(-2)}
+              </Text>
+            </View>
             <View style={{ display: "flex", alignItems: "center" }}>
               <Image source={svg} style={{ width: 150, height: 150 }} />
             </View>

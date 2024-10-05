@@ -314,6 +314,31 @@
           "checksum": "2b1aa50d451495abd3133c96c8388e6f"
         },
         {
+          "type": "renderModule",
+          "assetId": "tkL7NtyLeguy",
+          "checksum": "08e45a5d6b1bfc3a4bb91dfa9776d002"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "tkL7NtyLeguy",
+          "checksum": "08e45a5d6b1bfc3a4bb91dfa9776d002"
+        },
+        {
+          "type": "renderModule",
+          "assetId": "cB6f0S1EOzoR",
+          "checksum": "c129fcd47aee8bd37ba77314961d0094"
+        },
+        {
+          "type": "cssRules",
+          "assetId": "cB6f0S1EOzoR",
+          "checksum": "c129fcd47aee8bd37ba77314961d0094"
+        },
+        {
+          "type": "image",
+          "assetId": "_CYITfyfShrb",
+          "checksum": "1f38de9a819c80cc5b8e5a52aa1d494f"
+        },
+        {
           "assetId": "v9K2EjBMfgxWsQ5xC6ATsB",
           "type": "projectCss",
           "checksum": "c995757b456632c826c4de539a0950aa"
