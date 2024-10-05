@@ -22,10 +22,14 @@ function Ingresso() {
   const [notPaid, setNotPaid] = React.useState(true);
   const [info, setInfo] = React.useState<any>();
   const [isNew, setIsNew] = React.useState(0);
+  const [notAuthorized, setNotAuthorized] = React.useState(false);
+
   const { data, isLoading, error, mutate } = useMutablePlasmicQueryData(
     `ingresso/${id}/${entry}`,
     async () => {
       let query = supabase.from("checkin").select();
+      query = query.filter("inscricao_id", "eq", id);
+      query = query.filter("inscricao_number", "eq", entry);
       const { data, error } = await query;
       if (error !== null) {
         throw new Error(error.message);
@@ -66,7 +70,8 @@ function Ingresso() {
       }
       const name = localStorage.getItem("isv-admin");
       if (!name) {
-        throw new Error("not authorized");
+        setNotAuthorized(true);
+        return;
       }
       if (inscricao.length === 0) {
         throw new Error(`Inscricao nao encontrada: ${id}`);
@@ -93,7 +98,7 @@ function Ingresso() {
         const minutes = String(date.getMinutes()).padStart(2, '0'); // Get minutes and pad with zero
 
         setInfo({
-          nome: inscricao[0].name,
+          nome: `${inscricao[0].name} (${+(entry?? 0)+1} de ${inscricao[0].ticketInfo.vip + inscricao[0].ticketInfo.geral})`,
           data: `${day}/${month}`,
           horario: `${hours}:${minutes}`,
           pessoa: data[0].responsavel,
@@ -111,7 +116,7 @@ function Ingresso() {
       toast.error("CHECK-IN JÁ REALIZADO");
     }
   }, [isNew]);
-  return error || error2 || error3 ? (
+  return error || error2 || error3 || notAuthorized ? (
     <h1>Not Authorized</h1>
   ) : (
     <PageParamsProvider__
