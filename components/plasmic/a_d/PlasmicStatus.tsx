@@ -68,10 +68,16 @@ import sty from "./PlasmicStatus.module.css"; // plasmic-import: CGqfazUoAy5y/cs
 
 createPlasmicElementProxy;
 
-export type PlasmicStatus__VariantMembers = {};
-export type PlasmicStatus__VariantsArgs = {};
+export type PlasmicStatus__VariantMembers = {
+  loading: "loading";
+};
+export type PlasmicStatus__VariantsArgs = {
+  loading?: SingleBooleanChoiceArg<"loading">;
+};
 type VariantPropType = keyof PlasmicStatus__VariantsArgs;
-export const PlasmicStatus__VariantProps = new Array<VariantPropType>();
+export const PlasmicStatus__VariantProps = new Array<VariantPropType>(
+  "loading"
+);
 
 export type PlasmicStatus__ArgsType = {
   incorrect?: boolean;
@@ -79,6 +85,7 @@ export type PlasmicStatus__ArgsType = {
   geralIn?: React.ReactNode;
   vipOut?: React.ReactNode;
   geralOut?: React.ReactNode;
+  children?: React.ReactNode;
 };
 type ArgPropType = keyof PlasmicStatus__ArgsType;
 export const PlasmicStatus__ArgProps = new Array<ArgPropType>(
@@ -86,7 +93,8 @@ export const PlasmicStatus__ArgProps = new Array<ArgPropType>(
   "vipIn",
   "geralIn",
   "vipOut",
-  "geralOut"
+  "geralOut",
+  "children"
 );
 
 export type PlasmicStatus__OverridesType = {
@@ -135,6 +143,24 @@ function PlasmicStatus__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "loading",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.loading
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+
   return (
     <React.Fragment>
       <Head></Head>
@@ -159,7 +185,8 @@ function PlasmicStatus__RenderFunc(props: {
             projectcss.plasmic_tokens,
             plasmic_copy_of_plasmic_kit_q_4_color_tokens_css.plasmic_tokens,
             plasmic_plasmic_kit_q_4_color_tokens_css.plasmic_tokens,
-            sty.root
+            sty.root,
+            { [sty.rootloading]: hasVariant($state, "loading", "loading") }
           )}
         >
           <div
@@ -190,138 +217,175 @@ function PlasmicStatus__RenderFunc(props: {
               }}
             />
           </div>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox__aaerc)}
+          <div
+            className={classNames(projectcss.all, sty.freeBox__cjKcc, {
+              [sty.freeBoxloading__cjKccLkRWr]: hasVariant(
+                $state,
+                "loading",
+                "loading"
+              )
+            })}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__vxnnV
-              )}
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__aaerc, {
+                [sty.freeBoxloading__aaercLkRWr]: hasVariant(
+                  $state,
+                  "loading",
+                  "loading"
+                )
+              })}
             >
-              {"CHECK-IN REALIZADOS"}
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__ae9Wp)}>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__kZBiT)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__vxnnV,
+                  {
+                    [sty.textloading__vxnnVLkRWr]: hasVariant(
+                      $state,
+                      "loading",
+                      "loading"
+                    )
+                  }
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__aWdk3
-                  )}
-                >
-                  {"VIP"}
-                </div>
-                <div className={classNames(projectcss.all, sty.freeBox__qeDDy)}>
-                  {renderPlasmicSlot({
-                    defaultContents: "200",
-                    value: args.vipIn,
-                    className: classNames(sty.slotTargetVipIn)
-                  })}
-                </div>
-              </Stack__>
-              <div className={classNames(projectcss.all, sty.freeBox__dDcGs)}>
+                {"CHECK-IN REALIZADOS"}
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__ae9Wp)}>
                 <Stack__
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox__tk0Wz)}
+                  className={classNames(projectcss.all, sty.freeBox__kZBiT)}
                 >
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__ooo2A
+                      sty.text__aWdk3
                     )}
                   >
-                    {"GERAL"}
+                    {"VIP"}
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__r1Bg0)}
+                    className={classNames(projectcss.all, sty.freeBox__qeDDy)}
                   >
                     {renderPlasmicSlot({
                       defaultContents: "200",
-                      value: args.geralIn,
-                      className: classNames(sty.slotTargetGeralIn)
+                      value: args.vipIn,
+                      className: classNames(sty.slotTargetVipIn)
                     })}
                   </div>
                 </Stack__>
+                <div className={classNames(projectcss.all, sty.freeBox__dDcGs)}>
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox__tk0Wz)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ooo2A
+                      )}
+                    >
+                      {"GERAL"}
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__r1Bg0)}
+                    >
+                      {renderPlasmicSlot({
+                        defaultContents: "200",
+                        value: args.geralIn,
+                        className: classNames(sty.slotTargetGeralIn)
+                      })}
+                    </div>
+                  </Stack__>
+                </div>
               </div>
-            </div>
-          </Stack__>
-          <Stack__
-            as={"div"}
-            hasGap={true}
-            className={classNames(projectcss.all, sty.freeBox___2VZ2E)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__yoyfy
-              )}
+            </Stack__>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox___2VZ2E, {
+                [sty.freeBoxloading___2VZ2ELkRWr]: hasVariant(
+                  $state,
+                  "loading",
+                  "loading"
+                )
+              })}
             >
-              {"RESTANTE"}
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__sju5N)}>
-              <Stack__
-                as={"div"}
-                hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__vIDsL)}
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__yoyfy
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__nqh9M
-                  )}
-                >
-                  {"VIP"}
-                </div>
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___2TChC)}
-                >
-                  {renderPlasmicSlot({
-                    defaultContents: "200",
-                    value: args.vipOut,
-                    className: classNames(sty.slotTargetVipOut)
-                  })}
-                </div>
-              </Stack__>
-              <div className={classNames(projectcss.all, sty.freeBox__dC2Ih)}>
+                {"RESTANTE"}
+              </div>
+              <div className={classNames(projectcss.all, sty.freeBox__sju5N)}>
                 <Stack__
                   as={"div"}
                   hasGap={true}
-                  className={classNames(projectcss.all, sty.freeBox___9Suvg)}
+                  className={classNames(projectcss.all, sty.freeBox__vIDsL)}
                 >
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__xy7Ju
+                      sty.text__nqh9M
                     )}
                   >
-                    {"GERAL"}
+                    {"VIP"}
                   </div>
                   <div
-                    className={classNames(projectcss.all, sty.freeBox__hrz6G)}
+                    className={classNames(projectcss.all, sty.freeBox___2TChC)}
                   >
                     {renderPlasmicSlot({
                       defaultContents: "200",
-                      value: args.geralOut,
-                      className: classNames(sty.slotTargetGeralOut)
+                      value: args.vipOut,
+                      className: classNames(sty.slotTargetVipOut)
                     })}
                   </div>
                 </Stack__>
+                <div className={classNames(projectcss.all, sty.freeBox__dC2Ih)}>
+                  <Stack__
+                    as={"div"}
+                    hasGap={true}
+                    className={classNames(projectcss.all, sty.freeBox___9Suvg)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xy7Ju
+                      )}
+                    >
+                      {"GERAL"}
+                    </div>
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__hrz6G)}
+                    >
+                      {renderPlasmicSlot({
+                        defaultContents: "200",
+                        value: args.geralOut,
+                        className: classNames(sty.slotTargetGeralOut)
+                      })}
+                    </div>
+                  </Stack__>
+                </div>
               </div>
-            </div>
-          </Stack__>
+            </Stack__>
+            {(hasVariant($state, "loading", "loading") ? true : false)
+              ? renderPlasmicSlot({
+                  defaultContents: null,
+                  value: args.children
+                })
+              : null}
+          </div>
           <PlasmicImg__
             alt={""}
             className={classNames(sty.img__iYnHy)}

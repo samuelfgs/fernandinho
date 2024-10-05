@@ -5,12 +5,15 @@ import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-we
 
 import { PlasmicStatus } from "../components/plasmic/a_d/PlasmicStatus";
 import { useRouter } from "next/router";
-import { useMutablePlasmicQueryData, usePlasmicQueryData } from "@plasmicapp/react-web/lib/query";
+import {
+  useMutablePlasmicQueryData,
+  usePlasmicQueryData,
+} from "@plasmicapp/react-web/lib/query";
 import { supabase } from "@/components/supabase/supabase";
+import { ColorRing } from "react-loader-spinner";
 
 function Status() {
-
-  const { data: inscritos, isLoading: isLoadingInscritos } = 
+  const { data: inscritos, isLoading: isLoadingInscritos } =
     useMutablePlasmicQueryData("inscritos", async () => {
       const { data: inscritos, error: err1 } = await supabase
         .from("inscritos_fernandinho")
@@ -20,55 +23,58 @@ function Status() {
             payments (id, paid, lote)
           `
         );
-        if (!inscritos) {
-          throw new Error(err1?.message ?? "Unknown error");
-        }
-        const paid = [];
-        for (const inscricao of inscritos) {
-          const newLine = {
-            id: inscricao.id,
-            fullName: inscricao.name,
-            cpf: inscricao.cpf,
-            telefone: inscricao.telefone,
-            email: inscricao.email,
-            lote: inscricao.ticketInfo.lote,
-            vip: inscricao.ticketInfo.vip,
-            geral: inscricao.ticketInfo.geral,
-            total: inscricao.ticketTotalPrice,
-            status: inscricao.payments?.[0]?.paid ? "PAGO" : "AGUARDANDO",
-          }
-
-          if (inscricao.payments?.find((p: any) => p.paid)) {
-            paid.push(newLine);
-          }
-        }
-        return paid;
+      if (!inscritos) {
+        throw new Error(err1?.message ?? "Unknown error");
       }
+      const paid = [];
+      for (const inscricao of inscritos) {
+        const newLine = {
+          id: inscricao.id,
+          fullName: inscricao.name,
+          cpf: inscricao.cpf,
+          telefone: inscricao.telefone,
+          email: inscricao.email,
+          lote: inscricao.ticketInfo.lote,
+          vip: inscricao.ticketInfo.vip,
+          geral: inscricao.ticketInfo.geral,
+          total: inscricao.ticketTotalPrice,
+          status: inscricao.payments?.[0]?.paid ? "PAGO" : "AGUARDANDO",
+        };
+
+        if (inscricao.payments?.find((p: any) => p.paid)) {
+          paid.push(newLine);
+        }
+      }
+      return paid;
+    });
+
+  const { data: checkin, isLoading: isLoadingCheckIn } =
+    useMutablePlasmicQueryData(
+      "checkin",
+      async () => {
+        const { data, error } = await supabase.from("checkin").select("*");
+
+        if (!data) {
+          throw new Error(error.message ?? "Unknown error");
+        }
+        return data;
+      },
+      { refreshInterval: 1000 }
     );
-
-  const { data: checkin, isLoading: isLoadingCheckIn} = useMutablePlasmicQueryData("checkin", async () => {
-    const { data, error } = await supabase
-      .from("checkin")
-      .select("*");
-
-    if (!data) {
-      throw new Error(error.message ?? "Unknown error");
-    }
-    return data;
-  }, { refreshInterval: 1000 });
 
   const count = {
     vipIn: 0,
     vipOut: 0,
     geralIn: 0,
-    geralOut: 0
-  }
-
+    geralOut: 0,
+  };
 
   if (inscritos && checkin) {
     for (const inscrito of inscritos) {
       for (let i = 0; i < inscrito.vip; i++) {
-        const row = checkin.find(r => r.inscricao_id === inscrito.id && r.inscricao_number === i);
+        const row = checkin.find(
+          (r) => r.inscricao_id === inscrito.id && r.inscricao_number === i
+        );
         if (row) {
           count.vipIn++;
         } else {
@@ -76,7 +82,11 @@ function Status() {
         }
       }
       for (let i = 0; i < inscrito.geral; i++) {
-        const row = checkin.find(r => r.inscricao_id === inscrito.id && r.inscricao_number === (i + inscrito.vip));
+        const row = checkin.find(
+          (r) =>
+            r.inscricao_id === inscrito.id &&
+            r.inscricao_number === i + inscrito.vip
+        );
         if (row) {
           count.geralIn++;
         } else {
@@ -96,6 +106,18 @@ function Status() {
         vipOut={count.vipOut || "0"}
         geralIn={count.geralIn || "0"}
         geralOut={count.geralOut || "0"}
+        loading={!inscritos || !checkin}
+        children={
+          <ColorRing
+            visible={true}
+            height="300"
+            width="300"
+            ariaLabel="color-ring-loading"
+            wrapperStyle={{}}
+            wrapperClass="color-ring-wrapper"
+            colors={["blue", "blue", "blue", "blue", "blue"]}
+          />
+        }
       />
     </PageParamsProvider__>
   );
