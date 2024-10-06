@@ -5,6 +5,9 @@ type Data = {
   name: string
 }
 
+import {
+  Image,
+} from "@react-pdf/renderer";
 
 import ReactDOMServer from 'react-dom/server';
 import { Html } from '@react-email/html';
@@ -133,12 +136,15 @@ export const sendEmail = async (body: any) => {
       svgs={qrs}
       vip={vip}
       geral={geral}
+      calendarImage={body.calendarImage}
+      markerImage={body.markerImage}
+      isvImage={body.isvImage}
     />
   );
 
   try {
     const info = await sendMail(email, pdfBuffer);
-    await sendMail(`fgs.samuel+${id}@gmail.com`, pdfBuffer)
+    // await sendMail(`fgs.samuel+${id}@gmail.com`, pdfBuffer)
     return info;
   } catch (err) {
     throw (err);
@@ -165,6 +171,20 @@ export default async function handler(
   console.log("dale", batch[0]);
   const st = [];
   let i = 0;
+
+
+  const calendarImage = <Image
+    source={"./public/calendar.png"}
+    style={{ width: 30, height: 30 }}
+  />
+  const markerImage = <Image
+    source={"./public/marker.png"}
+    style={{ width: 30, height: 30 }}
+  />
+  const isvImage = <Image
+  source="./public/isv.png"
+  style={{ width: 100, height: 100 }}
+/>
   for (const inscrito of batch) {
     try {
       const info = await sendEmail({
@@ -175,6 +195,9 @@ export default async function handler(
         vip: inscrito.ticketInfo.vip,
         geral: inscrito.ticketInfo.geral,
         id: `${inscrito.id}`,
+        calendarImage,
+        markerImage,
+        isvImage,
       });
       st.push(info);
       i += 1;

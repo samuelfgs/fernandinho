@@ -427,6 +427,29 @@ function PlasmicInscricao__RenderFunc(props: {
                       {"Pista Geral"}
                     </div>
                     <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__vyvvK
+                      )}
+                    >
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return "ESGOTADO";
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
+                    </div>
+                    <div
                       className={classNames(projectcss.all, sty.freeBox__qMQaH)}
                     >
                       <div

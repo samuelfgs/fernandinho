@@ -40,7 +40,15 @@ const styles = StyleSheet.create({
   },
 });
 
-const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
+const PDFPage = ({ 
+  person,
+  svg,
+  isVIP,
+  isFirst,
+  calendarImage,
+  markerImage,
+  isvImage,
+}: any) => {
   const idx = person.email.indexOf("@");
   return (
     <Page size="A4" style={styles.page}>
@@ -89,10 +97,7 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
                 gap: 10,
               }}
             >
-              <Image
-                source={"https://construcao.igrejasv.com/calendar.png"}
-                style={{ width: 30, height: 30 }}
-              />
+              {calendarImage}
               <View
                 style={{
                   display: "flex",
@@ -113,10 +118,7 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
                 gap: 10,
               }}
             >
-              <Image
-                source={"https://construcao.igrejasv.com/marker.png"}
-                style={{ width: 30, height: 30 }}
-              />
+              {markerImage}
               <View
                 style={{
                   display: "flex",
@@ -160,10 +162,7 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
           </View>
         </View>
         <View style={{ display: "flex", alignItems: "center" }}>
-          <Image
-            source="https://ad20.igrejasv.com/plasmic/a_d_2/images/isv.png"
-            style={{ width: 100, height: 100 }}
-          />
+          {isvImage}
         </View>
       </View>
     </Page>
@@ -178,6 +177,9 @@ interface ComprovanteProps {
   geral: number;
   svgs: any[];
   price: string;
+  calendarImage: any;
+  markerImage: any;
+  isvImage: any;
 }
 
 export const Comprovante = (props: ComprovanteProps) => {
@@ -198,6 +200,9 @@ export const Comprovante = (props: ComprovanteProps) => {
           isVIP={inscType === "vip"}
           isFirst={idx === 0}
           svg={svgs[idx]}
+          calendarImage={props.calendarImage}
+          markerImage={props.markerImage}
+          isvImage={props.isvImage}
         />
       ))}
     </Document>
