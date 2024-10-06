@@ -136,9 +136,6 @@ export const sendEmail = async (body: any) => {
       svgs={qrs}
       vip={vip}
       geral={geral}
-      calendarImage={body.calendarImage}
-      markerImage={body.markerImage}
-      isvImage={body.isvImage}
     />
   );
 

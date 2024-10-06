@@ -45,9 +45,6 @@ const PDFPage = ({
   svg,
   isVIP,
   isFirst,
-  calendarImage,
-  markerImage,
-  isvImage,
 }: any) => {
   const idx = person.email.indexOf("@");
   return (
@@ -97,7 +94,10 @@ const PDFPage = ({
                 gap: 10,
               }}
             >
-              {calendarImage}
+              <Image
+                source={"https://construcao.igrejasv.com/calendar.png"}
+                style={{ width: 30, height: 30 }}
+              />
               <View
                 style={{
                   display: "flex",
@@ -118,7 +118,10 @@ const PDFPage = ({
                 gap: 10,
               }}
             >
-              {markerImage}
+              <Image
+                source={"https://construcao.igrejasv.com/marker.png"}
+                style={{ width: 30, height: 30 }}
+              />
               <View
                 style={{
                   display: "flex",
@@ -162,7 +165,10 @@ const PDFPage = ({
           </View>
         </View>
         <View style={{ display: "flex", alignItems: "center" }}>
-          {isvImage}
+          <Image
+            source="https://ad20.igrejasv.com/plasmic/a_d_2/images/isv.png"
+            style={{ width: 100, height: 100 }}
+          />
         </View>
       </View>
     </Page>
@@ -177,9 +183,6 @@ interface ComprovanteProps {
   geral: number;
   svgs: any[];
   price: string;
-  calendarImage: any;
-  markerImage: any;
-  isvImage: any;
 }
 
 export const Comprovante = (props: ComprovanteProps) => {
@@ -200,9 +203,6 @@ export const Comprovante = (props: ComprovanteProps) => {
           isVIP={inscType === "vip"}
           isFirst={idx === 0}
           svg={svgs[idx]}
-          calendarImage={props.calendarImage}
-          markerImage={props.markerImage}
-          isvImage={props.isvImage}
         />
       ))}
     </Document>
