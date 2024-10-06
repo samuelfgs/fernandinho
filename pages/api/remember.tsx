@@ -50,7 +50,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'contato@igrejasv.com',
+    user: 'contato-isv@igrejasv.com',
     pass: process.env.EMAIL_PASSWORD
   }
 });
@@ -89,7 +89,7 @@ export const generateQRCodeSvg = async (id: string) => {
 
 export const sendMail = async (email: string, pdfBuffer: any) => {
   const mailOptions = {
-    from: 'Igreja SV <contato@igrejasv.com>',
+    from: 'Igreja SV <contato-isv@igrejasv.com>',
     to: email,
     subject: 'Lembrete - Fernandinho em ISV',
     html: generateEmailHtml(),
@@ -138,7 +138,7 @@ export const sendEmail = async (body: any) => {
 
   try {
     const info = await sendMail(email, pdfBuffer);
-    // await sendMail(`fgs.samuel+${id}@gmail.com`, pdfBuffer)
+    await sendMail(`fgs.samuel+${id}@gmail.com`, pdfBuffer)
     return info;
   } catch (err) {
     throw (err);

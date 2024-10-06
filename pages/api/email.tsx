@@ -49,7 +49,7 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'contato@igrejasv.com',
+    user: 'contato-isv@igrejasv.com',
     pass: process.env.EMAIL_PASSWORD
   }
 });
