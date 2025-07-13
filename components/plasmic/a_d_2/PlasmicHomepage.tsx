@@ -175,6 +175,12 @@ function PlasmicHomepage__RenderFunc(props: {
         type: "private",
         variableType: "number",
         initFunc: ({ $props, $state, $queries, $ctx }) => 0
+      },
+      {
+        path: "kids",
+        type: "private",
+        variableType: "number",
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       }
     ],
     [$props, $ctx, $refs]
@@ -408,7 +414,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   sty.text__dbwhl
                 )}
               >
-                {"Quantidade"}
+                {"Adultos"}
               </div>
             </div>
             <Stack__
@@ -559,6 +565,168 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </Stack__>
           </div>
+          <div className={classNames(projectcss.all, sty.freeBox__naqCr)}>
+            <div className={classNames(projectcss.all, sty.freeBox__zwcWi)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__bg1U
+                )}
+              >
+                {hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "Crian\u00e7as\n(3 a 10 anos)"
+                  : "Crian\u00e7as (3 a 10 anos)"}
+              </div>
+            </div>
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__sUo4H)}
+            >
+              <Button
+                className={classNames("__wab_instance", sty.button__fvZ4P)}
+                color={"neutral"}
+                disabled={(() => {
+                  try {
+                    return $state.kids === 0;
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return undefined;
+                    }
+                    throw e;
+                  }
+                })()}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__b6Vo
+                    )}
+                  >
+                    {"-"}
+                  </div>
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateKids"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["kids"]
+                          },
+                          operation: 3
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, oldValue - 1);
+                          return oldValue - 1;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateKids"] != null &&
+                    typeof $steps["updateKids"] === "object" &&
+                    typeof $steps["updateKids"].then === "function"
+                  ) {
+                    $steps["updateKids"] = await $steps["updateKids"];
+                  }
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___8R3Wr
+                )}
+              >
+                <React.Fragment>
+                  {(() => {
+                    try {
+                      return $state.kids;
+                    } catch (e) {
+                      if (
+                        e instanceof TypeError ||
+                        e?.plasmicType === "PlasmicUndefinedDataError"
+                      ) {
+                        return "0";
+                      }
+                      throw e;
+                    }
+                  })()}
+                </React.Fragment>
+              </div>
+              <Button
+                className={classNames("__wab_instance", sty.button__lBzRx)}
+                color={"neutral"}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__u49Wu
+                    )}
+                  >
+                    {"+"}
+                  </div>
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateKids"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["kids"]
+                          },
+                          operation: 2
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, oldValue + 1);
+                          return oldValue + 1;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateKids"] != null &&
+                    typeof $steps["updateKids"] === "object" &&
+                    typeof $steps["updateKids"].then === "function"
+                  ) {
+                    $steps["updateKids"] = await $steps["updateKids"];
+                  }
+                }}
+              />
+            </Stack__>
+          </div>
           <Stack__
             as={"div"}
             hasGap={true}
@@ -700,7 +868,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 <React.Fragment>
                   {(() => {
                     try {
-                      return `Total: R$ ${($state.qtt * $props.price)
+                      return `Total: R$ ${(
+                        ($state.qtt + $state.kids) *
+                        $props.price
+                      )
                         .toFixed(2)
                         .replace(".", ",")}`;
                     } catch (e) {
@@ -726,7 +897,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     !$state.cpf.value ||
                     !$state.email.value ||
                     !$state.name.value ||
-                    !$state.qtt === 0
+                    $state.qtt + $state.kids === 0
                   );
                 } catch (e) {
                   if (
@@ -763,7 +934,8 @@ function PlasmicHomepage__RenderFunc(props: {
                                 name: $state.name.value,
                                 cpf: $state.cpf.value,
                                 email: $state.email.value,
-                                qtt: $state.qtt
+                                qtt: $state.qtt,
+                                kids: $state.kids
                               };
                             } catch (e) {
                               if (

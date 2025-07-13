@@ -40,13 +40,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const PDFPage = ({ 
-  person,
-  svg,
-  isVIP,
-  isFirst,
-}: any) => {
+const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
   const idx = person.email.indexOf("@");
+  console.log("dale", { idx, person, svg, isVIP, isFirst })
   return (
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
@@ -70,6 +66,15 @@ const PDFPage = ({
           >
             <Text>Adoração e Discipulado 2025</Text>
             <Text style={{ color: "#8d8d8d" }}>Igreja em SV</Text>
+          </View>
+          <View
+            style={{
+              display: "flex",
+              gap: 5,
+              alignItems: "flex-start",
+            }}
+          >
+            <Text>Ingresso {!isVIP ? "Ingresso Criança" : "Ingresso Adulto"}</Text>
           </View>
           <View
             style={{
@@ -173,13 +178,16 @@ interface ComprovanteProps {
   svgs: any[];
   price: string;
   qtt: number;
+  kids: number;
 }
 
 export const Comprovante = (props: ComprovanteProps) => {
-  const { name, email, cpf, qtt, svgs } = props;
+  const { name, email, cpf, qtt, kids, svgs } = props;
   const inscricoes = [
-    ...[...(new Array(qtt).keys() as any)].map((x: any) => "vip"),
+    ...[...(new Array(qtt).keys() as any)].map((x: any) => "adulto"),
+    ...[...(new Array(kids).keys() as any)].map((x: any) => "kids"),
   ];
+  console.log("dale", inscricoes)
   return (
     <Document>
       {inscricoes.map((inscType, idx) => (
@@ -189,7 +197,7 @@ export const Comprovante = (props: ComprovanteProps) => {
             email,
             name,
           }}
-          isVIP={inscType === "vip"}
+          isVIP={inscType === "adulto"}
           isFirst={idx === 0}
           svg={svgs[idx]}
         />

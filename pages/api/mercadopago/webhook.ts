@@ -17,6 +17,7 @@ export default async function handler(
   const paymentId = req.query?.["data.id"];
   const topic = req.query?.type;
 
+  console.log("dale");
   if (topic !== "payment") {
     res.status(200).json({ q: req.query });
     return;
@@ -54,7 +55,7 @@ export default async function handler(
     .from("payments_ad")
     .upsert({
       user_id: inscrito.id,
-      price: inscrito.qtt * +(process.env.NEXT_PUBLIC_PRICE!),
+      price: (inscrito.qtt + inscrito.kids) * +(process.env.NEXT_PUBLIC_PRICE!),
       paid: true,
       link: mercadoPago.init_point,
       method: mercadoPago.payment_method_id,
@@ -79,11 +80,13 @@ export default async function handler(
       name: inscrito.name,
       cpf: inscrito.cpf,
       email: inscrito.email,
-      price: inscrito.qtt * +(process.env.NEXT_PUBLIC_PRICE!),
+      price: (inscrito.qtt + inscrito.kids) * +(process.env.NEXT_PUBLIC_PRICE!),
       qtt: inscrito.qtt,
+      kids: inscrito.kids,
       id: `${inscrito.id}`,
     });
     console.log("dale3", "success", email);
+    throw Error("asd")
   } catch (err) {
     console.log("err3", err);
     res.status(500).json(err);

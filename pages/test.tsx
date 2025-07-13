@@ -15,7 +15,7 @@ function Homepage() {
   const [error, setError] = React.useState("");
   const router = useRouter();
 
-  const handleContinue = async ({ name, cpf, email, qtt }: any) => {
+  const handleContinue = async ({ name, cpf, email, qtt, kids }: any) => {
     setError("");
     setIsLoading(true);
 
@@ -37,14 +37,22 @@ function Homepage() {
             email: email,
             id: mercadoPagoId,
             items: [
-              {
+              ...(qtt > 0 ? [{
                 id: 0,
                 title: "Ingressos A&D",
                 description: "Ingressos para A&D 2025",
                 quantity: qtt,
                 currency_id: "BRL",
-                unit_price: 0.02
-              },
+                unit_price: +(process.env.NEXT_PUBLIC_PRICE!)
+              }] : []),
+              ...(kids > 0 ? [{
+                id: 0,
+                title: "Ingressos A&D",
+                description: "Ingressos para A&D 2025 - Criança",
+                quantity: kids,
+                currency_id: "BRL",
+                unit_price: +(process.env.NEXT_PUBLIC_PRICE!)
+              }] : []),
             ],
           }),
         }
@@ -61,6 +69,7 @@ function Homepage() {
           mercadoPagoId,
           mercadoPagoLink: responseJson.response.init_point,
           qtt,
+          kids,
         })
         .select();
 
@@ -85,7 +94,7 @@ function Homepage() {
         onContinue={handleContinue}
         isLoading={isLoading}
         error={error}
-        price={0.02}
+        price={+(process.env.NEXT_PUBLIC_PRICE!)}
       />
     </PageParamsProvider__>
   );
