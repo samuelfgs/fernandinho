@@ -23,7 +23,7 @@ export const sendMail = async (email: string, pdfBuffer: any) => {
   const mailOptions = {
     from: 'Igreja SV <contato@igrejasv.com>',
     to: email,
-    subject: 'Inscrição Realizada com Sucesso - Fernandinho em ISV',
+    subject: 'Inscrição Realizada com Sucesso - A&D 25',
     html: generateEmailHtml(),
     attachments: [
       {

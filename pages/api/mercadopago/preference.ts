@@ -21,7 +21,7 @@ export default async function handler(
     },
     auto_return: "approved",
     notification_url: `${process.env
-      .NEXT_PUBLIC_ENDPOINT!}/api/mercadopago/webhook`,
+      .NEXT_PUBLIC_ENDPOINT!}/api/mercadopago/webhook/`,
   };
 
   console.log(body);

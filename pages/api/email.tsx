@@ -14,7 +14,7 @@ import { Img } from "@react-email/img";
 const MyEmailTemplate = () => (
   <Html>
     <Text style={{ fontWeight: "bold", fontSize: "1.5rem" }}>
-      Fernandinho em São Vicente
+      Adoração e Discipulado 2025
     </Text>
     <Text>
       Parabéns! Seu ingresso foi adquirido com sucesso.
