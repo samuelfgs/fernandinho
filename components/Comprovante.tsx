@@ -68,17 +68,8 @@ const PDFPage = ({
               alignItems: "flex-start",
             }}
           >
-            <Text>Fernandinho em São Vicente</Text>
+            <Text>Adoração e Discipulado 2025</Text>
             <Text style={{ color: "#8d8d8d" }}>Igreja em SV</Text>
-          </View>
-          <View
-            style={{
-              display: "flex",
-              gap: 5,
-              alignItems: "flex-start",
-            }}
-          >
-            <Text>Ingresso {!isVIP ? "Pista Geral" : "Pista VIP"}</Text>
           </View>
           <View
             style={{
@@ -106,7 +97,7 @@ const PDFPage = ({
                   lineHeight: 1.5,
                 }}
               >
-                <Text>06 de outubro de 2024</Text>
+                <Text>01 e 02 de agosto de 2025</Text>
                 <Text>18:00</Text>
               </View>
             </View>
@@ -179,17 +170,15 @@ interface ComprovanteProps {
   name: string;
   email: string;
   cpf: string;
-  vip: number;
-  geral: number;
   svgs: any[];
   price: string;
+  qtt: number;
 }
 
 export const Comprovante = (props: ComprovanteProps) => {
-  const { name, email, cpf, vip, geral, svgs } = props;
+  const { name, email, cpf, qtt, svgs } = props;
   const inscricoes = [
-    ...[...(new Array(vip).keys() as any)].map((x: any) => "vip"),
-    ...[...(new Array(geral).keys() as any)].map((x: any) => "geral"),
+    ...[...(new Array(qtt).keys() as any)].map((x: any) => "vip"),
   ];
   return (
     <Document>

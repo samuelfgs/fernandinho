@@ -39,7 +39,7 @@ export default async function handler(
 
   const mercadoPagoId = mercadoPago.external_reference;
   const { data: inscritoData, error: inscritoError } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .select("*")
     .eq("mercadoPagoId", mercadoPagoId);
 
@@ -51,14 +51,14 @@ export default async function handler(
   const inscrito = inscritoData[0];
 
   const { data: paymentData, error: paymentError } = await supabase
-    .from("payments")
+    .from("payments_ad")
     .upsert({
       user_id: inscrito.id,
-      price: inscrito.ticketTotalPrice,
+      price: inscrito.qtt * +(process.env.NEXT_PUBLIC_PRICE!),
       paid: true,
       link: mercadoPago.init_point,
       method: mercadoPago.payment_method_id,
-      lote: inscrito.lote,
+      lote: 1,
     })
     .eq("user_id", inscrito.id)
     .select("*");
@@ -79,9 +79,8 @@ export default async function handler(
       name: inscrito.name,
       cpf: inscrito.cpf,
       email: inscrito.email,
-      price: inscrito.ticketTotalPrice,
-      vip: inscrito.ticketInfo.vip,
-      geral: inscrito.ticketInfo.geral,
+      price: inscrito.qtt * +(process.env.NEXT_PUBLIC_PRICE!),
+      qtt: inscrito.qtt,
       id: `${inscrito.id}`,
     });
     console.log("dale3", "success", email);
@@ -92,7 +91,7 @@ export default async function handler(
   }
 
   const { error: error2 } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .update({ sent_email: true })
     .eq("id", inscrito.id);
 

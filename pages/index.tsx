@@ -3,16 +3,78 @@
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
 
-import { PlasmicHomepage } from "../components/plasmic/a_d/PlasmicHomepage";
+import { PlasmicHomepage } from "../components/plasmic/a_d_2/PlasmicHomepage";
 import { useRouter } from "next/router";
-import HomeMobile from "@/components/HomeMobile";
-import FaleConoscoMobile from "@/components/FaleConoscoMobile";
-import BackgroundDesktop from "@/components/BackgroundDesktop";
-import HomeDesktopPage1 from "@/components/HomeDesktopPage1";
-import HomeDesktopPage2 from "@/components/HomeDesktopPage2";
-import HomeDesktopPage3 from "@/components/HomeDesktopPage3";
+
+import { supabase } from "@/components/supabase/supabase";
+import { nanoid } from "nanoid";
+import validator from "email-validator";
 
 function Homepage() {
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [error, setError] = React.useState("");
+  const router = useRouter();
+
+  const handleContinue = async ({ name, cpf, email, qtt }: any) => {
+    setError("");
+    setIsLoading(true);
+
+    if (!validator.validate(email)) {
+      setError("Email invalido");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const mercadoPagoId = nanoid() + nanoid();
+
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_ENDPOINT}/api/mercadopago/preference`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            id: mercadoPagoId,
+            items: [
+              {
+                id: 0,
+                title: "Ingressos A&D",
+                description: "Ingressos para A&D 2025",
+                quantity: qtt,
+                currency_id: "BRL",
+                unit_price: +(process.env.NEXT_PUBLIC_PRICE!)
+              },
+            ],
+          }),
+        }
+      );
+
+      const responseJson = await response.json();
+
+      const newRow = await supabase
+        .from("inscritos_ad")
+        .insert({
+          name,
+          cpf,
+          email,
+          mercadoPagoId,
+          mercadoPagoLink: responseJson.response.init_point,
+          qtt,
+        })
+        .select();
+
+      if (newRow.error || newRow.data.length !== 1) {
+        throw new Error(newRow.error?.message ?? "Unknown error");
+      }
+
+      router.push(responseJson.response.init_point);
+    } catch (err) {
+      setIsLoading(false);
+      setError((err as any).message);
+    }
+  };
+
   return (
     <PageParamsProvider__
       route={useRouter()?.pathname}
@@ -20,56 +82,10 @@ function Homepage() {
       query={useRouter()?.query}
     >
       <PlasmicHomepage
-        mobile={
-          <>
-            <HomeMobile />
-            <div
-              style={{
-                position: "fixed",
-                right: 10,
-                bottom: 10,
-              }}
-            >
-              <FaleConoscoMobile />
-            </div>
-          </>
-        }
-        desktop={
-          <>
-            <div
-              style={{
-                position: "fixed",
-                width: "100vw",
-                height: "100vh",
-              }}
-            >
-              <BackgroundDesktop />
-            </div>
-            <div>
-              <div
-                style={{
-                  height: "100vh",
-                }}
-              >
-                <HomeDesktopPage1 />
-              </div>
-              <div
-                style={{
-                  height: "100vh",
-                }}
-              >
-                <HomeDesktopPage2 />
-              </div>
-              <div
-                style={{
-                  height: "100vh",
-                }}
-              >
-                <HomeDesktopPage3 />
-              </div>
-            </div>
-          </>
-        }
+        onContinue={handleContinue}
+        isLoading={isLoading}
+        error={error}
+        price={+(process.env.NEXT_PUBLIC_PRICE!)}
       />
     </PageParamsProvider__>
   );

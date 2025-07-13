@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -80,9 +80,7 @@ export type PlasmicLogin__VariantsArgs = {};
 type VariantPropType = keyof PlasmicLogin__VariantsArgs;
 export const PlasmicLogin__VariantProps = new Array<VariantPropType>();
 
-export type PlasmicLogin__ArgsType = {
-  incorrect?: boolean;
-};
+export type PlasmicLogin__ArgsType = { incorrect?: boolean };
 type ArgPropType = keyof PlasmicLogin__ArgsType;
 export const PlasmicLogin__ArgProps = new Array<ArgPropType>("incorrect");
 
@@ -131,6 +129,7 @@ function PlasmicLogin__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -257,10 +256,20 @@ function PlasmicLogin__RenderFunc(props: {
               data-plasmic-name={"textInput"}
               data-plasmic-override={overrides.textInput}
               className={classNames("__wab_instance", sty.textInput)}
-              onChange={(...eventArgs) => {
-                generateStateOnChangeProp($state, ["textInput", "value"])(
-                  (e => e.target?.value).apply(null, eventArgs)
-                );
+              onChange={async (...eventArgs: any) => {
+                ((...eventArgs) => {
+                  generateStateOnChangeProp($state, ["textInput", "value"])(
+                    (e => e.target?.value).apply(null, eventArgs)
+                  );
+                }).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
               }}
               value={
                 generateStateValueProp($state, ["textInput", "value"]) ?? ""
@@ -280,10 +289,20 @@ function PlasmicLogin__RenderFunc(props: {
               data-plasmic-name={"textInput2"}
               data-plasmic-override={overrides.textInput2}
               className={classNames("__wab_instance", sty.textInput2)}
-              onChange={(...eventArgs) => {
-                generateStateOnChangeProp($state, ["textInput2", "value"])(
-                  (e => e.target?.value).apply(null, eventArgs)
-                );
+              onChange={async (...eventArgs: any) => {
+                ((...eventArgs) => {
+                  generateStateOnChangeProp($state, ["textInput2", "value"])(
+                    (e => e.target?.value).apply(null, eventArgs)
+                  );
+                }).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
               }}
               type={"password"}
               value={
@@ -350,15 +369,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicLogin__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicLogin__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicLogin__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicLogin__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;

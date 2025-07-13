@@ -1,6 +1,6 @@
-// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
+// @ts-nocheck
 /* prettier-ignore-start */
 
 /** @jsxRuntime classic */
@@ -121,6 +121,7 @@ function PlasmicSuccess__RenderFunc(props: {
   };
 
   const __nextRouter = useNextRouter();
+
   const $ctx = useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
@@ -181,7 +182,7 @@ function PlasmicSuccess__RenderFunc(props: {
                 )}
               >
                 {
-                  "Parab\u00e9ns! Sua compra de ingressos para o Fernadinho em S\u00e3o Vicente foi realizada com sucesso!\n\nEm breve, entraremos em contato, via e-mail, com todas as informa\u00e7\u00f5es sobre seu check-in para o evento.\n\nAt\u00e9 l\u00e1!"
+                  "Parab\u00e9ns! Sua compra de ingressos para o A&D 25 em S\u00e3o Vicente foi realizada com sucesso!\n\nEm breve, entraremos em contato, via e-mail, com todas as informa\u00e7\u00f5es sobre seu check-in para o evento.\n\nAt\u00e9 l\u00e1!"
                 }
               </div>
             </Stack__>
@@ -237,15 +238,15 @@ type NodeComponentProps<T extends NodeNameType> =
     args?: PlasmicSuccess__ArgsType;
     overrides?: NodeOverridesType<T>;
   } & Omit<PlasmicSuccess__VariantsArgs, ReservedPropsType> & // Specify variants directly as props
-    /* Specify args directly as props*/ Omit<
-      PlasmicSuccess__ArgsType,
-      ReservedPropsType
-    > &
-    /* Specify overrides for each element directly as props*/ Omit<
+    // Specify args directly as props
+    Omit<PlasmicSuccess__ArgsType, ReservedPropsType> &
+    // Specify overrides for each element directly as props
+    Omit<
       NodeOverridesType<T>,
       ReservedPropsType | VariantPropType | ArgPropType
     > &
-    /* Specify props for the root element*/ Omit<
+    // Specify props for the root element
+    Omit<
       Partial<React.ComponentProps<NodeDefaultElementType[T]>>,
       ReservedPropsType | VariantPropType | ArgPropType | DescendantsType<T>
     >;

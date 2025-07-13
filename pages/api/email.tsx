@@ -87,9 +87,9 @@ export const generateQRCodeSvg = async (id: string) => {
 
 
 export const sendEmail = async (body: any) => {
-  const { name, cpf, email, price, vip, geral, id } = body;
+  const { name, cpf, email, price, qtt, id } = body;
   const qrs: any[] = [];
-  for (let i = 0; i < geral + vip; i++) {
+  for (let i = 0; i < qtt; i++) {
     const svg = await generateQRCodeSvg(`https://igrejasv.com/ingresso/${id}/${i}`);
     const buf = Buffer.from(svg as any);
     qrs.push(buf);
@@ -102,8 +102,7 @@ export const sendEmail = async (body: any) => {
       email={email}
       price={price}
       svgs={qrs}
-      vip={vip}
-      geral={geral}
+      qtt={qtt}
     />
   );
 

@@ -366,7 +366,7 @@
 .img {
   object-fit: cover;
   max-width: 100%;
-  display: none !important;
+  display: none;
 }
 .img > picture > img {
   object-fit: cover;

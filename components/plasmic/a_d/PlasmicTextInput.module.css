@@ -73,16 +73,13 @@
 .inputcolor_dark {
   color: #ffffff;
 }
-.root:focus-within .input {
-  outline: none;
-}
 .root .input___focusVisibleWithin {
   outline: none;
 }
-.root .input:focus {
+.root:focus-within .input {
   outline: none;
 }
-.root:focus-within .input:focus {
+.root .input:focus {
   outline: none;
 }
 .root .input::placeholder {
@@ -90,6 +87,9 @@
 }
 .rootcolor_dark .inputcolor_dark::placeholder {
   color: #c8c7c1;
+}
+.root:focus-within .input:focus {
+  outline: none;
 }
 .root:focus-within .input::placeholder {
   outline: none;
