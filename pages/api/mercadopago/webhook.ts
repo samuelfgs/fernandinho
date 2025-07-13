@@ -86,7 +86,6 @@ export default async function handler(
       id: `${inscrito.id}`,
     });
     console.log("dale3", "success", email);
-    throw Error("asd")
   } catch (err) {
     console.log("err3", err);
     res.status(500).json(err);
