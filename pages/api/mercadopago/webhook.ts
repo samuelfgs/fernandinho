@@ -37,7 +37,7 @@ export default async function handler(
     return;
   }
 
-  const mercadoPagoId = paymentId;
+  const mercadoPagoId = mercadoPago.external_reference;
   const { data: inscritoData, error: inscritoError } = await supabase
     .from("inscritos_ad")
     .select("*")
