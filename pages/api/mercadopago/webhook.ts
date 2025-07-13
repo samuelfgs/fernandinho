@@ -22,22 +22,21 @@ export default async function handler(
     return;
   }
 
-  // const mercadoPago = await (
-  //   await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
-  //     headers: {
-  //       authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
-  //     },
-  //   })
-  // ).json();
+  const mercadoPago = await (
+    await fetch(`https://api.mercadopago.com/v1/payments/${paymentId}`, {
+      headers: {
+        authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
+      },
+    })
+  ).json();
 
-  // console.log("dale1", { paymentId, mercadoPago });
-  // if (mercadoPago.status !== "approved") {
-  //   console.log("dale", "not paid");
-  //   res.status(500).json("not paid");
-  //   return;
-  // }
+  console.log("dale1", { paymentId, mercadoPago });
+  if (mercadoPago.status !== "approved") {
+    console.log("dale", "not paid");
+    res.status(500).json("not paid");
+    return;
+  }
 
-  // const mercadoPagoId = mercadoPago.external_reference;
   const mercadoPagoId = paymentId;
   const { data: inscritoData, error: inscritoError } = await supabase
     .from("inscritos_ad")
@@ -51,7 +50,6 @@ export default async function handler(
 
   const inscrito = inscritoData[0];
 
-  const mercadoPago = { init_point: "", payment_method_id: ""}
   const { data: paymentData, error: paymentError } = await supabase
     .from("payments_ad")
     .upsert({
