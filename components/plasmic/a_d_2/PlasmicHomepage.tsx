@@ -63,6 +63,8 @@ import Loading from "../../Loading"; // plasmic-import: jjiZWn6Rmy6Y/component
 import Button from "../../Button"; // plasmic-import: Td7P8G5TJYZK/component
 import TextField from "../../TextField"; // plasmic-import: dcswTQKiNiea/component
 
+import { useScreenVariants as useScreenVariantsht85E1RMwQbV } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ht85e1RMwQbV/globalVariant
+
 import "@plasmicapp/react-web/lib/plasmic.css";
 
 import plasmic_color_tokens_css from "../color_tokens/plasmic.module.css"; // plasmic-import: cUBNGVYNKSb57j9eXqwvXN/projectcss
@@ -182,6 +184,10 @@ function PlasmicHomepage__RenderFunc(props: {
     $ctx,
     $queries: {},
     $refs
+  });
+
+  const globalVariants = ensureGlobalVariants({
+    screen: useScreenVariantsht85E1RMwQbV()
   });
 
   return (
