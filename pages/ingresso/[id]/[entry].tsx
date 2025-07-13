@@ -42,7 +42,7 @@ function Ingresso() {
     isLoading: isLoadingInscricao,
     error: error2,
   } = usePlasmicQueryData(`inscricao/${id}/${entry}`, async () => {
-    let query = supabase.from("inscritos_fernandinho").select();
+    let query = supabase.from("inscritos_ad").select();
     query.filter("id", "eq", id);
     const { data, error } = await query;
     if (error !== null) {

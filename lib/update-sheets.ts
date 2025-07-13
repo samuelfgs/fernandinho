@@ -30,7 +30,7 @@ type Row = { [K in (typeof colOrder)[number]]: string };
 
 export async function updateSheets() {
   const { data: inscritos, error: err1 } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .select(
       `
         *,

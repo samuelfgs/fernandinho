@@ -16,7 +16,7 @@ function Status() {
   const { data: inscritos, isLoading: isLoadingInscritos } =
     useMutablePlasmicQueryData("inscritos", async () => {
       const { data: inscritos, error: err1 } = await supabase
-        .from("inscritos_fernandinho")
+        .from("inscritos_ad")
         .select(
           `
             *,

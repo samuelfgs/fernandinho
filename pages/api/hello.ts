@@ -8,7 +8,7 @@ export default async function handler(
 ) {
 
   const { data: inscritoData, error: inscritoError } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .select("*")
     .order("id", { ascending: false })
 

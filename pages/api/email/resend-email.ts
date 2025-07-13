@@ -17,7 +17,7 @@ export default async function handler(
   const id = req.query?.["id"];
 
   const { data: inscritoData, error: inscritoError } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .select("*")
     .eq("id", id);
 
@@ -45,7 +45,7 @@ export default async function handler(
   }
 
   const { error: error2 } = await supabase
-    .from("inscritos_fernandinho")
+    .from("inscritos_ad")
     .update({ sent_email: true })
     .eq("id", inscrito.id);
 
