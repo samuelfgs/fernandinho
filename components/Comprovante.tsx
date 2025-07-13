@@ -74,7 +74,7 @@ const PDFPage = ({ person, svg, isVIP, isFirst }: any) => {
               alignItems: "flex-start",
             }}
           >
-            <Text>Ingresso {!isVIP ? "Ingresso Criança" : "Ingresso Adulto"}</Text>
+            <Text>Ingresso {!isVIP ? "Criança" : "Adulto"}</Text>
           </View>
           <View
             style={{
