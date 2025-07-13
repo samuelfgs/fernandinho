@@ -134,8 +134,7 @@ export const sendEmail = async (body: any) => {
       email={email}
       price={price}
       svgs={qrs}
-      vip={vip}
-      geral={geral}
+      qtt={geral+vip}
     />
   );
 

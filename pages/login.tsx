@@ -35,11 +35,11 @@ function Login() {
         incorrect={error}
         textInput={{
           value: name,
-          onChange: (e) => setName(e.target.value)
+          onChange: (e: any) => setName(e.target.value)
         }}
         textInput2={{
           value: password,
-          onChange: (e) => setPassword(e.target.value)
+          onChange: (e: any) => setPassword(e.target.value)
         }}
         button={{
           onClick: handleLogin
