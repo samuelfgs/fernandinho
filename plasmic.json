@@ -3261,6 +3261,20 @@
           "cssFilePath": "plasmic/a_d_2/PlasmicLoading.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "N-yG2qvaJPxd",
+          "name": "Login",
+          "type": "managed",
+          "projectId": "vVD1sTFSmdjjS6SHX4G6gi",
+          "renderModuleFilePath": "plasmic/a_d_2/PlasmicLogin.tsx",
+          "importSpec": {
+            "modulePath": "../pages/login.tsx"
+          },
+          "cssFilePath": "plasmic/a_d_2/PlasmicLogin.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/login"
         }
       ],
       "icons": [

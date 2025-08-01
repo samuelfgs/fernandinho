@@ -3,16 +3,14 @@
 import * as React from "react";
 import { PageParamsProvider as PageParamsProvider__ } from "@plasmicapp/react-web/lib/host";
 
-import { PlasmicLogin } from "../components/plasmic/a_d/PlasmicLogin";
+import { PlasmicLogin } from "../components/plasmic/a_d_2/PlasmicLogin";
 import { useRouter } from "next/router";
 
 function Login() {
-  const [name, setName] = React.useState("");
-  const [password, setPassword] = React.useState("");
   const [error, setError] = React.useState(false);
   const router = useRouter();
 
-  const handleLogin = () => {
+  const handleLogin = (name: string, password: string) => {
     if (password !== process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setError(true);
       return;
@@ -23,8 +21,7 @@ function Login() {
     }
     localStorage.setItem("isv-admin", name);
     router.push("/");
-  }
-
+  };
   return (
     <PageParamsProvider__
       route={useRouter()?.pathname}
@@ -32,18 +29,8 @@ function Login() {
       query={useRouter()?.query}
     >
       <PlasmicLogin
-        incorrect={error}
-        textInput={{
-          value: name,
-          onChange: (e: any) => setName(e.target.value)
-        }}
-        textInput2={{
-          value: password,
-          onChange: (e: any) => setPassword(e.target.value)
-        }}
-        button={{
-          onClick: handleLogin
-        }}
+        error={error ? "Senha invalida" : undefined}
+        onLogin={handleLogin as any}
       />
     </PageParamsProvider__>
   );

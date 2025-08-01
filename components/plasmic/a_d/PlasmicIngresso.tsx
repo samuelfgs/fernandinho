@@ -208,7 +208,7 @@ function PlasmicIngresso__RenderFunc(props: {
               }
             )}
           >
-            {"TOUR FERNANDINHO"}
+            {"ADORAÇÃO E DISCIPULADO 2025"}
           </div>
           <div
             className={classNames(projectcss.all, sty.freeBox__dWgWa, {

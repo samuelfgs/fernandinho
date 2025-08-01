@@ -13,7 +13,7 @@
     "@hookform/error-message": "^2.0.1",
     "@plasmicapp/cli": "^0.1.331",
     "@plasmicapp/react-web": "^0.2.348",
-    "@plasmicpkgs/react-aria": "^0.0.146",
+    "@plasmicpkgs/react-aria": "^0.0.149",
     "@react-email/html": "^0.0.9",
     "@react-email/img": "^0.0.9",
     "@react-email/text": "^0.0.9",

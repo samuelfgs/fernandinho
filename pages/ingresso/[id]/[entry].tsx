@@ -73,7 +73,7 @@ function Ingresso() {
         setNotAuthorized(true);
         return;
       }
-      if (inscricao.length === 0) {
+      if (inscricao.length === 0 || (+(entry ?? 0)) >= inscricao[0].qtt + inscricao[0].kids) {
         throw new Error(`Inscricao nao encontrada: ${id}`);
       }
       if (payment.length === 0) {
@@ -98,11 +98,11 @@ function Ingresso() {
         const minutes = String(date.getMinutes()).padStart(2, '0'); // Get minutes and pad with zero
 
         setInfo({
-          nome: `${inscricao[0].name} (${+(entry?? 0)+1} de ${inscricao[0].ticketInfo.vip + inscricao[0].ticketInfo.geral})`,
+          nome: `${inscricao[0].name} (${+(entry?? 0)+1} de ${inscricao[0].kids + inscricao[0].qtt})`,
           data: `${day}/${month}`,
           horario: `${hours}:${minutes}`,
           pessoa: data[0].responsavel,
-          tipo: (+(entry ?? 0)) >= inscricao[0].ticketInfo.vip ? "Ingresso Pista Geral" : "Ingresso Pista VIP",
+          tipo: (+(entry ?? 0)) >= inscricao[0].qtt ? "Ingresso Criança" : "Ingresso Adulto",
         })
       }
     };
