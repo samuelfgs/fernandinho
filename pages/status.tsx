@@ -20,7 +20,7 @@ function Status() {
         .select(
           `
             *,
-            payments (id, paid, lote)
+            payments_ad (id, paid, lote)
           `
         );
       if (!inscritos) {
@@ -28,20 +28,20 @@ function Status() {
       }
       const paid = [];
       for (const inscricao of inscritos) {
+        console.log("xqdl", inscricao);
         const newLine = {
           id: inscricao.id,
           fullName: inscricao.name,
           cpf: inscricao.cpf,
           telefone: inscricao.telefone,
           email: inscricao.email,
-          lote: inscricao.ticketInfo.lote,
-          vip: inscricao.ticketInfo.vip,
-          geral: inscricao.ticketInfo.geral,
-          total: inscricao.ticketTotalPrice,
+          adulto: inscricao.qtt,
+          kids: inscricao.kids,
           status: inscricao.payments?.[0]?.paid ? "PAGO" : "AGUARDANDO",
         };
+        console.log("xqdl2", newLine);
 
-        if (inscricao.payments?.find((p: any) => p.paid)) {
+        if (inscricao.payments_ad?.find((p: any) => p.paid)) {
           paid.push(newLine);
         }
       }
@@ -63,38 +63,41 @@ function Status() {
     );
 
   const count = {
-    vipIn: 0,
-    vipOut: 0,
-    geralIn: 0,
-    geralOut: 0,
+    kidsIn: 0,
+    kidsOut: 0,
+    adultosIn: 0,
+    adultosOut: 0,
   };
 
   if (inscritos && checkin) {
     for (const inscrito of inscritos) {
-      for (let i = 0; i < inscrito.vip; i++) {
+      for (let i = 0; i < inscrito.adulto; i++) {
         const row = checkin.find(
           (r) => r.inscricao_id === inscrito.id && r.inscricao_number === i
         );
         if (row) {
-          count.vipIn++;
+          count.adultosIn++;
         } else {
-          count.vipOut++;
+          count.adultosOut++;
         }
       }
-      for (let i = 0; i < inscrito.geral; i++) {
+      for (let i = 0; i < inscrito.kids; i++) {
         const row = checkin.find(
           (r) =>
             r.inscricao_id === inscrito.id &&
-            r.inscricao_number === i + inscrito.vip
+            r.inscricao_number === i + inscrito.adulto
         );
         if (row) {
-          count.geralIn++;
+          count.kidsIn++;
         } else {
-          count.geralOut++;
+          count.kidsOut++;
         }
       }
     }
   }
+
+  console.log('dale', { count, inscritos, checkin })
+
   return (
     <PageParamsProvider__
       route={useRouter()?.pathname}
@@ -102,10 +105,10 @@ function Status() {
       query={useRouter()?.query}
     >
       <PlasmicStatus
-        vipIn={count.vipIn || "0"}
-        vipOut={count.vipOut || "0"}
-        geralIn={count.geralIn || "0"}
-        geralOut={count.geralOut || "0"}
+        vipIn={count.adultosIn || "0"}
+        vipOut={count.adultosOut || "0"}
+        geralIn={count.kidsIn || "0"}
+        geralOut={count.kidsOut || "0"}
         loading={!inscritos || !checkin}
         children={
           <ColorRing

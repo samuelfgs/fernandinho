@@ -197,7 +197,7 @@ function PlasmicStatus__RenderFunc(props: {
               sty.text__rdH4E
             )}
           >
-            {"ISV FERNANDINHO"}
+            {"ADORAÇÃO E DISCIPULADO 2025"}
           </div>
           <div className={classNames(projectcss.all, sty.freeBox__fydRs)}>
             <PlasmicImg__
@@ -267,7 +267,7 @@ function PlasmicStatus__RenderFunc(props: {
                       sty.text__aWdk3
                     )}
                   >
-                    {"VIP"}
+                    {"ADULTOS"}
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox__qeDDy)}
@@ -292,7 +292,7 @@ function PlasmicStatus__RenderFunc(props: {
                         sty.text__ooo2A
                       )}
                     >
-                      {"GERAL"}
+                      {"CRIANÇAS"}
                     </div>
                     <div
                       className={classNames(projectcss.all, sty.freeBox__r1Bg0)}
@@ -340,7 +340,7 @@ function PlasmicStatus__RenderFunc(props: {
                       sty.text__nqh9M
                     )}
                   >
-                    {"VIP"}
+                    {"ADULTOS"}
                   </div>
                   <div
                     className={classNames(projectcss.all, sty.freeBox___2TChC)}
@@ -365,7 +365,7 @@ function PlasmicStatus__RenderFunc(props: {
                         sty.text__xy7Ju
                       )}
                     >
-                      {"GERAL"}
+                      {"CRIANÇAS"}
                     </div>
                     <div
                       className={classNames(projectcss.all, sty.freeBox__hrz6G)}
